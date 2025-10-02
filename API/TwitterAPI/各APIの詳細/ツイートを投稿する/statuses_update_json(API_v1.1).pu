@@ -1,0 +1,23 @@
+@startuml{statuses_update_json.png}
+'画像変換するときにここで指定したファイル名になる。
+
+skinparam maxMessageSize 70
+'テキストを指定した長さで折り返す
+
+title ツイート自動投稿処理
+
+hide footbox
+'シーケンスの最下部のシーケンスボックスを非表示にする場合に記述する
+
+actor ユーザ as user
+
+participant App as app
+
+participant TwitterServer as twiServer
+
+
+
+
+
+
+@enduml

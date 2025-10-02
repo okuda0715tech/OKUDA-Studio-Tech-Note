@@ -1,0 +1,213 @@
+@startuml{3LeggedOAuth.png}
+'画像変換するときにここで指定したファイル名になる。
+
+skinparam maxMessageSize 70
+'テキストを指定した長さで折り返す
+
+title 3 Legged OAuth 処理
+
+hide footbox
+'シーケンスの最下部のシーケンスボックスを非表示にする場合に記述する
+
+actor ユーザ as user
+
+participant App as app
+
+participant TwitterServer as twiServer
+
+
+== STEP 1 ==
+
+app ->> twiServer : リクエストトークンの払い出し / 要求
+note right of twiServer
+    ■メソッド
+    POST
+    ■エンドポイント
+    https://api.twitter.com/oauth/request_token
+    ■クエリストリング？もしかしたらヘッダーに入れるべきなのかな？
+    x_auth_access_type (任意) = "read/write"
+    ■メッセージヘッダー
+    【Authorization】
+    oauth_callback (必須) = "https%3A%2F%2FyourCallbackUrl.com"
+    oauth_consumer_key (必須) = "xxxxxxxxxxxxxxxxxxxx"
+    oauth_signature_method (必須) = "HMAC-SHA1"
+    oauth_signature (必須) = "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
+    oauth_timestamp (必須) = "1300228849"
+    oauth_nonce (必須) = "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
+    oauth_version (任意) = "1.0"
+    ■補足
+    oauth_callback は、ステップ 2 のユーザ認可がおりた後にリダイレクトする URL であり、
+    開発者ポータルに、その URL が登録されている必要があります。
+    ユーザが認可を与えるために一時的に Twitter の認可 Web ページにリダイレクトされ、
+    認可を与えた後に、アプリ側へユーザをリダイレクトするために使用される URL である。
+    カスタム URL スキームという実装を行うことで、 URL からアプリを起動することが可能である。
+    oauth_signature_method は、コンシューマーがリクエストの署名に使用した署名方法
+    oauth_signature は、署名方法。Signing Requestsで定義されている署名。
+    oauth_timestamp は、 単位は「秒」であり「ミリ秒」ではないため注意。
+    oauth_nonce は、 Nonce and Timestampで定義されている通り。
+    oauth_version は、値は1.0でなければならない。
+    oauth_token は、まだ取得していないため、ヘッダーには含めません。
+end note
+
+twiServer -> twiServer : signature と Consumer Key を検証する
+
+twiServer -->> app : リクエストトークンの払い出し / 応答
+
+alt スタートラインのステータスが 200 である
+    note right of app
+        ■メッセージボディ
+        oauth_token = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+        oauth_token_secret = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+        oauth_callback_confirmed = true
+        ■補足
+        oauth_token は、リクエストトークンのことを示します。
+        この時点では、リクエストトークンはまだユーザから承認されていません。
+        oauth_token_secret は、リクエストトークンシークレットのことを示します。
+        STEP3 完了後に取得するアクセストークンシークレットとは別物です。
+    end note
+
+    alt auth_callback_confirmed != true
+        note right of app
+            認証処理を中断する
+        end note
+    end
+else ステータスが 200 以外の場合
+    note right of app
+        認証処理を中断する
+    end note
+end
+
+
+app -> app : oauth_token, oauth_token_secret を保存する
+
+
+== STEP 2 ==
+
+app ->> twiServer : App に権限を与えるために認可 Web ページを表示 / 要求
+
+note right of twiServer
+    ブラウザを立ち上げて、以下のリクエストを行う。
+
+    ■メソッド
+    GET
+    ■エンドポイント
+    oauth/authorize
+    ■メッセージボディ
+    oauth_token (必須) = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+    ■補足
+    oauth_token には、 STEP1 で取得したリクエストトークンを渡す。
+    リクエストトークンは一度だけ使用可能である。
+    ■例
+    https://api.twitter.com/oauth/authorize?oauth_token=XXXXXXX
+end note
+
+twiServer ->> user : 認証 & 認可の Web ページをブラウザで表示
+
+user ->> twiServer : アプリへの権限付与 or 拒否の操作
+
+alt ユーザが認証 & 認可を行った
+    twiServer -->> app : App に権限を与えるために認可 Web ページを表示 / 応答
+    note right of twiServer
+        認証 & 認可を行ったブラウザに対して、以下のメッセージでリダイレクトする
+
+        ■ステータスコード
+        302
+        ■メッセージボディ
+        oauth_token = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+        oauth_verifier = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx HTTP/1.1
+        ■補足
+        oauth_token は、ユーザが許可または拒否したリクエストトークンのことを示します。
+    end note
+
+    app -> app : (ブラウザの機能により) コールバック URL にリダイレクトされる
+
+    note right of app
+        ■メソッド
+        GET
+        ■クエリストリング
+        oauth_token = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+        oauth_verifier = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx HTTP/1.1
+    end note
+
+    |||
+
+    app -> app : Android アプリリンクの機能により、ブラウザからアプリへリダイレクトする。
+
+    note right of app
+        アプリにリダイレクトする際には、 Intent に含まれる Data の URL に
+        oauth_token と oauth_verifier が付与されている。
+    end note
+
+    |||
+
+    app -> app : アプリは、 Intent から oauth_token と oauth_verifier を取得する。
+
+    note right of app
+        Uri uri = intent.getData() で URI を取得する。
+        URI から uri.getQueryParameter("ParamKey") で、 oauth_token と oauth_verifier を取得する。
+    end note
+
+    |||
+
+    app -> app : ユーザが認可を行った後に受け取ったリクエストトークンが STEP 1 で受け取ったリクエストトークンと一致するかどうかを確認する。
+end
+
+
+== STEP 3 ==
+
+app ->> twiServer : アクセストークンの払い出し / 要求
+
+note right of twiServer
+    ■メソッド
+    POST
+    ■エンドポイント
+    oauth/access_token
+    ■メッセージヘッダー
+    【Authorization】
+    oauth_verifier (必須) =
+    oauth_consumer_key =
+    oauth_token =
+    oauth_signature_method =
+    oauth_signature =
+    oauth_timestamp =
+    oauth_nonce =
+    oauth_version (任意) =
+    ■補足
+    oauth_verifier は、 STEP 2 で取得したもの。
+    oauth_consumer_key は、コンシューマーキー
+    oauth_token は、前のステップで取得したリクエストトークン
+    oauth_signature_method は、 Consumer がリクエストの署名に使用した署名方法。
+    oauth_signature は、 Signing Requestsで定義されている署名。
+    oauth_timestamp は、 Nonce and Timestampで定義されている通り。
+    oauth_nonce は、 Nonce and Timestampで定義されている通り。
+    oauth_version は、値は1.0でなければならない。
+end note
+
+twiServer -->> app : アクセストークンの払い出し / 応答
+
+note right of twiServer
+    ■ステータスコード
+    200
+    ■メッセージボディ
+    oauth_token =
+    oauth_token_secret =
+    user_id =
+    screen_name =
+    ■補足
+    oauth_token は、アクセストークン
+    oauth_token_secret は、アクセストークンシークレット
+    ■例
+
+end note
+
+app -> app : 以降、 Twitter API を使用するときの認証情報として使用するため、 アクセストークンとトークンシークレットを保存する。
+
+note right of app
+    アプリが使用することを許可されたアクセストークンは、
+    公式Twitterアプリから削除することができる。
+    また、アクセストークンに有効期限は存在せず、
+    明示的に取り消さない限り、継続的に使用することができる。
+end note
+
+
+@enduml
