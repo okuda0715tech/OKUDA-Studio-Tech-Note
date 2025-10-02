@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?><sqlb_project><db path="E:/ユーザー/okuda0715/デスクトップ/with_recursive_sample.db" readonly="0" foreign_keys="1" case_sensitive_like="0" temp_store="0" wal_autocheckpoint="1000" synchronous="2"/><attached/><window><main_tabs open="structure browser pragmas query" current="3"/></window><tab_structure><column_width id="0" width="300"/><column_width id="1" width="0"/><column_width id="2" width="100"/><column_width id="3" width="423"/><column_width id="4" width="0"/><expanded_item id="0" parent="1"/><expanded_item id="1" parent="1"/><expanded_item id="2" parent="1"/><expanded_item id="3" parent="1"/></tab_structure><tab_browse><current_table name="4,6:mainFOLDER"/><default_encoding codec=""/><browse_table_settings><table schema="main" name="FOLDER" show_row_id="0" encoding="" plot_x_axis="" unlock_view_pk="_rowid_"><sort/><column_widths><column index="1" value="34"/><column index="2" value="45"/><column index="3" value="79"/></column_widths><filter_values/><conditional_formats/><row_id_formats/><display_formats/><hidden_columns/><plot_y_axes/><global_filter/></table><table schema="main" name="営業成績" show_row_id="0" encoding="" plot_x_axis="" unlock_view_pk="_rowid_"><sort><column index="3" mode="0"/></sort><column_widths><column index="1" value="158"/><column index="2" value="147"/><column index="3" value="135"/></column_widths><filter_values/><conditional_formats/><row_id_formats/><display_formats/><hidden_columns/><plot_y_axes/><global_filter/></table></browse_table_settings></tab_browse><tab_sql><sql name="SQL 1">WITH RECURSIVE 成績サマリ(名前, 上司名, 売上総和) AS (
+-- 非再帰項
+SELECT 営業成績.名前, 営業成績.名前, 営業成績.年次売上
+FROM 営業成績
+UNION ALL
+-- 再帰項
+SELECT 営業成績.名前, 成績サマリ.上司名, 年次売上
+FROM 営業成績, 成績サマリ
+WHERE 営業成績.上司名 = 成績サマリ.名前
+)
+-- メインクエリ
+SELECT 上司名, SUM(売上総和) 売上総和
+FROM 成績サマリ
+GROUP BY 上司名;
+</sql><sql name="SQL 2">WITH RECURSIVE rec(DEPTH, ID, BASE_PATH, PATH, PARENT_ID, FULLPATH) as (
+SELECT
+ 1 AS DEPTH
+,ID
+,PATH AS BASE_PATH
+,PATH
+,PARENT_ID
+,PATH AS FULLPATH
+FROM FOLDER
+WHERE PARENT_ID is NULL
+UNION ALL
+SELECT
+ a.DEPTH + 1
+,b.ID
+,a.BASE_PATH
+,b.PATH
+,b.PARENT_ID
+,a.FULLPATH || '\' || b.PATH
+FROM 
+ rec a
+,FOLDER b
+WHERE a.ID = b.PARENT_ID)
+SELECT * FROM rec</sql><sql name="SQL 4">WITH RECURSIVE rec(ID, NAME, PARENT_ID, FULL_PATH) as (
+SELECT
+ID
+,NAME
+,PARENT_ID
+,NAME AS FULL_PATH
+FROM FOLDER
+WHERE PARENT_ID is NULL
+UNION ALL
+SELECT
+b.ID
+,b.NAME
+,b.PARENT_ID
+,a.FULL_PATH || '\' || b.NAME
+FROM 
+ rec a
+,FOLDER b
+WHERE a.ID = b.PARENT_ID)
+SELECT * FROM rec
+</sql><sql name="SQL 5">WITH RECURSIVE TMP as (
+SELECT
+ 1 AS FOLLOW_UP_ORDER
+,ID
+,NAME
+,PARENT_ID
+FROM FOLDER
+WHERE ID = 6
+UNION ALL
+SELECT
+ TMP.FOLLOW_UP_ORDER + 1
+,FOLDER.ID
+,FOLDER.NAME
+,FOLDER.PARENT_ID
+FROM 
+ TMP
+,FOLDER
+WHERE TMP.PARENT_ID = FOLDER.ID)
+SELECT
+ ((SELECT COUNT(*) FROM TMP) - FOLLOW_UP_ORDER + 1) AS DEPTH
+,*
+FROM TMP ORDER BY FOLLOW_UP_ORDER DESC
+</sql><current_tab id="3"/></tab_sql></sqlb_project>

@@ -1,0 +1,103 @@
+@startuml{3LeggedOAuth.png}
+'画像変換するときにここで指定したファイル名になる。
+
+skinparam maxMessageSize 70
+'テキストを指定した長さで折り返す
+
+title 3LeggedOAuth処理
+
+hide footbox
+'シーケンスの最下部のシーケンスボックスを非表示にする場合に記述する
+
+actor Webアプリ as user
+'actor は棒人間を表示する
+
+participant API as api
+'participant は四角を表示する
+
+database Redis as redis
+'database は DB を表示する
+
+database DynamoDB as dynamo
+'as の左部が表示名、右部が変数名
+
+participant NewsAPI as news
+
+user -> api : ニュース一覧取得リクエスト
+' -> 同期メッセージという意味になる。
+
+activate api
+' オブジェクト生成的な意味合いになる。
+
+api -> redis : AccessToken
+' note は必ず end note で閉じること。そうしないとインデントが崩れる場合がある。
+note right
+    db:9, ttl:60s
+end note
+redis --> api : userId
+'応答はハイフンが２本
+'非同期の場合は、三角カッコが２個
+api -> dynamo : userId
+note right
+    table:metadata
+end note
+'矢印の右側にコメントボックスを表示してそこにコメントを表示する、という意味
+
+dynamo --> api : ユーザープロフィール
+
+group 公開ニュースの取得
+    '区切りがわかりにくくなってしまう場合はgroup - endで囲うとよい
+
+    api -> redis  : 公開ニュース取得
+    note right
+        db:11,ttl:60s
+    end note
+    redis --> api : 公開ニュースのJSON
+
+    alt キャッシュなし
+        '分岐を表現したいときは分岐ケースをalt - endで囲う
+
+        api -> news : 公開ニュース取得
+        news --> api : 公開ニュース
+        api -> redis : 公開ニュースキャッシュ
+    end
+end
+
+group ユーザニュースの取得
+    api -> redis  : ユーザニュース取得
+    note right
+        db:11,ttl:60s
+    end note
+    redis --> api : ユーザニュースのJSON
+    alt キャッシュなし
+        api -> news : ユーザニュース取得
+        news --> api : ユーザニュース
+        api -> redis : ユーザニュースキャッシュ
+    end
+end
+api -> api : プロフィールから配信ニュース抽出、\n公開開始日時でソート
+api --> user : ニュース一覧
+
+note right of api
+    改行が必要な
+    ノートの書き方
+end note
+
+alt auth_callback_confirmed != true
+    api -> news
+else if aaa == bbb
+    api -> dynamo
+end
+
+note right of api
+    alt と opt の違いは不明
+end note
+
+opt aaa == bbb
+    api -> news
+else if aaa == ccc
+    api -> dynamo
+end
+
+
+@enduml
