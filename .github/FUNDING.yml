@@ -3,6 +3,5 @@ github: okuda0715tech
 
 # 外部サービスでの寄付
 custom:
-# PayPal は本人確認ができず、銀行口座に出金できないため、利用停止中。
-#  - "https://www.paypal.me/okudatomohiro"
+  - "https://www.paypal.me/okudatomohiro"
   - "https://buymeacoffee.com/okuda.tomohiro"
