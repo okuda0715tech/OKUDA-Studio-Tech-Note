@@ -16,7 +16,9 @@
 
 
 
-## お役に立てましたら寄付もご検討ください
+## 寄付
+
+以下のボタンより寄付も可能となっております。もし、よろしければご検討ください。
 
 <!-- GitHub Sponsors -->
 [![Sponsor](https://img.shields.io/badge/Github%20Sponsor-💛-ebebeb?style=flat)](https://github.com/sponsors/okuda0715tech)
