@@ -19,12 +19,11 @@
 ## お役に立てましたら寄付もご検討ください
 
 <!-- GitHub Sponsors -->
-[![Sponsor](https://img.shields.io/badge/Sponsor-❤-ff69b4?style=flat)](https://github.com/sponsors/your-username)
+[![Sponsor](https://img.shields.io/badge/Sponsor-❤-ff69b4?style=flat)](https://github.com/sponsors/okuda0715tech)
 
 <!-- PayPal -->
-[![Donate with PayPal](https://img.shields.io/badge/PayPal-Donate-00457C?logo=paypal&style=flat)](https://www.paypal.me/yourid)
+[![Donate with PayPal](https://img.shields.io/badge/PayPal-Donate-00457C?logo=paypal&style=flat)](https://www.paypal.me/okudatomohiro)
 
 <!-- Buy Me a Coffee -->
-[![Buy Me a Coffee](https://img.shields.io/badge/Buy%20Me%20a%20Coffee-☕-FFDD00?style=flat)](https://buymeacoffee.com/yourid)
-
+[![Buy Me a Coffee](https://img.shields.io/badge/Buy%20Me%20a%20Coffee-☕-FFDD00?style=flat)](https://buymeacoffee.com/okuda.tomohiro)
 
