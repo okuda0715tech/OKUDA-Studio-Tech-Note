@@ -22,7 +22,7 @@
 [![Sponsor](https://img.shields.io/badge/Github%20Sponsor-💖-ebebeb?style=flat)](https://github.com/sponsors/okuda0715tech)
 
 <!-- PayPal -->
-[![Donate with PayPal](https://img.shields.io/badge/PayPal-💰-bedafa?logo=paypal&style=flat)](https://www.paypal.me/okudatomohiro)
+[![Donate with PayPal](https://img.shields.io/badge/PayPal-💲-bedafa?logo=paypal&style=flat)](https://www.paypal.me/okudatomohiro)
 
 <!-- Buy Me a Coffee -->
 [![Buy Me a Coffee](https://img.shields.io/badge/Buy%20Me%20a%20Coffee-☕-FFDD00?style=flat)](https://buymeacoffee.com/okuda.tomohiro)
