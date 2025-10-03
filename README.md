@@ -19,7 +19,7 @@
 ## お役に立てましたら寄付もご検討ください
 
 <!-- GitHub Sponsors -->
-[![Sponsor](https://img.shields.io/badge/Github%20Sponsor-❤-f7ade4?style=flat)](https://github.com/sponsors/okuda0715tech)
+[![Sponsor](https://img.shields.io/badge/Github%20Sponsor-❤-f74343?style=flat)](https://github.com/sponsors/okuda0715tech)
 
 <!-- PayPal -->
 [![Donate with PayPal](https://img.shields.io/badge/PayPal-Donate-00457C?logo=paypal&style=flat)](https://www.paypal.me/okudatomohiro)
