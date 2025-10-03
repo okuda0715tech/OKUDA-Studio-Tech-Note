@@ -1,7 +1,8 @@
-# GitHub Sponsors での継続寄付
+# GitHub Sponsors での寄付
 github: okuda0715tech
 
-# 外部サービスでの単発寄付（一般ユーザー向け）
+# 外部サービスでの寄付
 custom:
-  - "https://www.paypal.me/okudatomohiro"
+# PayPal は本人確認ができず、銀行口座に出金できないため、利用停止中。
+#  - "https://www.paypal.me/okudatomohiro"
   - "https://buymeacoffee.com/okuda.tomohiro"
