@@ -1,0 +1,4378 @@
+フォルダー パスの一覧:  ボリューム KIOXIA M.2 SSD 2TB
+ボリューム シリアル番号は 0CC1-6D79 です
+G:.
+|   .gitattributes
+|   .gitignore
+|   export_tree.bat
+|   github.css
+|   README.md
+|   tree.txt
+|   
++---.github
+|       FUNDING.yml
+|       
++---Android
+|   |   Androidの基礎.md
+|   |   LifecycleAwareComponents.md
+|   |   SupportLibraryについて.md
+|   |   UIからアプリを作るツール.md
+|   |   【Android】FragmentでfindViewBy.textClipping
+|   |   コーディングのコツ.md
+|   |   コード診断ツール.md
+|   |   サンプルアプリ集.md
+|   |   バーコード読み取り機能.md
+|   |   パッケージ名の変更方法.pdf
+|   |   操作方法とその名称.md
+|   |   画面サンプルコード集.md
+|   |   画面名称.pdf
+|   |   端末状態の取得.md
+|   |   
+|   +---Activity
+|   |   |   activity_fragment_lifecycle.pdf
+|   |   |   Activityのライフサイクル.xlsx
+|   |   |   Activityの種類.md
+|   |   |   ListActivity.md
+|   |   |   PreferenceActivity.md
+|   |   |   アニメーション.md
+|   |   |   アニメーション.txt
+|   |   |   タスクとバックスタック_new.md
+|   |   |   タスク（バックスタック）.md
+|   |   |   ライフサイクル.md
+|   |   |   
+|   |   \---Activity間のデータ転送
+|   |           Activity間のデータ転送.md
+|   |           startActivityForResult.pdf
+|   |           startActivityForResult.webloc
+|   |           別 Activity から戻ってきたときの RESULT_FIRST_USER とは.md
+|   |           
+|   +---Activity・Fragment共通事項
+|   |       .DS_Store
+|   |       ActivityとFragmentの役割.md
+|   |       Bundle.pdf
+|   |       Bundle.webloc
+|   |       Parcelableの使用方法.pdf
+|   |       Parcelableの使用方法.webloc
+|   |       ParselableとSerializable.md
+|   |       savedInstanceState.md
+|   |       
+|   +---Adapter
+|   |       Adapter一覧.md
+|   |       
+|   +---ADB
+|   |       ADBコマンド.md
+|   |       
+|   +---Android Developers
+|   |   +---Android Studio エディタ
+|   |   |   +---5.アプリを実行してデバッグする
+|   |   |   |   |   1.概要.md
+|   |   |   |   |   
+|   |   |   |   +---4.ローカルデバイスでアプリを実行する
+|   |   |   |   |   |   1.始める.md
+|   |   |   |   |   |   
+|   |   |   |   |   \---画像
+|   |   |   |   |           device-mirroring.png
+|   |   |   |   |           
+|   |   |   |   +---5.コードをデバッグする
+|   |   |   |   |   |   2.開発者向けオプションを設定する.md
+|   |   |   |   |   |   5.レイアウトをデバッグする.md
+|   |   |   |   |   |   
+|   |   |   |   |   \---画像
+|   |   |   |   |           deep-inspect.png
+|   |   |   |   |           dev-options-debug_2x.png
+|   |   |   |   |           dev-options-view-attributes_2x.png
+|   |   |   |   |           embedded-layout-inspector.png
+|   |   |   |   |           layout-inspector-layer-spacing.png
+|   |   |   |   |           layout-inspector-live-updates-button.png
+|   |   |   |   |           layout-inspector-rotation-icon.png
+|   |   |   |   |           li-3d-mode.png
+|   |   |   |   |           li-activity-restart.png
+|   |   |   |   |           li-load-overlay.png
+|   |   |   |   |           li-snapshot.png
+|   |   |   |   |           live-layout-inspector-remove-overlay-icon.png
+|   |   |   |   |           live-layout-inspector-view-options-icon.png
+|   |   |   |   |           padding が margin に見える件.png
+|   |   |   |   |           start-embedded-layout-inspector.png
+|   |   |   |   |           
+|   |   |   |   \---画像
+|   |   |   |           toolbar-apply-changes.png
+|   |   |   |           toolbar-apply-code-changes.png
+|   |   |   |           toolbar-run.png
+|   |   |   |           
+|   |   |   \---6.コードをテストする
+|   |   |       |   2.Android Studio でテストする.md
+|   |   |       |   
+|   |   |       \---画像
+|   |   |               Firebase Test Lab を使用したインストルメンテーション テストの結果.png
+|   |   |               Firebase Test Lab 用テスト構成の作成.png
+|   |   |               Test Matrix ツール ウィンドウにテスト結果が表示されている.png
+|   |   |               [Run] ウィンドウに表示されたテスト結果.png
+|   |   |               アプリケーションのコード カバレッジ率.png
+|   |   |               インストルメンテーションテストとローカルJVMテスト.png
+|   |   |               カバレッジ付き（テスト名）実行ボタン.png
+|   |   |               ガター アクションからテストを実行する.png
+|   |   |               ダイアログを開くボタン.png
+|   |   |               テスト実行アイコン.png
+|   |   |               テスト結果の概要.png
+|   |   |               プルダウン メニュー.png
+|   |   |               プロジェクトの同期アイコン.png
+|   |   |               出力ペインに失敗したテストの詳細が表示されている.png
+|   |   |               実行アイコン.png
+|   |   |               旧バージョンの Android Studio の個別テストランナー.png
+|   |   |               統合 Gradle テストランナー.png
+|   |   |               
+|   |   +---設計とプランニング
+|   |   |   \---5.プライバシーとセキュリティ
+|   |   |       \---3.セキュリティ
+|   |   |               1.セキュリティガイドライン.md
+|   |   |               
+|   |   \---開発
+|   |       +---ガイド
+|   |       |   +---4.アプリアーキテクチャ
+|   |       |   |   |   7.アプリの起動.md
+|   |       |   |   |   
+|   |       |   |   +---1.アーキテクチャガイド
+|   |       |   |   |   |   1.アプリアーキテクチャについて.md
+|   |       |   |   |   |   3.ドメインレイヤ.md
+|   |       |   |   |   |   アーキテクチャ図解.dio
+|   |       |   |   |   |   アーキテクチャ図解.md
+|   |       |   |   |   |   アーキテクチャ図解.svg
+|   |       |   |   |   |   ドメインレイヤを使用したバリデーションチェック.md
+|   |       |   |   |   |   
+|   |       |   |   |   +---2.UIレイヤ
+|   |       |   |   |   |   |   1.UI レイヤについて.md
+|   |       |   |   |   |   |   1回限りの ViewModel イベントのアンチパターン.md
+|   |       |   |   |   |   |   2.UI イベント.md
+|   |       |   |   |   |   |   3.状態ホルダーと UI の状態.md
+|   |       |   |   |   |   |   4.UI 状態生成.md
+|   |       |   |   |   |   |   Jetpack Compose から安全に flow を収集する.md
+|   |       |   |   |   |   |   UI から Flow を収集する安全な方法.md
+|   |       |   |   |   |   |   【ブログ】Jetpack Compose の共有 ViewModel.md
+|   |       |   |   |   |   |   
+|   |       |   |   |   |   \---画像
+|   |       |   |   |   |           Composableのライフサイクル.webp
+|   |       |   |   |   |           JetpackComposeから安全にflowを収集する方法の図解.webp
+|   |       |   |   |   |           UDFで記事をブックマークする例.png
+|   |       |   |   |   |           UDFの仕組み.png
+|   |       |   |   |   |           UIからFlowを収集する安全な方法の図解.webp
+|   |       |   |   |   |           UIイベントの決定木.png
+|   |       |   |   |   |           UIレイヤにおけるロジックの適用順序.png
+|   |       |   |   |   |           UIレイヤの役割.png
+|   |       |   |   |   |           UIレイヤーのロジックと状態の実装場所.png
+|   |       |   |   |   |           イベントと状態の関係.png
+|   |       |   |   |   |           ケーススタディのニュースアプリ.png
+|   |       |   |   |   |           単方向データフローの図.webp
+|   |       |   |   |   |           様々な状態ホルダーに依存しているUI.png
+|   |       |   |   |   |           状態ホルダーにViewModelを使用するかプレーンなクラスを使用するか.png
+|   |       |   |   |   |           状態生成パイプライン.png
+|   |       |   |   |   |           
+|   |       |   |   |   +---4.データレイヤ
+|   |       |   |   |   |   |   1.データレイヤについて.md
+|   |       |   |   |   |   |   2.オフラインファースト.md
+|   |       |   |   |   |   |   
+|   |       |   |   |   |   \---画像
+|   |       |   |   |   |           pullベースの同期.png
+|   |       |   |   |   |           push ベースの同期.png
+|   |       |   |   |   |           オフラインファーストアプリのデータレイヤ.png
+|   |       |   |   |   |           オンラインのみの書き込み.png
+|   |       |   |   |   |           データレイヤのアーキテクチャ.png
+|   |       |   |   |   |           ネットワーク接続のモニタリング.png
+|   |       |   |   |   |           他のリポジトリに依存するリポジトリ.png
+|   |       |   |   |   |           再試行を使用した書き込みキュー.png
+|   |       |   |   |   |           指数バックオフ.png
+|   |       |   |   |   |           最後の書き込み優先.png
+|   |       |   |   |   |           遅延書き込み.png
+|   |       |   |   |   |           
+|   |       |   |   |   \---画像
+|   |       |   |   |           UIレイヤの役割.png
+|   |       |   |   |           データレイヤの役割.png
+|   |       |   |   |           ドメインレイヤの利用を強制する.png
+|   |       |   |   |           ドメインレイヤの役割.png
+|   |       |   |   |           一般的なアーキテクチャの図.png
+|   |       |   |   |           他のユースケースに依存するユースケース.png
+|   |       |   |   |           複数のリポジトリに依存するユースケース.png
+|   |       |   |   |           
+|   |       |   |   +---2.モジュール化
+|   |       |   |   |   |   1.モジュール化について.md
+|   |       |   |   |   |   2.一般的なパターン.md
+|   |       |   |   |   |   Android ライブラリを作成する.md
+|   |       |   |   |   |   モジュールとライブラリ.md
+|   |       |   |   |   |   ライブラリのバージョン競合時の対応方法.md
+|   |       |   |   |   |   
+|   |       |   |   |   \---画像
+|   |       |   |   |           アプリモジュールは実際の実装を提供する.png
+|   |       |   |   |           タブは機能モジュールに分割できる.png
+|   |       |   |   |           データモジュールとその内容.png
+|   |       |   |   |           プロダクトフレーバーごとにコンパイル方法を変える.png
+|   |       |   |   |           マルチモジュール コードベースの依存関係グラフ.png
+|   |       |   |   |           ライブラリへの依存関係の追加1.png
+|   |       |   |   |           ライブラリへの依存関係の追加2.png
+|   |       |   |   |           ライブラリへの依存関係の追加3.png
+|   |       |   |   |           ライブラリへの依存関係の追加4.png
+|   |       |   |   |           ライブラリへの依存関係の追加5.png
+|   |       |   |   |           ライブラリへの依存関係の追加6.png
+|   |       |   |   |           上位モジュールは抽象化に依存するう.png
+|   |       |   |   |           依存するモジュールを分離可能.png
+|   |       |   |   |           同じデータモジュールに依存する 2 つのモジュール.png
+|   |       |   |   |           実装モジュールが抽象化モジュールに依存する.png
+|   |       |   |   |           循環依存関係とメディエーションモジュール.png
+|   |       |   |   |           抽象化.png
+|   |       |   |   |           機能モジュールとデータモジュールの依存関係.png
+|   |       |   |   |           
+|   |       |   |   +---3.アーキテクチャコンポーネント
+|   |       |   |   |   +---1.UI レイヤのライブラリ
+|   |       |   |   |   |   +---3.ライフサイクル対応コンポーネント
+|   |       |   |   |   |   |   |   4.UI の状態を保存する.md
+|   |       |   |   |   |   |   |   5.ライフサイクル対応コンポーネントで Kotlin コルーチンを使用する.md
+|   |       |   |   |   |   |   |   
+|   |       |   |   |   |   |   +---1.ライフサイクル
+|   |       |   |   |   |   |   |   |   1.ライフサイクルを管理する.md
+|   |       |   |   |   |   |   |   |   2.Compose と統合する.md
+|   |       |   |   |   |   |   |   |   
+|   |       |   |   |   |   |   |   \---画像
+|   |       |   |   |   |   |   |           Activity のライフサイクルを構成する状態とイベント.svg
+|   |       |   |   |   |   |   |           
+|   |       |   |   |   |   |   \---2.ViewModel
+|   |       |   |   |   |   |           1.ViewModel について.md
+|   |       |   |   |   |   |           2.依存関係を使用して ViewModel を作成する.md
+|   |       |   |   |   |   |           3.ViewModel スコープ用 API.md
+|   |       |   |   |   |   |           4.ViewModel の保存済み状態のモジュール.md
+|   |       |   |   |   |   |           5.ViewModel API クイックリファレンス.pdf
+|   |       |   |   |   |   |           
+|   |       |   |   |   |   \---4.ページングライブラリ
+|   |       |   |   |   |       |   1.ページングについて.md
+|   |       |   |   |   |       |   2.ページングデータを読み込んで表示する.md
+|   |       |   |   |   |       |   5.読み込み状態の管理と表示.md
+|   |       |   |   |   |       |   
+|   |       |   |   |   |       \---画像
+|   |       |   |   |   |               load() がキーをどのように使用および更新するかを示す図.svg
+|   |       |   |   |   |               ページングライブラリのアーキテクチャ.svg
+|   |       |   |   |   |               
+|   |       |   |   |   \---2.データレイヤライブラリ
+|   |       |   |   |           1.DataStore.md
+|   |       |   |   |           proto スキーマの定義.md
+|   |       |   |   |           
+|   |       |   |   +---5.アプリの操作
+|   |       |   |   |   |   1.ナビゲーションの原則.md
+|   |       |   |   |   |   
+|   |       |   |   |   +---2.Navigation コンポーネント
+|   |       |   |   |   |   |   1.概要.md
+|   |       |   |   |   |   |   2.ナビゲーションコントローラ.md
+|   |       |   |   |   |   |   
+|   |       |   |   |   |   +---3.ナビゲーショングラフを設計する
+|   |       |   |   |   |   |   |   1.概要.md
+|   |       |   |   |   |   |   |   10.Kotlin DSL を使用してプログラムでグラフを作成する.md
+|   |       |   |   |   |   |   |   2.ダイアログのデスティネーション.md
+|   |       |   |   |   |   |   |   3.アクティビティのデスティネーション.md
+|   |       |   |   |   |   |   |   4.ネストされたグラフ.md
+|   |       |   |   |   |   |   |   5.ディープリンク.md
+|   |       |   |   |   |   |   |   6.新しいデスティネーションタイプ.md
+|   |       |   |   |   |   |   |   7.型安全性.md
+|   |       |   |   |   |   |   |   8.コードをカプセル化する.md
+|   |       |   |   |   |   |   |   9.グローバルなアクション.md
+|   |       |   |   |   |   |   |   
+|   |       |   |   |   |   |   \---画像
+|   |       |   |   |   |   |           サンフラワーのアクション.png
+|   |       |   |   |   |   |           トップレベルナビゲーショングラフ.png
+|   |       |   |   |   |   |           ネストされたグラフを追加.png
+|   |       |   |   |   |   |           
+|   |       |   |   |   |   +---4.ナビゲーショングラフを使用する
+|   |       |   |   |   |   |       1.デスティネーションに移動する.md
+|   |       |   |   |   |   |       2.オプションを使用して移動する.md
+|   |       |   |   |   |   |       3.Safe Args.md
+|   |       |   |   |   |   |       4.デスティネーション間でデータを渡す.md
+|   |       |   |   |   |   |       5.デスティネーション間の遷移をアニメーション化する.md
+|   |       |   |   |   |   |       6.条件付きナビゲーション.md
+|   |       |   |   |   |   |       7.プログラムで Navigation コンポーネントを操作する.md
+|   |       |   |   |   |   |       
+|   |       |   |   |   |   +---5.バックスタック
+|   |       |   |   |   |   |   |   1.概要.md
+|   |       |   |   |   |   |   |   2.ダイアログとバックスタック.md
+|   |       |   |   |   |   |   |   3.循環型ナビゲーションとバックスタック.md
+|   |       |   |   |   |   |   |   4.複数のバックスタック.md
+|   |       |   |   |   |   |   |   【ブログ】Multiple back stacks.md
+|   |       |   |   |   |   |   |   【ブログ】Navigation Multiple back stacks.md
+|   |       |   |   |   |   |   |   
+|   |       |   |   |   |   |   \---画像
+|   |       |   |   |   |   |           2つのDialogデスティネーションが一番上にあるバックスタック.png
+|   |       |   |   |   |   |           3 つのデスティネーション（A、B、C）がある循環型ナビゲーションのグラフ.png
+|   |       |   |   |   |   |           Dialogデスティネーションがポップされ、新しいデスティネーションが追加される.png
+|   |       |   |   |   |   |           FragmentManager state after swapping the two stacks.webp
+|   |       |   |   |   |   |           FragmentManager state after three commits.webp
+|   |       |   |   |   |   |           FragmentManager state after we’ve saved the profile back stack and added one more commit.webp
+|   |       |   |   |   |   |           ダイアログデスティネーションが一番上にあるバックスタック.png
+|   |       |   |   |   |   |           
+|   |       |   |   |   |   \---6.統合
+|   |       |   |   |   |       |   2.マルチモジュール プロジェクトのナビゲーションに関するベスト プラクティス.md
+|   |       |   |   |   |       |   3.NavigationUI を使用して UI コンポーネントを NavController に接続する.md
+|   |       |   |   |   |       |   
+|   |       |   |   |   |       \---画像
+|   |       |   |   |   |               ナビゲーション メニューを表示している開いたドロワー.png
+|   |       |   |   |   |               
+|   |       |   |   |   +---8.他のアプリと連携する
+|   |       |   |   |   |   \---8.パッケージの公開設定
+|   |       |   |   |   |           1.パッケージの公開設定について.md
+|   |       |   |   |   |           
+|   |       |   |   |   \---画像
+|   |       |   |   |           アボカドの詳細画面.png
+|   |       |   |   |           サンフラワーの例.png
+|   |       |   |   |           リンゴの詳細画面.png
+|   |       |   |   |           上へと戻るボタン.png
+|   |       |   |   |           
+|   |       |   |   \---6.依存関係インジェクション
+|   |       |   |       |   1.依存関係挿入について.md
+|   |       |   |       |   2.手動による依存関係挿入.md
+|   |       |   |       |   3.Hilt を使用した依存関係挿入.md
+|   |       |   |       |   @AssistedInject の使い方.md
+|   |       |   |       |   Hilt の使いどころ.md
+|   |       |   |       |   【コードラボ】Android アプリでの Hilt の使用.md
+|   |       |   |       |   
+|   |       |   |       +---8.Dagger
+|   |       |   |       |       1.Dagger の基本.md
+|   |       |   |       |       
+|   |       |   |       \---画像
+|   |       |   |               Carの外部で生成したEngineをCarに渡す場合.png
+|   |       |   |               Car内部で直接Engineを生成する場合.png
+|   |       |   |               Hilt コンポーネントの階層.svg
+|   |       |   |               ログインフロー.png
+|   |       |   |               依存関係グラフのモデル.png
+|   |       |   |               
+|   |       |   +---6.主要分野
+|   |       |   |   \---7.アプリデータとファイル
+|   |       |   |       |   1.アプリデータとファイルについて.md
+|   |       |   |       |   13.アプリのインストール場所.md
+|   |       |   |       |   2.ストレージについて.md
+|   |       |   |       |   3.アプリ固有のストレージに保存する.md
+|   |       |   |       |   5.ストレージデバイスのすべてのファイルを管理する.md
+|   |       |   |       |   6.Key-Value データを保存する.md
+|   |       |   |       |   8.ストレージのユースケースとベストプラクティス.md
+|   |       |   |       |   ストレージの一覧.xlsx
+|   |       |   |       |   ストレージアクセスのまとめ.md
+|   |       |   |       |   ファイルアクセスのまとめ.md
+|   |       |   |       |   対象範囲別ストレージ.md
+|   |       |   |       |   対象範囲別ストレージ2.md
+|   |       |   |       |   権限について.md
+|   |       |   |       |   
+|   |       |   |       +---10.ファイルの共有
+|   |       |   |       |       1.ファイル共有について.md
+|   |       |   |       |       2.ファイル共有の設定.md
+|   |       |   |       |       3.ファイルの共有.md
+|   |       |   |       |       4.共有ファイルのリクエスト.md
+|   |       |   |       |       5.ファイル情報の取得.md
+|   |       |   |       |       
+|   |       |   |       +---11.ファイルの印刷
+|   |       |   |       |       あまり使う機会がなさそうな技術なので勉強をスキップします.txt
+|   |       |   |       |       
+|   |       |   |       +---12.コンテンツプロバイダ
+|   |       |   |       |   |   1.コンテンツプロバイダについて.md
+|   |       |   |       |   |   2.コンテンツプロバイダの基本.md
+|   |       |   |       |   |   3.コンテンツプロバイダの作成.md
+|   |       |   |       |   |   4.ストレージアクセスフレームワークを使用してファイルを開く.md
+|   |       |   |       |   |   5.カスタムドキュメントプロバイダを作成する.md
+|   |       |   |       |   |   6.クラウドメディアプロバイダを作成する.md
+|   |       |   |       |   |   カレンダープロバイダの概要.md
+|   |       |   |       |   |   スタブコンテンツプロバイダを作成する.md
+|   |       |   |       |   |   
+|   |       |   |       |   \---画像
+|   |       |   |       |           カレンダープロバイダのデータモデル.png
+|   |       |   |       |           コンテンツプロバイダと他のコンポーネントとの関係.png
+|   |       |   |       |           システムの選択ツールに表示される「ダウンロード」フォルダに保存されている画像.svg
+|   |       |   |       |           ストレージアクセスフレームワークのフロー.png
+|   |       |   |       |           データアクセスの際の各クラスの関係.png
+|   |       |   |       |           ドキュメントプロバイダのデータモデル.png
+|   |       |   |       |           抽象化の概念図.png
+|   |       |   |       |           検索場所として「ダウンロード」フォルダが選択されている選択ツール.svg
+|   |       |   |       |           概念図.png
+|   |       |   |       |           
+|   |       |   |       +---4.共有ストレージに保存する
+|   |       |   |       |   |   1.共有ストレージについて.md
+|   |       |   |       |   |   2.メディア.md
+|   |       |   |       |   |   3.写真選択ツール.md
+|   |       |   |       |   |   4.ドキュメントおよび他のファイル.md
+|   |       |   |       |   |   5.データセット.md
+|   |       |   |       |   |   MediaStore 内のデータの同期.md
+|   |       |   |       |   |   ドキュメントプロバイダの概略図.xlsx
+|   |       |   |       |   |   
+|   |       |   |       |   \---画像
+|   |       |   |       |           ドキュメントプロバイダの概略図.png
+|   |       |   |       |           メディア管理アプリ画面.png
+|   |       |   |       |           写真選択ツールのUI.gif
+|   |       |   |       |           
+|   |       |   |       +---7.ローカルデータベースにデータを保存する
+|   |       |   |       |       13.SQLite を使用してデータを保存する.md
+|   |       |   |       |       
+|   |       |   |       +---9.データの共有
+|   |       |   |       |   |   1.データの共有について.md
+|   |       |   |       |   |   2.他のアプリへのシンプルなデータの送信.md
+|   |       |   |       |   |   3.他のアプリからのシンプルなデータの受信.md
+|   |       |   |       |   |   4.ダイレクト共有ターゲットを提供する.md
+|   |       |   |       |   |   
+|   |       |   |       |   \---画像
+|   |       |   |       |           sharesheet.png
+|   |       |   |       |           カスタムアクション.png
+|   |       |   |       |           カスタムターゲット.png
+|   |       |   |       |           ダイレクト共有ターゲット.png
+|   |       |   |       |           リッチプレビュー.png
+|   |       |   |       |           
+|   |       |   |       \---画像
+|   |       |   |               MANAGE_EXTERNAL_STORAGE 権限に関する注意喚起.svg
+|   |       |   |               
+|   |       |   \---8.ベストプラクティス
+|   |       |       \---1.テスト
+|   |       |           |   1.Android でアプリをテストする.md
+|   |       |           |   
+|   |       |           +---2.基本
+|   |       |           |   |   1.Android アプリのテストの基礎.md
+|   |       |           |   |   2.Android でのテスト項目.md
+|   |       |           |   |   3.Android でテストダブルを使用する.md
+|   |       |           |   |   4.テスト戦略.md
+|   |       |           |   |   
+|   |       |           |   \---画像
+|   |       |           |           5層のテストピラミッドの例.png
+|   |       |           |           アプリのほとんどをカバーし、リモートデータを偽装する大規模なテスト.png
+|   |       |           |           テストスコープ.png
+|   |       |           |           バランスの悪いピラミッド.png
+|   |       |           |           ピラミッド.png
+|   |       |           |           単体テストにおける架空の依存関係.png
+|   |       |           |           実行する場所に応じたテストのタイプ.png
+|   |       |           |           
+|   |       |           +---3.ローカルテスト
+|   |       |           |       2.Robolectric.md
+|   |       |           |       ローカルテストを作成する.md
+|   |       |           |       
+|   |       |           \---4.インストルメンテーションテスト
+|   |       |               |   1.インストルメンテーションテストを作成する.md
+|   |       |               |   2.UI テストを自動化する.md
+|   |       |               |   2.大規模テストの安定性.md
+|   |       |               |   
+|   |       |               +---3. AndroidX のテストライブラリ
+|   |       |               |       1. AndroidX Test 用にプロジェクトをセットアップする.md
+|   |       |               |       
+|   |       |               \---画像
+|   |       |                       テストでスリープを使用した場合.png
+|   |       |                       依存関係をフェイクに置き換えて UI をテストする.png
+|   |       |                       同期のテスト.png
+|   |       |                       
+|   |       \---主要分野
+|   |           \---UI
+|   |               \---ガイド
+|   |                   |   公式ドキュメント TOP ページ.url
+|   |                   |   
+|   |                   +---1.はじめに
+|   |                   |   |   Compose における考え方.md
+|   |                   |   |   
+|   |                   |   \---画像
+|   |                   |           イベントが下位のコンポーザブルから上位のコンポーザブルに伝搬するイメージ.png
+|   |                   |           データが上位のコンポーザブルから下位のコンポーザブルに落ちるイメージ.png
+|   |                   |           最も簡単なコンポーザブル関数の例.png
+|   |                   |           
+|   |                   +---10.タップと入力
+|   |                   |   |   1.概要.md
+|   |                   |   |   IME の開閉とコンポーザブルへのフォーカス.md
+|   |                   |   |   URL リンクを開く.md
+|   |                   |   |   
+|   |                   |   +---2.ポインタ入力
+|   |                   |   |   |   1.概要.md
+|   |                   |   |   |   2.操作について理解する.md
+|   |                   |   |   |   3.タップとプレス.md
+|   |                   |   |   |   4.スクロール.md
+|   |                   |   |   |   5.ドラッグ、スワイプ、フリング.md
+|   |                   |   |   |   6.Swipeable から AnchoredDraggable に移行する.md
+|   |                   |   |   |   7.マルチタッチジェスチャー.md
+|   |                   |   |   |   awaitPointerEvent の使用例.md
+|   |                   |   |   |   
+|   |                   |   |   \---画像
+|   |                   |   |           awaitPointerEvent サンプル.png
+|   |                   |   |           drag なし.png
+|   |                   |   |           gestures-drag.gif
+|   |                   |   |           gestures-swipe.gif
+|   |                   |   |           scrollable の使用例.gif
+|   |                   |   |           transformable の例.gif
+|   |                   |   |           verticalScroll 修飾子の最も簡単な例.gif
+|   |                   |   |           イベントハンドラが同じタップ位置に対して重複する場合.png
+|   |                   |   |           イベント伝搬のサンプルの UI ツリー.png
+|   |                   |   |           右に少し drag.png
+|   |                   |   |           
+|   |                   |   +---3.キーボード入力
+|   |                   |   |       1.キーボードショートカットヘルパー.md
+|   |                   |   |       
+|   |                   |   +---4.フォーカス
+|   |                   |   |       1.概要.md
+|   |                   |   |       
+|   |                   |   +---5.ユーザー操作
+|   |                   |   |   |   1.ユーザー操作を処理する.md
+|   |                   |   |   |   3.ドラッグ & ドロップ.md
+|   |                   |   |   |   プルリフレッシュ.md
+|   |                   |   |   |   
+|   |                   |   |   \---画像
+|   |                   |   |           button-always-enabled.gif
+|   |                   |   |           button-reflects-state.gif
+|   |                   |   |           引っ張ている最中.png
+|   |                   |   |           指を離した後.png
+|   |                   |   |           
+|   |                   |   \---画像
+|   |                   |           IME の開閉とフォーカスの例.webp
+|   |                   |           
+|   |                   +---12.スタイルガイドライン
+|   |                   |       2.Compose の Kotlin.md
+|   |                   |       
+|   |                   +---15.ツール
+|   |                   |   |   1.概要.md
+|   |                   |   |   
+|   |                   |   +---2.デザイン
+|   |                   |   |   |   1.UI をプレビューする.md
+|   |                   |   |   |   2.アニメーションのプレビューとデバッグ.md
+|   |                   |   |   |   
+|   |                   |   |   \---画像
+|   |                   |   |           animation-preview-curve.gif
+|   |                   |   |           animation-preview.gif
+|   |                   |   |           compose-animation-coordination.gif
+|   |                   |   |           compose-animation-preview-picker.gif
+|   |                   |   |           compose-preview-ui.png
+|   |                   |   |           multipreview-template.png
+|   |                   |   |           preview-devicespec-edit-sample-function.png
+|   |                   |   |           preview-devicespec-gibberish.png
+|   |                   |   |           preview-devicespec-sample-function.png
+|   |                   |   |           preview-devicespec-spec-list.png
+|   |                   |   |           preview-multipreview-1.png
+|   |                   |   |           preview-multipreview-2.png
+|   |                   |   |           run_preview.png
+|   |                   |   |           start-animation-inspection-highlight.png
+|   |                   |   |           tooling-background-preview.png
+|   |                   |   |           tooling-copy-render.png
+|   |                   |   |           tooling-decorated-preview.png
+|   |                   |   |           tooling-deploy-preview-demo.gif
+|   |                   |   |           tooling-interactive-preview-demo.gif
+|   |                   |   |           tooling-locale-preview.png
+|   |                   |   |           tooling-preview-code-nav.png
+|   |                   |   |           tooling-preview-sequence.png
+|   |                   |   |           tooling-square-preview.png
+|   |                   |   |           tooling-start-interactive.png
+|   |                   |   |           viewmodel_failed.png
+|   |                   |   |           プレビューのモード選択.png
+|   |                   |   |           
+|   |                   |   +---3.開発
+|   |                   |   |   |   1.コードを反復開発する.md
+|   |                   |   |   |   2.エディタのアクション.md
+|   |                   |   |   |   
+|   |                   |   |   \---画像
+|   |                   |   |           device-le-example.png
+|   |                   |   |           empty-compose-activity.png
+|   |                   |   |           example-project-settings.png
+|   |                   |   |           live-edit-on.png
+|   |                   |   |           live-edit-out-of-date.png
+|   |                   |   |           live-edit-settings.png
+|   |                   |   |           live-editing-of-literals.gif
+|   |                   |   |           tooling-apply-changes.png
+|   |                   |   |           tooling-color-picker.gif
+|   |                   |   |           tooling-preview-deploy-gutter-icon.gif
+|   |                   |   |           tooling-resource-picker.gif
+|   |                   |   |           
+|   |                   |   +---4.デバッグ
+|   |                   |   |   |   1.レイアウトの検査.md
+|   |                   |   |   |   2.アプリのパフォーマンスをトレースする.md
+|   |                   |   |   |   
+|   |                   |   |   \---画像
+|   |                   |   |           li-recomposition-counts.png
+|   |                   |   |           li-semantic-info.png
+|   |                   |   |           li-show-recomposition-counts.png
+|   |                   |   |           live-layout-inspector-view-options-icon.png
+|   |                   |   |           tracing-1.png
+|   |                   |   |           tracing-2.png
+|   |                   |   |           tracing-3.png
+|   |                   |   |           tracing-4.png
+|   |                   |   |           tracing-5.png
+|   |                   |   |           
+|   |                   |   \---5.Relay のデザイナーとディベロッパーツール
+|   |                   |       |   1.概要.md
+|   |                   |       |   
+|   |                   |       \---画像
+|   |                   |               relay-banner-image.png
+|   |                   |               relay-for-figma-and-android.png
+|   |                   |               
+|   |                   +---16.システム機能を利用する
+|   |                   |   |   1.ウィンドウインセット.md
+|   |                   |   |   インセット一覧.xlsx
+|   |                   |   |   
+|   |                   |   \---画像
+|   |                   |           e2e-intro.gif
+|   |                   |           edge-to-edge-lazy-column-textfields.mp4
+|   |                   |           interop-keyboard.gif
+|   |                   |           インセットの right left top bottom の位置.png
+|   |                   |           ステータスバーの余白.png
+|   |                   |           ナビゲーションバーの余白.png
+|   |                   |           
+|   |                   +---2.UIアーキテクチャ
+|   |                   |   |   1.ライフサイクル.md
+|   |                   |   |   1.ライフサイクル2.md
+|   |                   |   |   2.副作用.md
+|   |                   |   |   3.段階（フェーズ）.md
+|   |                   |   |   5.アーキテクチャ.md
+|   |                   |   |   6.アーキテクチャのレイヤリング.md
+|   |                   |   |   7.CompositionLocal.md
+|   |                   |   |   8.ナビゲーション.md
+|   |                   |   |   【ブログ】Jetpack Compose Stability.md
+|   |                   |   |   コンポーザブルに対して「状態を引数で渡す場合」と「戻り値で状態を返す場合」.md
+|   |                   |   |   再コンポーズがスキップできない条件.md
+|   |                   |   |   副作用の入退場・再コンポーズ時の動作一覧.xlsx
+|   |                   |   |   副作用一覧.xlsx
+|   |                   |   |   戻り値を持つコンポーザブル関数.md
+|   |                   |   |   
+|   |                   |   +---4.状態の管理
+|   |                   |   |   |   1.概要.md
+|   |                   |   |   |   2.状態をホイスティングする場所.md
+|   |                   |   |   |   3.UI状態を保存する.md
+|   |                   |   |   |   derivedStateOf を使用すべき状況.url
+|   |                   |   |   |   remember() 関数に複数のパラメータが渡されている場合.md
+|   |                   |   |   |   【ブログ】Compose のスナップショットシステム.md
+|   |                   |   |   |   【ブログ】derivedStateOf を使用すべき状況.md
+|   |                   |   |   |   状態の生成方法.md
+|   |                   |   |   |   状態の管理方法の選択.xlsx
+|   |                   |   |   |   状態を保持する場所の決定フロー.xlsx
+|   |                   |   |   |   状態関連の関数一覧.xlsx
+|   |                   |   |   |   
+|   |                   |   |   \---画像
+|   |                   |   |           Hello サンプル.png
+|   |                   |   |           Initial state of username and submitEnabled.bin
+|   |                   |   |           State updates after the user continues typing.bin
+|   |                   |   |           State updates with derivedStateOf.bin
+|   |                   |   |           state-hoisting-chat.png
+|   |                   |   |           Updating the code to use derivedStateOf.webp
+|   |                   |   |           ViewModelにホイスティングする.png
+|   |                   |   |           タイムスタンプの表示状態を保持.mp4
+|   |                   |   |           チャットアプリコンポーザブルツリー.png
+|   |                   |   |           プレーンな状態クラスの実行結果.png
+|   |                   |   |           リスト状態がホイスティングされたコンポーザブルツリー.png
+|   |                   |   |           単方向データフロー.png
+|   |                   |   |           状態の変更に伴って通知してくれる Map の例.png
+|   |                   |   |           
+|   |                   |   \---画像
+|   |                   |           produceState のサンプル.png
+|   |                   |           UI 要素の共通部品化の例.png
+|   |                   |           コンポーズのフェーズ.png
+|   |                   |           ダイアログサンプル ダイアログ表示状態.png
+|   |                   |           ダイアログサンプル 初期状態.png
+|   |                   |           ダイアログサンプル 選択後の状態.png
+|   |                   |           ダイアログデスティネーションは it に直接含まれる.png
+|   |                   |           ホストされたデスティネーションは、グラフ内に格納されている.png
+|   |                   |           ライフサイクル.png
+|   |                   |           レイアウトインスペクターで再コンポーズのスキップを確認する。.webp
+|   |                   |           レイヤ.svg
+|   |                   |           再コンポジションのステップ.bin
+|   |                   |           単方向データフロー.png
+|   |                   |           戻り値を持つコンポーザブルの例.png
+|   |                   |           段階的な状態の読み取り.svg
+|   |                   |           複数回呼び出されたコンポーザブルは別物として扱われる.png
+|   |                   |           
+|   |                   +---3.アプリのレイアウトを開発する
+|   |                   |   |   1.レイアウトの基本.md
+|   |                   |   |   10.アラインメントライン.md
+|   |                   |   |   11.Intrainsic な測定値.md
+|   |                   |   |   12.ConstraintLayout.md
+|   |                   |   |   2.修飾子.md
+|   |                   |   |   3.制約と修飾子の順序.md
+|   |                   |   |   4.カスタム修飾子を作成する.md
+|   |                   |   |   5.修飾子のリスト.url
+|   |                   |   |   6.Pager.md
+|   |                   |   |   7.Flow レイアウト.md
+|   |                   |   |   8.カスタムレイアウト.md
+|   |                   |   |   Column Row Box.md
+|   |                   |   |   よく使用するコンポーザブル関数.md
+|   |                   |   |   よく使用するコンポーザブル関数のパラメータ.md
+|   |                   |   |   よく使用する修飾子.md
+|   |                   |   |   様々な padding.md
+|   |                   |   |   自分で定義したコンポーザブルに Modifier でサイズ指定しても効かない場合.md
+|   |                   |   |   
+|   |                   |   +---9.アダプティブレイアウト
+|   |                   |   +---各コンポーザブル関数の使い方
+|   |                   |   |       Box.md
+|   |                   |   |       
+|   |                   |   \---画像
+|   |                   |           Alignment と Arrangement の例.PNG
+|   |                   |           Alignment.Bottom.png
+|   |                   |           Alignment.CenterVertically.png
+|   |                   |           Alignment.Top（Default）.png
+|   |                   |           Arrangement.Bottom.png
+|   |                   |           Arrangement.Center.png
+|   |                   |           Arrangement.Center（Vertical）.png
+|   |                   |           Arrangement.End.png
+|   |                   |           Arrangement.SpaceAround.png
+|   |                   |           Arrangement.SpaceBetween.png
+|   |                   |           Arrangement.spacedBy(8.dp).png
+|   |                   |           Arrangement.Start（Default）.png
+|   |                   |           Arrangement.Top（Default）.png
+|   |                   |           Baselineから親のTopまでのマージン.png
+|   |                   |           Column の Arrangement.gif
+|   |                   |           ConstraintLayout の例2.png
+|   |                   |           ConstraintLayout の簡単な例.png
+|   |                   |           ContextualFlowRow の例.png
+|   |                   |           fillMaxSizeの例.png
+|   |                   |           FirstBaseline のイメージ.png
+|   |                   |           FlowRow に対して fillMaxWith を使用した場合.png
+|   |                   |           FlowRow の例.png
+|   |                   |           FlowRow を使用してグリッドを作成し、最後のアイテムが全幅を占めるようにする.png
+|   |                   |           FlowRow を使用してグリッドを作成する.png
+|   |                   |           Intrinsic の例(意図しない結果).png
+|   |                   |           Intrinsic の例.png
+|   |                   |           matchParentSizeの例.png
+|   |                   |           matchParentSizeの例2.png
+|   |                   |           maxIntrinsicWidth.png
+|   |                   |           maxItemsInEachRow = 3.png
+|   |                   |           minIntrinsicWidth.png
+|   |                   |           Modifier が効いていない例.png
+|   |                   |           Modifier が効かない場合.png
+|   |                   |           Modifier.fillMaxColumnWidth() が適用されていない場合.png
+|   |                   |           Modifier.fillMaxColumnWidth() が適用されている場合.png
+|   |                   |           requiredsizeの使用例.png
+|   |                   |           Row に対して fillMaxWith を使用した場合.png
+|   |                   |           Row の Arrangement.gif
+|   |                   |           weightの例.png
+|   |                   |           インジケーター付きのページャー.png
+|   |                   |           オフセットによる要素の見切れ.png
+|   |                   |           カスタム Column レイアウトの実行結果.png
+|   |                   |           スロットのイメージ.png
+|   |                   |           タップエリアが小さくならない例.png
+|   |                   |           タップエリアが小さくなる例.png
+|   |                   |           ノードをラップする修飾子.png
+|   |                   |           ボタンが画面外に押し出された例.png
+|   |                   |           レイアウトの3ステッププロセス.svg
+|   |                   |           レイアウトのサイズと配置の決定順序.svg
+|   |                   |           作りたいカスタムレイアウト.png
+|   |                   |           修飾子を使用した例の画面イメージ.png
+|   |                   |           最大値の設定なし.png
+|   |                   |           未選択状態.png
+|   |                   |           標準レイアウトコンポーネントの例.svg
+|   |                   |           行サイズが交互に変化する FlowRow.png
+|   |                   |           親要素のサイズの割合指定で子要素のサイズやオフセットを決定する.png
+|   |                   |           透明度を変える例.png
+|   |                   |           選択済み状態.png
+|   |                   |           
+|   |                   +---4.マテリアルコンポーネント
+|   |                   |   |   1.Scaffold.md
+|   |                   |   |   10.スイッチ.md
+|   |                   |   |   11.チェックボックス.md
+|   |                   |   |   12.バッジ.md
+|   |                   |   |   14.ナビゲーションドロワー.md
+|   |                   |   |   16.日付選択ツール.md
+|   |                   |   |   17.スナックバー.md
+|   |                   |   |   18.分割線.md
+|   |                   |   |   19.リストとグリッド.md
+|   |                   |   |   20.リソース.md
+|   |                   |   |   3.Button.md
+|   |                   |   |   4.フローティングアクションボタン.md
+|   |                   |   |   5.カード.md
+|   |                   |   |   6.チップ.md
+|   |                   |   |   7.ダイアログ.md
+|   |                   |   |   8.進行状況インジケーター.md
+|   |                   |   |   9.スライダー.md
+|   |                   |   |   Popup.md
+|   |                   |   |   Surface.md
+|   |                   |   |   TextField の適切な状態管理.md
+|   |                   |   |   【ブログ】Material 3 Jetpack Compose のドロップダウン メニュー (例付き).md
+|   |                   |   |   ボトムナビゲーションバー.md
+|   |                   |   |   
+|   |                   |   +---13.ボトムシート
+|   |                   |   |   |   1.概要.md
+|   |                   |   |   |   2.ボトムシートの一部.md
+|   |                   |   |   |   
+|   |                   |   |   \---画像
+|   |                   |   |           シートが一部表示された状態.png
+|   |                   |   |           シートが完全に表示された状態.png
+|   |                   |   |           ボトムシート.png
+|   |                   |   |           
+|   |                   |   +---15.時刻選択ツール
+|   |                   |   |   |   1.概要.md
+|   |                   |   |   |   2.タイムピッカーダイアログ.md
+|   |                   |   |   |   
+|   |                   |   |   \---画像
+|   |                   |   |           2 種類のタイムピッカー.png
+|   |                   |   |           AlertDialog 内のタイムピッカー.png
+|   |                   |   |           カスタムダイアログ内のタイムピッカー.png
+|   |                   |   |           ダイアルタイムピッカーの実装例.png
+|   |                   |   |           入力タイムピッカーの実装例.png
+|   |                   |   |           
+|   |                   |   +---2.アプリバー
+|   |                   |   |   |   1.概要.md
+|   |                   |   |   |   2.トップアプリバーから移動する.md
+|   |                   |   |   |   ボトムアプリバーとナビゲーションバーの違い.md
+|   |                   |   |   |   
+|   |                   |   |   \---画像
+|   |                   |   |           アプリバーの外観.svg
+|   |                   |   |           ボトムアプリバーの例.png
+|   |                   |   |           ボトムアプリバーの実行結果.png
+|   |                   |   |           ボトムナビゲーションバーの例.png
+|   |                   |   |           中.svg
+|   |                   |   |           中サイズのトップアプリバーの実行結果.mp4
+|   |                   |   |           大.svg
+|   |                   |   |           大サイズの実行結果.png
+|   |                   |   |           小.svg
+|   |                   |   |           小_中央揃え.svg
+|   |                   |   |           小サイズ(中央揃え)の実行結果.png
+|   |                   |   |           小サイズの実行結果.png
+|   |                   |   |           
+|   |                   |   \---画像
+|   |                   |           2 種類の進行状況インジケーター.svg
+|   |                   |           4種類のFAB.svg
+|   |                   |           4種類のチップ.svg
+|   |                   |           5種類のボタン.svg
+|   |                   |           contentPadding パラメータを使用した場合.png
+|   |                   |           Dialog コンポーザブルの例.png
+|   |                   |           LazyColumn のパディング実装例.png
+|   |                   |           LazyColumn の要素間の間隔の設定.png
+|   |                   |           Modifier.padding を使用した場合.png
+|   |                   |           OFF のスイッチ.png
+|   |                   |           OFF 状態のチェックボックス.png
+|   |                   |           ON のスイッチ.png
+|   |                   |           ON 状態のチェックボックス.png
+|   |                   |           scaffold の実装例.png
+|   |                   |           span の使用例.png
+|   |                   |           Surface の実装例.png
+|   |                   |           switch コンポーネント.png
+|   |                   |           すべてのチェックボックスが OFF.png
+|   |                   |           すべてのチェックボックスが ON.png
+|   |                   |           アウトラインボタン.png
+|   |                   |           アクション付きのスナックバーの実装例.png
+|   |                   |           アシストチップの例.png
+|   |                   |           エレベーティッドボタン.png
+|   |                   |           オフセットが 0 の場合.png
+|   |                   |           オフセットが 21 の場合.png
+|   |                   |           オフセットが 95 の場合.png
+|   |                   |           オフセットが二つ目の要素の 2 の場合.png
+|   |                   |           カスタムアイコンのスイッチ.png
+|   |                   |           カスタムカラーのスイッチ.png
+|   |                   |           グリッドの要素間の間隔を設定する.png
+|   |                   |           グリッドアイテムの並び順.png
+|   |                   |           グリッド表示の例.png
+|   |                   |           グルーピングされたナビゲーションドロワーの例.png
+|   |                   |           コンテナが設定されていないダイアログ.png
+|   |                   |           サイズが数値指定されていない BadgedBox.png
+|   |                   |           サンプルコードの結果.png
+|   |                   |           ショッピング カート内のアイテム数を表示するバッジ.png
+|   |                   |           スタンダードナビゲーションドロワー.png
+|   |                   |           スナックバーの例.png
+|   |                   |           スナックバーの実装例.png
+|   |                   |           スライダーの基本的な実装例.png
+|   |                   |           スライダーの実装例.png
+|   |                   |           ダイアログの例.svg
+|   |                   |           チェックボックスの 3 つの状態.svg
+|   |                   |           テキストとアイコンを保持するカードの例.svg
+|   |                   |           テキストボタン.png
+|   |                   |           ドッキングデートピッカーの実装例.png
+|   |                   |           ドロップダウンメニューの例.webp
+|   |                   |           ドロワーが開いた状態.png
+|   |                   |           ドロワーの実装例.png
+|   |                   |           ドロワーを閉じている時.png
+|   |                   |           ドロワーを開いている時.png
+|   |                   |           バッジのバグ.png
+|   |                   |           バッジの例.svg
+|   |                   |           バッジの基本的な実装例.png
+|   |                   |           フローティングアクションボタン.png
+|   |                   |           ボタン付きのアラートダイアログ.png
+|   |                   |           モーダルデートピッカーの実装例.png
+|   |                   |           モーダルナビゲーションドロワー.png
+|   |                   |           リストの末尾にできる余白.png
+|   |                   |           リストの要素にキーを指定.png
+|   |                   |           一部のチェックボックスが ON.png
+|   |                   |           入力チップの例.png
+|   |                   |           入力モーダルデートピッカーの実装例.png
+|   |                   |           入力可能なドロップダウン.webp
+|   |                   |           列数固定のグリッド.png
+|   |                   |           列数固定のスタッガードグリッドの実装例.png
+|   |                   |           固定ヘッダの例.gif
+|   |                   |           垂直分割線の例.png
+|   |                   |           塗りつぶしカードの例.png
+|   |                   |           塗りつぶしボタン.png
+|   |                   |           大きいFAB.png
+|   |                   |           小さいFAB.png
+|   |                   |           拡張FAB.png
+|   |                   |           提案・候補チップの例.png
+|   |                   |           最後の要素にフッターが存在しているため、余白はその前に確保した例.png
+|   |                   |           期間付きデートピッカーの実装例.png
+|   |                   |           枠線付きカードの例.png
+|   |                   |           水平分割線の例.png
+|   |                   |           画像を含むダイアログ.png
+|   |                   |           立体カードの例.png
+|   |                   |           範囲指定が可能なスライダー.png
+|   |                   |           色調の異なる塗りつぶしボタン.png
+|   |                   |           選択状態のフィルターチップ.png
+|   |                   |           選択解除状態のフィルターチップ.png
+|   |                   |           高度なスライダーの実装例.png
+|   |                   |           
+|   |                   +---5.テーマ設定
+|   |                   |   |   1.概要.md
+|   |                   |   |   2.マテリアルデザイン 3.md
+|   |                   |   |   5.カスタムテーマ設定.md
+|   |                   |   |   6.テーマの構造.md
+|   |                   |   |   7.XML テーマを Compose に移行する.md
+|   |                   |   |   
+|   |                   |   \---画像
+|   |                   |           M2 のシャドウ エレベーションと M3 の色調エレベーションの比較.png
+|   |                   |           M2 のリップルと M3 のリップルの比較.gif
+|   |                   |           Navigation bar と Navigation Rail の例.png
+|   |                   |           Primary Container と On Primary Container の使用例.png
+|   |                   |           Reply のサンプルアプリの動的テーマ設定（左）とデフォルトのアプリテーマ設定（右）.png
+|   |                   |           Reply アプリの固定ドロワーナビゲーション.png
+|   |                   |           Reply アプリの色調パレット.png
+|   |                   |           Reply サンプルアプリで、カードには Medium 、フローティング アクション ボタンには Large を使用.png
+|   |                   |           Reply サンプルアプリのライト カラースキーム.png
+|   |                   |           Secondary と Tertiary の組み合わせ例.png
+|   |                   |           すべてのマテリアル 3 コンポーネントのデフォルトのシェイプ値.png
+|   |                   |           オーバースクロール時のストレッチエフェクト.gif
+|   |                   |           カスタムテーマ.png
+|   |                   |           タイポグラフィーの使用例.png
+|   |                   |           マテリアル デザイン 3 のデフォルトのタイポグラフィ スケール.png
+|   |                   |           マテリアル デザイン 3 を使用した Reply サンプルアプリ.png
+|   |                   |           マテリアル デザインのサブシステム 色、タイポグラフィ、シェイプ.png
+|   |                   |           十分なコントラストと不十分なコントラストの例.png
+|   |                   |           強調に使用できる Surface の例.png
+|   |                   |           異なる強調度のボタン.png
+|   |                   |           色調で高度を表現する.png
+|   |                   |           
+|   |                   +---6.テキストとタイポグラフィ
+|   |                   |   |   1.概要.md
+|   |                   |   |   3.ユーザー入力を処理する.md
+|   |                   |   |   4.ユーザー操作を有効にする.md
+|   |                   |   |   5.フォントを操作する.md
+|   |                   |   |   6.絵文字を表示する.md
+|   |                   |   |   TextField のタップイベントをインターセプトする.md
+|   |                   |   |   アプリ全体にカスタムフォントファミリーを設定する方法.md
+|   |                   |   |   クレジットカード番号のハイフン区切りのサンプルコード.md
+|   |                   |   |   
+|   |                   |   +---2.テキストの表示とスタイル設定
+|   |                   |   |   |   1.リソースを使用してテキストを表示する.md
+|   |                   |   |   |   2.テキストのスタイルを設定する.md
+|   |                   |   |   |   3.段落に対するスタイル設定.md
+|   |                   |   |   |   4.テキストレイアウトの設定.md
+|   |                   |   |   |   
+|   |                   |   |   \---画像
+|   |                   |   |           bold.png
+|   |                   |   |           Brush API の linearGradient 関数と定義済みの色のリストを使用する。.png
+|   |                   |   |           color 青.png
+|   |                   |   |           Italic.png
+|   |                   |   |           line height.png
+|   |                   |   |           Linebreak の違いの比較.png
+|   |                   |   |           Paragraph の strategy の使用例.png
+|   |                   |   |           ParagraphStyle の使用例.png
+|   |                   |   |           shadow.png
+|   |                   |   |           size 30.png
+|   |                   |   |           SpanStyle 内で透明度を設定する.png
+|   |                   |   |           Strictness と WordBreak を使用した実行結果と、 Heading を使用した実行結果の比較.png
+|   |                   |   |           Text 内の一部の文字に Brush を適用する.png
+|   |                   |   |           TextAlign の使用例.png
+|   |                   |   |           Trim Both.png
+|   |                   |   |           Trim Bottom.png
+|   |                   |   |           Trim None.png
+|   |                   |   |           Trim Top.png
+|   |                   |   |           テキストの丸め.png
+|   |                   |   |           ハイフネーションの違い.png
+|   |                   |   |           マーキーの例.mp4
+|   |                   |   |           最大行数の指定.png
+|   |                   |   |           複数のスタイルを適用.png
+|   |                   |   |           
+|   |                   |   \---画像
+|   |                   |           OutlinedTextField 入力済み.png
+|   |                   |           TextField での Brush の使用例.gif
+|   |                   |           TextField と BasicTextField に共通なパラメータの使用例.png
+|   |                   |           TextField 入力済み.png
+|   |                   |           クレジットカード番号の4桁ごとにハイフンを挿入する実装の実行結果.png
+|   |                   |           ダウンロード可能なフォントの例.png
+|   |                   |           パスワード入力フォームの例.png
+|   |                   |           フォントの格納場所.png
+|   |                   |           フォントの設定例.png
+|   |                   |           リンクの実装例.png
+|   |                   |           一部の文字列を選択不可にする例.png
+|   |                   |           可変フォントにカスタム軸を設定した例.png
+|   |                   |           可変フォントの使用例.png
+|   |                   |           同じフォントを使用し、異なる軸でカスタマイズしたテキスト.png
+|   |                   |           定義したフォントファミリーを使用した例.png
+|   |                   |           選択可能になった Text コンポーザブル.png
+|   |                   |           
+|   |                   +---7.画像とグラフィック
+|   |                   |   |   1.概要.md
+|   |                   |   |   
+|   |                   |   +---2.画像
+|   |                   |   |   |   1.概要.md
+|   |                   |   |   |   2.画像の読み込み.md
+|   |                   |   |   |   3.ImageBitmap と ImageVector.md
+|   |                   |   |   |   4.マテリアルアイコン.md
+|   |                   |   |   |   5.画像をカスタマイズする.md
+|   |                   |   |   |   6.カスタムペインター.md
+|   |                   |   |   |   7.パフォーマンスの最適化.md
+|   |                   |   |   |   
+|   |                   |   |   +---2-1.Glide
+|   |                   |   |   |   |   引用元 - 公式ドキュメント.url
+|   |                   |   |   |   |   
+|   |                   |   |   |   +---1.Documentation
+|   |                   |   |   |   |   |   2.さあ始めよう.md
+|   |                   |   |   |   |   |   3.プレースホルダー.md
+|   |                   |   |   |   |   |   4.オプション.md
+|   |                   |   |   |   |   |   8.構成.md
+|   |                   |   |   |   |   |   9.キャッシュ.md
+|   |                   |   |   |   |   |   プレースホルダーの選択フロー.dio
+|   |                   |   |   |   |   |   
+|   |                   |   |   |   |   \---画像
+|   |                   |   |   |   |           プレースホルダーの選択フロー.svg
+|   |                   |   |   |   |           
+|   |                   |   |   |   +---2.Tutorial
+|   |                   |   |   |   +---3.Reference
+|   |                   |   |   |   +---4.Integration Libraries
+|   |                   |   |   |   |       2.Compose.md
+|   |                   |   |   |   |       
+|   |                   |   |   |   \---5.Developers
+|   |                   |   |   \---画像
+|   |                   |   |           16対9のアスペクト比を設定した画像.png
+|   |                   |   |           BlendMode.Darken の例.png
+|   |                   |   |           BlendMode.SrcIn の例.png
+|   |                   |   |           BlurEdgeTreatment.Unbounded.png
+|   |                   |   |           CircleShape でクリップした画像.png
+|   |                   |   |           ColorMatrix を使用して画像の明るさとコントラストを調整.png
+|   |                   |   |           Crop 横.png
+|   |                   |   |           Crop 縦.png
+|   |                   |   |           FillBounds 横.png
+|   |                   |   |           FillBounds 縦.png
+|   |                   |   |           FillHeight 横.png
+|   |                   |   |           FillHeight 縦.png
+|   |                   |   |           FillWidth 横.png
+|   |                   |   |           FillWidth 縦.png
+|   |                   |   |           Fit 横.png
+|   |                   |   |           Fit 縦.png
+|   |                   |   |           Inside 横 縮小あり.png
+|   |                   |   |           Inside 横 縮小なし.png
+|   |                   |   |           Inside 縦 縮小あり.png
+|   |                   |   |           Inside 縦 縮小なし.png
+|   |                   |   |           JPEG ファイルの例.jpg
+|   |                   |   |           None 横 切り抜きあり.png
+|   |                   |   |           None 横 切り抜きなし.png
+|   |                   |   |           None 縦 切り抜きあり.png
+|   |                   |   |           None 縦 切り抜きなし.png
+|   |                   |   |           RoundedCornerShape でクリップした画像.png
+|   |                   |   |           ぼかし効果を適用した画像.png
+|   |                   |   |           カスタム path を指定してクリップした画像.png
+|   |                   |   |           カスタムペインターの例.jpg
+|   |                   |   |           クリップして枠線を付けた画像.png
+|   |                   |   |           ベクターファイルの例.png
+|   |                   |   |           ライブラリに組み込み済みのショッピングカードアイコン.png
+|   |                   |   |           元の画像 横.jpg
+|   |                   |   |           元の画像 縦.jpg
+|   |                   |   |           彩度 0 のカラー マトリックス.png
+|   |                   |   |           色を反転した画像.png
+|   |                   |   |           虹色にグラデーションする円の枠線.png
+|   |                   |   |           
+|   |                   |   \---3.グラフィックス
+|   |                   |       |   1.概要.md
+|   |                   |       |   2.グラフィックス修飾子.md
+|   |                   |       |   3.ブラシ.md
+|   |                   |       |   4.シェイプ.md
+|   |                   |       |   
+|   |                   |       \---画像
+|   |                   |               alpha の例.png
+|   |                   |               Brush.horizontalGradient(colorList).png
+|   |                   |               Brush.linearGradient(colorList).png
+|   |                   |               Brush.radialGradient(colorList).png
+|   |                   |               Brush.sweepGradient(colorList).png
+|   |                   |               Brush.verticalGradient(colorList).png
+|   |                   |               Canvas での ImageBitmap の描画.png
+|   |                   |               Canvas でのテキストの描画.png
+|   |                   |               Canvas で回転オペレーションを適用した長方形.png
+|   |                   |               Canvas で拡縮オペレーションを適用した円.png
+|   |                   |               Canvas で移動オペレーションを適用した円.png
+|   |                   |               Canvas を使用して描画された長方形.png
+|   |                   |               clip で画像を切り抜き、影を適用.png
+|   |                   |               clip の例.png
+|   |                   |               Compose で Path を作成して描画.png
+|   |                   |               Compose で実行されるカスタム AGSL シェーダー.png
+|   |                   |               compositingStrategy を設定しなかった例2.png
+|   |                   |               CompositingStrategy.Auto と CompositingStrategy.Offscreen の比較.png
+|   |                   |               CompositingStrategy.Offscreen を使用.png
+|   |                   |               CompositingStrategy.Offscreen を未使用.png
+|   |                   |               drawArc.png
+|   |                   |               drawCircle.png
+|   |                   |               drawLine.png
+|   |                   |               drawOval.png
+|   |                   |               drawPoints.png
+|   |                   |               drawRect.png
+|   |                   |               drawRoundedRect.png
+|   |                   |               drawWithCache でブラシ オブジェクトをキャッシュする.png
+|   |                   |               ImageShader ブラシを使用して背景、テキスト、円を描画する.png
+|   |                   |               Modifier.drawBehind で描画されたテキストと背景.png
+|   |                   |               Modifier.drawWithContent の使用例.png
+|   |                   |               ModulateAlpha はアルファセットを個々の描画コマンドに適用.png
+|   |                   |               rotation.mp4
+|   |                   |               scaleX と scaleY を Image コンポーザブルに適用.png
+|   |                   |               ShaderBrush の使用例.png
+|   |                   |               smoothing 0.75.png
+|   |                   |               smoothing 0.png
+|   |                   |               Text でのカスタム反転修飾子.png
+|   |                   |               TileMode.Clamp.png
+|   |                   |               TileMode.Decal.png
+|   |                   |               TileMode.Mirror.png
+|   |                   |               TileMode.Repeated.png
+|   |                   |               translateionX と translationY.png
+|   |                   |               withTransform を使用して、長方形を回転させて右に移動したもの.png
+|   |                   |               より大きな半径の円形グラデーション.png
+|   |                   |               アニメーション付きシェイプ.gif
+|   |                   |               カラーストップが設定されたブラシ.png
+|   |                   |               キャンバスにアクセスして Drawable を描画.png
+|   |                   |               グラフィック シェイプ ライブラリ を使用して作成できるさまざまなシェイプの例.png
+|   |                   |               サイズを指定していない円形グラデーション.png
+|   |                   |               シェーダーを異なるサイズで 3 回作成.png
+|   |                   |               スムージング係数による図形の比較.png
+|   |                   |               タップして変形するシェイプ.gif
+|   |                   |               テキストの丸め処理あり.png
+|   |                   |               ハート型のシェイプ.png
+|   |                   |               ピンク色の丸を下にずらす.png
+|   |                   |               ポリゴンをクリップとして使用.png
+|   |                   |               原点付ローテーション.mp4
+|   |                   |               四角と三角の中間の図形.png
+|   |                   |               四角と三角の無限変換.gif
+|   |                   |               座標付きのハートシェイプ.png
+|   |                   |               座標系.png
+|   |                   |               描画コマンドへのインセットの適用.png
+|   |                   |               描画領域の中央にある青い六角形.png
+|   |                   |               水平グラデーションで描画された円.png
+|   |                   |               背景が長方形で、全領域の 2／3 のサイズを占める複数行のテキスト.png
+|   |                   |               角が丸い三角形.png
+|   |                   |               角の半径 r の場所.png
+|   |                   |               角丸なしのハートシェイプ.png
+|   |                   |               
+|   |                   +---8.アニメーション
+|   |                   |   |   1.概要.md
+|   |                   |   |   10.アニメーションをテストする.md
+|   |                   |   |   11.ツール.md
+|   |                   |   |   12.アニメーション チート シート.url
+|   |                   |   |   2.アニメーション API を選択する.md
+|   |                   |   |   3.クイックガイド.md
+|   |                   |   |   4.アニメーションの修飾子とコンポーザブル.md
+|   |                   |   |   5.値ベースのアニメーション.md
+|   |                   |   |   6.アニメーション化されたベクター画像.md
+|   |                   |   |   7.高度なアニメーションの例.md
+|   |                   |   |   8.アニメーションをカスタマイズする.md
+|   |                   |   |   Modifier.background と Modifier.drawBehind の違い.md
+|   |                   |   |   Modifier.graphicsLayer の使用方法.md
+|   |                   |   |   MutableInteractionSource の使用方法.md
+|   |                   |   |   
+|   |                   |   +---9.共有要素
+|   |                   |   |   |   1.はじめに.md
+|   |                   |   |   |   
+|   |                   |   |   \---画像
+|   |                   |   |           共有要素の例.mp4
+|   |                   |   |           
+|   |                   |   \---画像
+|   |                   |           animation-preview-overview.png
+|   |                   |           animationSpec の設定の例.gif
+|   |                   |           padding のアニメーション.gif
+|   |                   |           SizeTransform の使用例.gif
+|   |                   |           アニメーション API の俯瞰図.svg
+|   |                   |           アニメーションを繰り返す.gif
+|   |                   |           アニメーション化されたベクター型ドローアブル.gif
+|   |                   |           コンテンツのアニメーションをカスタマイズする.gif
+|   |                   |           コンポーザブルのサイズを変更するアニメーション.gif
+|   |                   |           コンポーザブルの移動をアニメーション化する.gif
+|   |                   |           サイズ変更のアニメーション.gif
+|   |                   |           テキストの拡大縮小.gif
+|   |                   |           テキストの色のアニメーション.gif
+|   |                   |           列内のアイテムの表示と非表示をアニメーション化.gif
+|   |                   |           同時実行アニメーションのイメージ.gif
+|   |                   |           未選択状態.png
+|   |                   |           画面遷移のアニメーション.gif
+|   |                   |           異なる型のコンテンツに入れ替えるアニメーション.gif
+|   |                   |           背景色のアニメーション.gif
+|   |                   |           自身の配置場所の移動によって、兄弟の配置を変更したい場合.gif
+|   |                   |           透明度をアニメーション化する.gif
+|   |                   |           連続したアニメーションのイメージ.gif
+|   |                   |           選択済み状態.png
+|   |                   |           
+|   |                   \---9.ユーザー補助
+|   |                       |   1.概要.md
+|   |                       |   2.主な手順.md
+|   |                       |   3.セマンティクス.md
+|   |                       |   
+|   |                       \---画像
+|   |                               タップイベントを親コンテナで処理する.gif
+|   |                               タップターゲットサイズの自動拡張.gif
+|   |                               タップ不可なチェックボックス.png
+|   |                               タップ可能なチェックボックス.png
+|   |                               ブックマークが選択された状態.png
+|   |                               ユーザー情報の一つのかたまり.png
+|   |                               リストアイテム.png
+|   |                               全体が選択された状態.png
+|   |                               共有アイコンのイメージ.png
+|   |                               最小サイズを指定した Box.png
+|   |                               要素を手動でマージした例.png
+|   |                               記事を表示する画面.png
+|   |                               
+|   +---Android_Studio
+|   |   |   Android Studioで使用できる Java のバージョン？.url
+|   |   |   AndroidStudioインストール後の初期設定.md
+|   |   |   BuildOutputの文字化けを解消する方法.pdf
+|   |   |   Githubからプロジェクトをインポート.md
+|   |   |   GradleUserHomeのデフォルト値を変更する.md
+|   |   |   Java8の機能を使用する.md
+|   |   |   TODO以外のアノテーションコメントの設定.md
+|   |   |   レイアウトの階層表示.md
+|   |   |   便利な設定.md
+|   |   |   注意事項.md
+|   |   |   複数のPCで開発する場合にJavaバージョンを統一する.md
+|   |   |   
+|   |   +---logcat
+|   |   |   |   logcat を使用してログを書き込み、表示する.url
+|   |   |   |   Logcat.md
+|   |   |   |   Logcatにログが表示されない条件.md
+|   |   |   |   Log_e_w_i_d_vの使い分け.md
+|   |   |   |   クラッシュ時にLogcatに表示されないことがある.md
+|   |   |   |   
+|   |   |   \---画像
+|   |   |           look_at_run_log.png
+|   |   |           
+|   |   +---_爆速コーディングのコツ
+|   |   |       コードエディタ編.md
+|   |   |       ショートカットキー.md
+|   |   |       ショートカットキー.url
+|   |   |       レイアウトエディタ編.md
+|   |   |       爆速コーディングのコツ.md
+|   |   |       画像リソース編.md
+|   |   |       
+|   |   \---コンパイルエラーの詳細確認方法
+|   |           command_line_options.png
+|   |           see_the_compiler_error.png
+|   |           コンパイルエラーの詳細確認方法.md
+|   |           
+|   +---Annotation
+|   |       Annotation.md
+|   |       
+|   +---APILevel
+|   |       新しいAPILevelが誕生したときにやることリスト.md
+|   |       
+|   +---Application
+|   |       Applicationクラスのライフサイクル.md
+|   |       カスタマイズしたApplicationクラスのonCreateが呼ばれない.md
+|   |       
+|   +---BroadcastReceiver
+|   |   |   BroadcastReceiver.md
+|   |   |   Broadcastが受信できない場合のトラブルシューティング.md
+|   |   |   MY_PACKAGE_REPLACEDが受信できずに苦戦した話.md
+|   |   |   よくあるエラー.md
+|   |   |   よく使用するBroadcast一覧.md
+|   |   |   マニフェストの設定.md
+|   |   |   レシーバーの有効化と無効化.md
+|   |   |   自身のアプリアップデートのBroadcastを受け取る.md
+|   |   |   
+|   |   +---APIレベル26対応
+|   |   |       暗黙的なブロードキャストへの制限.md
+|   |   |       
+|   |   \---_Utility
+|   |           ReceiverManager.md
+|   |           
+|   +---Canvas
+|   |   |   Canvasとは.md
+|   |   |   clipRect.md
+|   |   |   drawLine.md
+|   |   |   drawText.md
+|   |   |   drawTextで中央に描画する方法.pdf
+|   |   |   drawTextで中央に描画する方法.webloc
+|   |   |   drawした内容の削除方法.md
+|   |   |   saveとrestore.md
+|   |   |   saveとrestore.pdf
+|   |   |   saveとrestore.webloc
+|   |   |   【Android】CanvasにPathで破線や点線を書くのに便利なPathEffectの紹介   Qiita.pdf
+|   |   |   背景色を設定する.md
+|   |   |   
+|   |   +---Path
+|   |   |       Pathで破線を書く方法.url
+|   |   |       基本的な使い方.md
+|   |   |       
+|   |   \---画像
+|   |           font_lines.png
+|   |           font_metrix.png
+|   |           
+|   +---ContentProvider
+|   |       ContentProvider.md
+|   |       Intentを使用したプロバイダへのアクセス.md
+|   |       MIMEタイプ.md
+|   |       URI.md
+|   |       コントラクトクラス.md
+|   |       プロバイダからデータを取得する.md
+|   |       マニフェストの記載方法.md
+|   |       標準搭載のプロバイダ.md
+|   |       読み書きの権限.md
+|   |       
+|   +---Context
+|   |       Context.md
+|   |       
+|   +---Dialog
+|   |   |   DialogFragmentの利用.md
+|   |   |   サンプルリンク集.md
+|   |   |   ボタンタップ時にダイアログが閉じられないようにする方法.md
+|   |   |   
+|   |   \---画像
+|   |           日付選択ダイアログ.png
+|   |           時刻選択ダイアログ.png
+|   |           
+|   +---File
+|   |       autobackup.pdf
+|   |       
+|   +---Fragment
+|   |   |   activity_fragment_lifecycle.pdf
+|   |   |   FragmentでfindViewByIdをする.pdf
+|   |   |   FragmentでfindViewByIdをする.webloc
+|   |   |   Fragmentとは.md
+|   |   |   Fragmentのライフサイクル.xlsx
+|   |   |   Fragmentの利用.md
+|   |   |   Fragmentの追加_削除_入れ替え.md
+|   |   |   Fragment内のViewからのイベントをFragmentで受け取るシンプルな方法.md
+|   |   |   ListFragment.md
+|   |   |   onActivityCreatedの非推奨対応.md
+|   |   |   UIを持たないFragment.md
+|   |   |   アニメーション.md
+|   |   |   ライフサイクル.md
+|   |   |   基礎部分サンプルコード.md
+|   |   |   
+|   |   +---DialogFragment
+|   |   |       DialogFragment.md
+|   |   |       その他.md
+|   |   |       画面回転時にダイアログが再表示されない場合.md
+|   |   |       
+|   |   +---Fragmentの入れ子構造
+|   |   |       Fragmentの入れ子構造.md
+|   |   |       manager-mappings.png
+|   |   |       
+|   |   \---PreferenceFragment
+|   |           PreferenceFragment.md
+|   |           
+|   +---Intent
+|   |   |   AlarmManager経由でIntentにExtraを入れて渡す方法.md
+|   |   |   Dataについて.url
+|   |   |   Intent.md
+|   |   |   よく使用する Action.md
+|   |   |   よく使用する Category.md
+|   |   |   よく使用する Intent.url
+|   |   |   アプリのSTOP状態について.md
+|   |   |   インテント解決のAND_ORについて.pdf
+|   |   |   インテント解決のAND_ORについて.webloc
+|   |   |   明示的Intent.md
+|   |   |   暗黙的Intent.md
+|   |   |   
+|   |   \---PendingIntent
+|   |           IntentSender.md
+|   |           Mutabilityフラグ.md
+|   |           PendingIntent.md
+|   |           
+|   +---Jetpack Compose
+|   |   |   dp-px 変換と sp-px 変換.md
+|   |   |   Jetpack Compose チュートリアル.md
+|   |   |   コンポーズされた回数を確認する.md
+|   |   |   一つの画面内での View システムと Jetpack Compose の混在.md
+|   |   |   
+|   |   \---画像
+|   |           再コンポーズされた回数.png
+|   |           
+|   +---Layout・View
+|   |   |   @idと@+idの違い.md
+|   |   |   Activityへの参照を取得する方法.md
+|   |   |   declare-styleable,attrタグ.md
+|   |   |   Fragmentへの参照を取得する方法.md
+|   |   |   ID.md
+|   |   |   invalidateとrequestLayoutの違い.pdf
+|   |   |   invalidateとrequestLayoutの違い.webloc
+|   |   |   Javaコードでレイアウト・ビューの操作.md
+|   |   |   LayoutParamsについて.md
+|   |   |   layout_gravityとgravityの違い.md
+|   |   |   Tag.md
+|   |   |   Viewの描画手順.md
+|   |   |   wrap_contentしているViewの高さを取得する方法.md
+|   |   |   よく使うAndroid_API.md
+|   |   |   よく使うAndroid_API_逆引き.md
+|   |   |   カスタムレイアウトの作り方.md
+|   |   |   タブレットレイアウト対応.md
+|   |   |   ビューのライフサイクル.pdf
+|   |   |   ビューのライフサイクル.webloc
+|   |   |   
+|   |   +---Layout
+|   |   |   +---ViewGroup
+|   |   |   |   |   clipToPadding属性.md
+|   |   |   |   |   
+|   |   |   |   \---画像
+|   |   |   |           clipToPaddingがfalseの場合.PNG
+|   |   |   |           clipToPaddingがtrueの場合.PNG
+|   |   |   |           
+|   |   |   +---_ConstraintLayout
+|   |   |   |   |   Group.md
+|   |   |   |   |   GuideLine.md
+|   |   |   |   |   GUIの使用方法.md
+|   |   |   |   |   layout_marginBaselineの使い方.md
+|   |   |   |   |   match_parentの指定方法.md
+|   |   |   |   |   setMeasuredDimensionが効かない場合.md
+|   |   |   |   |   weightの設定方法.md
+|   |   |   |   |   マージンが効いていない場合.md
+|   |   |   |   |   制約が効いていない場合.md
+|   |   |   |   |   動的にViewを追加する.md
+|   |   |   |   |   基本はwrap_contentにしたいが、最大長は制約で指定したい場合.md
+|   |   |   |   |   縦横のアスペクト比で指定する方法.md
+|   |   |   |   |   表示サイズの変更に対する挙動.md
+|   |   |   |   |   親ViewGroupに対するパーセンテージで指定する.md
+|   |   |   |   |   
+|   |   |   |   +---Barrier
+|   |   |   |   |       barrier-end.png
+|   |   |   |   |       Barrier.md
+|   |   |   |   |       
+|   |   |   |   +---ConstraintLayout基礎
+|   |   |   |   |       ConstraintLayout基礎.md
+|   |   |   |   |       constraint_auto_return_after.png
+|   |   |   |   |       constraint_auto_return_before.png
+|   |   |   |   |       constraint_centering.png
+|   |   |   |   |       
+|   |   |   |   +---チェーンスタイル
+|   |   |   |   |       chains-styles.webp
+|   |   |   |   |       チェーンスタイル.md
+|   |   |   |   |       
+|   |   |   |   +---余白を比率指定したい場合_bias
+|   |   |   |   |       bias_sample.png
+|   |   |   |   |       余白を比率指定したい場合_bias.md
+|   |   |   |   |       
+|   |   |   |   +---円状に配置する
+|   |   |   |   |       circle_sample1.png
+|   |   |   |   |       circle_sample2.png
+|   |   |   |   |       Viewを円状に配置する方法.md
+|   |   |   |   |       
+|   |   |   |   \---画像
+|   |   |   |           constraintlayout_aspect_ratio.png
+|   |   |   |           constraint_layout_dynamically_create.png
+|   |   |   |           
+|   |   |   +---_CoordinatorLayout
+|   |   |   |       anchorの使い方.pdf
+|   |   |   |       anchorの使い方.webloc
+|   |   |   |       CoordinatorLayout.md
+|   |   |   |       
+|   |   |   +---_FrameLayout
+|   |   |   |       FrameLayout.md
+|   |   |   |       
+|   |   |   +---_MotionLayout
+|   |   |   |       KeyPosition.md
+|   |   |   |       基本.md
+|   |   |   |       
+|   |   |   \---レイアウトXML
+|   |   |           include後のパラメータ上書き.md
+|   |   |           よく使うtools属性.md
+|   |   |           レイアウトの再利用.md
+|   |   |           レイアウトの統一.md
+|   |   |           
+|   |   +---List系
+|   |   |       Adapter.md
+|   |   |       RecyclerView.md
+|   |   |       RecyclerViewでスワイプ.md
+|   |   |       
+|   |   +---_View
+|   |   |   |   backgroundで色がつかない.md
+|   |   |   |   StubView.md
+|   |   |   |   Viewのよく使用するプロパティ.md
+|   |   |   |   XY_translationXY_TopLeftの違い.md
+|   |   |   |   ビューに枠をつける.md
+|   |   |   |   動的に生成したViewにマージンが適用されない.md
+|   |   |   |   
+|   |   |   +---backgroundTint
+|   |   |   |       backgroundTint.pdf
+|   |   |   |       backgroundTint.url
+|   |   |   |       backgroundTint.webloc
+|   |   |   |       backgroundTintの隠れ機能.md
+|   |   |   |       
+|   |   |   +---_カスタムビュー
+|   |   |   |   |   attrタグのformatに指定できる型.md
+|   |   |   |   |   canvas_drawTextのx座標について.xlsx
+|   |   |   |   |   CanvasとPaintの基本的な使い方.md
+|   |   |   |   |   Color.md
+|   |   |   |   |   MeasureSpecについて.md
+|   |   |   |   |   onDrawの使用方法.md
+|   |   |   |   |   onMeasure_onLayout_onDrawの使用方法.md
+|   |   |   |   |   onMeasureについて.md
+|   |   |   |   |   styleableプロパティの全要素のリファレンス.pdf
+|   |   |   |   |   styleableプロパティの全要素のリファレンス.webloc
+|   |   |   |   |   Viewのライフサイクル.avif
+|   |   |   |   |   カスタムビューの作り方_三種.md
+|   |   |   |   |   カスタムビューの作り方_基本形.md
+|   |   |   |   |   カスタムビューを動的に生成したときのパラメータの渡し方.md
+|   |   |   |   |   コンストラクタの種類.md
+|   |   |   |   |   テキスト描画の詳細オプション.pdf
+|   |   |   |   |   テキスト描画の詳細オプション.webloc
+|   |   |   |   |   ビューのライフサイクル1.pdf
+|   |   |   |   |   ビューのライフサイクル1.webloc
+|   |   |   |   |   ビューのライフサイクル2.pdf
+|   |   |   |   |   ビューのライフサイクル2.webloc
+|   |   |   |   |   画面回転時の状態保存.md
+|   |   |   |   |   
+|   |   |   |   +---old
+|   |   |   |   |       カスタムビューの作り方_サンプルコード1.pdf
+|   |   |   |   |       カスタムビューの作り方_サンプルコード1.webloc
+|   |   |   |   |       カスタムビューの作り方_サンプルコード2.pdf
+|   |   |   |   |       カスタムビューの作り方_サンプルコード2.webloc
+|   |   |   |   |       カスタムビューの作り方_岡山女子エンジニア日誌.pdf
+|   |   |   |   |       カスタムビューの作り方_岡山女子エンジニア日誌.webloc
+|   |   |   |   |       三種類のカスタムビューの作り方.webloc
+|   |   |   |   |       
+|   |   |   |   \---画像
+|   |   |   |           anti_alias.gif
+|   |   |   |           canvas_drawTextのx座標について.png
+|   |   |   |           onDraw_onLayout.jpg
+|   |   |   |           
+|   |   |   \---画像
+|   |   |           difference_between_XY_translationXY_TopLeft.png
+|   |   |           difference_between_XY_translationXY_TopLeft.xlsx
+|   |   |           
+|   |   +---レイアウトxml
+|   |   |       ワーニングの消し方.md
+|   |   |       
+|   |   \---画像
+|   |           custom_view_sample.png
+|   |           
+|   +---Lifecycle
+|   |       Lifecycle.md
+|   |       superのコールバックをいつ呼ぶか.md
+|   |       
+|   +---Loader
+|   |       LoaderManager.md
+|   |       
+|   +---Log
+|   +---Manifest
+|   |   |   Android アプリリンクを追加する_Android_Developer.webloc
+|   |   |   AndroidManifestについて.md
+|   |   |   App is not indexable by Google Searchのワーニングを消す.pdf
+|   |   |   App is not indexable by Google Searchのワーニングを消す.webloc
+|   |   |   buildgradleの値を参照する.md
+|   |   |   マニフェストファイルを管理する.md
+|   |   |   
+|   |   \---画像
+|   |           優先順位に従ったマージの流れ.png
+|   |           
+|   +---Navigation
+|   |       navigationUp() で前の画面へ戻る際にパラメータを渡す方法.md
+|   |       「上へ」と「戻る」.md
+|   |       よくあるエラー.md
+|   |       アクション.md
+|   |       グローバルアクション.md
+|   |       デスティネーション.md
+|   |       デスティネーションを移動する.md
+|   |       ナビゲーショングラフ.md
+|   |       ナビゲーションホスト.md
+|   |       ネストされたグラフ.md
+|   |       パラメータを渡しながら移動する.md
+|   |       主要な各クラスの役割.md
+|   |       基本.md
+|   |       用語.md
+|   |       
+|   +---NavigationDrawer
+|   |       AndroidStudio上でドロワーが開いた状態をプレビュー表示する.md
+|   |       NavigationViewのテーマの設定.md
+|   |       ドロワーメニューがステータスバーの背後に隠れる場合.md
+|   |       別画面に遷移する場合、画面は一旦破棄される.md
+|   |       
+|   +---Notification
+|   |   |   APIレベル別機能実装可否一覧.xlsx
+|   |   |   Notification.md
+|   |   |   OSバージョン別まとめ.xlsx
+|   |   |   ヘッドアップ通知.md
+|   |   |   通知の概要.md
+|   |   |   通知をスワイプしても消えない場合.md
+|   |   |   
+|   |   +---画像
+|   |   |       アクションボタン.png
+|   |   |       アクティブなアプリ.svg
+|   |   |       カテゴリごとにどんな人からで指定した相手からのみ音やバイブレーションを出す.png
+|   |   |       ステーバースバー.png
+|   |   |       ヘッドアップ通知.png
+|   |   |       権限をリクエストする.md
+|   |   |       通知の折たたみと展開.png
+|   |   |       通知の構造.png
+|   |   |       通知グループの折たたみと展開.png
+|   |   |       通知ドロワー.png
+|   |   |       
+|   |   \---通知チャネル
+|   |       |   通知チャネル.md
+|   |       |   
+|   |       \---画像
+|   |               Descriptionが長すぎる場合.png
+|   |               アプリ別通知設定トップ画面.png
+|   |               通知チャネル設定画面.png
+|   |               
+|   +---OS個別対応
+|   |   |   OSバージョンアップに伴う新機能のまとめ.xlsx
+|   |   |   SDKやplatformAPIなどの違い.md
+|   |   |   バージョン分岐IF文.md
+|   |   |   主要なクラスの対応APIレベル.xlsx
+|   |   |   
+|   |   +---_Android8.0
+|   |   |       Android8.md
+|   |   |       バックグラウンドサービスの制限.md
+|   |   |       
+|   |   \---_Android9.0
+|   |           Android9.md
+|   |           
+|   +---Paint
+|   |       Paint.md
+|   |       
+|   +---Permission
+|   |       adbコマンドでpermissionを変更する方法.md
+|   |       Android 6 0のRuntime Permissionに対応する.pdf
+|   |       Android 6.0のRuntime Permissionに対応する.webloc
+|   |       APIレベルとパーミッション.xlsx
+|   |       OSバージョン別まとめ.xlsx
+|   |       Permission の実装を検討する際の全体像.dio
+|   |       Permission の実装を検討する際の全体像.svg
+|   |       Permissionの概要.md
+|   |       Permissionを宣言する.md
+|   |       Permissionを避ける方法.md
+|   |       よく使用されるパーミッション.xlsx
+|   |       パーミッションが必要であることを明示する.md
+|   |       実行時 Permission の処理フロー.dio
+|   |       実行時 Permission の処理フロー.svg
+|   |       
+|   +---RecyclerView
+|   |   |   Adapter のコールバックが呼ばれない場合.md
+|   |   |   ItemAnimator.md
+|   |   |   notify系メソッド.md
+|   |   |   アイテム内の特定のViewをデフォルトで非表示にする.md
+|   |   |   アニメーション.md
+|   |   |   タップしたアイテムと別のアイテムが変更される場合.md
+|   |   |   余白や区切り線の付け方.md
+|   |   |   基本形.md
+|   |   |   挙動調整.md
+|   |   |   
+|   |   \---画像
+|   |           onDrawとonDrawOver.png
+|   |           outRect.png
+|   |           
+|   +---Service
+|   |   |   AIDL.md
+|   |   |   android_oreo_background_service_restriction.pdf
+|   |   |   android_oreo_background_service_restriction.webloc
+|   |   |   Android_Oreoにおけるバックグラウンドサービスの実行制限.md
+|   |   |   IntentServiceクラス.md
+|   |   |   JobIntentServiceクラス.md
+|   |   |   Serviceについて.md
+|   |   |   Serviceのライフサイクル.xlsx
+|   |   |   Serviceクラス.md
+|   |   |   バインドされたService.md
+|   |   |   フォアグラウンドService.md
+|   |   |   通知のボタンタップ時にBroadcast経由でServiceを停止する.pdf
+|   |   |   通知のボタンタップ時にBroadcast経由でServiceを停止する.webloc
+|   |   |   
+|   |   \---トラブルシューティング
+|   |           Serviceが生成されない場合のトラブルシューティング.md
+|   |           フォアグラウンドサービスのNotificationがスワイプしても消せない.md
+|   |           
+|   +---Style_Theme
+|   |   |   APIレベルによって参照するstyle.xmlファイルを切り替える.md
+|   |   |   attrs.md
+|   |   |   ElevationOverlay.md
+|   |   |   shapeAppearance.md
+|   |   |   Style.md
+|   |   |   Style_Theme共通部分と差部分.md
+|   |   |   StyleとThemeの違い2.md
+|   |   |   textAppearance.md
+|   |   |   Theme.md
+|   |   |   xmlの属性に指定する@androidなどの意味.md
+|   |   |   よく使用するテーマ属性.xlsx
+|   |   |   スタイルの要素としてテーマオーバーレイを指定したい場合.md
+|   |   |   ダークテーマ.md
+|   |   |   テーマとスタイルとオーバーレイの使い分け.xlsx
+|   |   |   テーマとスタイルについて.pdf
+|   |   |   テーマとスタイルについて.webloc
+|   |   |   テーマの設定フローチャート.dio
+|   |   |   フォント.md
+|   |   |   参考.md
+|   |   |   
+|   |   \---Theme
+|   |       |   MaterialComponentsのテーマカラーがどこに適用されるのかを調べて見た.pdf
+|   |       |   
+|   |       +---Shape
+|   |       |   |   Shape.md
+|   |       |   |   
+|   |       |   \---画像
+|   |       |           各ウィジェットの大中小の分類.png
+|   |       |           
+|   |       +---タイポグラフィ（フォント）
+|   |       |       Typograpy.md
+|   |       |       
+|   |       \---色
+|   |               Themeの活用例_ColorStateList.md
+|   |               Themeを含めたリソースの命名規則.md
+|   |               
+|   +---UI
+|   |   |   .DS_Store
+|   |   |   ウィジェット逆引き辞書.md
+|   |   |   画面の各部分の名称.pdf
+|   |   |   画面の各部分の名称.webloc
+|   |   |   
+|   |   +---_設計
+|   |   |   |   TextViewを横並びで配置する場合はベースラインを揃える.md
+|   |   |   |   良いUIとは.md
+|   |   |   |   
+|   |   |   \---画像
+|   |   |           foward_navigation.png
+|   |   |           horizontal_navigation.png
+|   |   |           reverse_navigation.png
+|   |   |           
+|   |   \---画像
+|   |           FlexboxLayout.png
+|   |           NestedScrollView1.gif
+|   |           NestedScrollView2.gif
+|   |           
+|   +---Widget
+|   |   |   SnackBar.md
+|   |   |   
+|   |   +---Button
+|   |   |   |   backgroundTint.md
+|   |   |   |   paddingを小さくしてもボタンが小さくならない.md
+|   |   |   |   ボタンWidgetの枠と実際のボタン画像との間を埋めたい.md
+|   |   |   |   丸いリップルエフェクトが表示されるボタン.md
+|   |   |   |   図解でわかるパラメータ.xlsx
+|   |   |   |   
+|   |   |   \---MaterialButton
+|   |   |           AndroidのMaterialButtonがすごい良かった話.pdf
+|   |   |           AndroidのMaterialButtonがすごい良かった話.webloc
+|   |   |           MaterialButton.md
+|   |   |           アイコンのみのボタン.md
+|   |   |           アウトラインのボタン.md
+|   |   |           
+|   |   +---ImageFilterView
+|   |   |       ImageFilterView.md
+|   |   |       
+|   |   +---ImageView
+|   |   |   |   getIntrinsicWidthとgetWidthの違い.md
+|   |   |   |   ImageViewのscaleTypeを秒で決める.pdf
+|   |   |   |   ImageViewのscaleTypeを秒で決める.webloc
+|   |   |   |   ImageViewの大きさの指定方法.xlsx
+|   |   |   |   scaleType調査_試験パターン表.pdf
+|   |   |   |   scaleType調査_試験結果.pdf
+|   |   |   |   scaleType調査結果.xlsx
+|   |   |   |   Viewサイズによって画像サイズを変える.pdf
+|   |   |   |   【古い】表示方法まとめ.md
+|   |   |   |   画像サイズによってViewサイズを変える.pdf
+|   |   |   |   
+|   |   |   \---画像
+|   |   |           center_crop.png
+|   |   |           fit_center.png
+|   |   |           fit_xy.png
+|   |   |           
+|   |   +---ProgressBar
+|   |   |       回転するプログレスバー.md
+|   |   |       進捗率を表示するプログレスバー.md
+|   |   |       
+|   |   +---RadioButton
+|   |   |   |   UI調整.md
+|   |   |   |   イベントリスナー一覧.md
+|   |   |   |   
+|   |   |   \---image
+|   |   |           RadioButton不要な余白.PNG
+|   |   |           RadioButton不要な余白を削除.PNG
+|   |   |           塗りつぶし色の指定.PNG
+|   |   |           
+|   |   +---ScrollView
+|   |   |       ScrollView.md
+|   |   |       スクロールしない場合のトラブルシューティング.md
+|   |   |       
+|   |   +---Spinner
+|   |   |   |   onNothingSelectedコールバックはいつ呼ばれるのか.md
+|   |   |   |   ロジック関連.md
+|   |   |   |   
+|   |   |   \---ユーザーインターフェース関連
+|   |   |           spinner_text_align.png
+|   |   |           ユーザーインターフェース関連.md
+|   |   |           
+|   |   +---SurfaceView
+|   |   |       SurfaceView.md
+|   |   |       
+|   |   +---Switch
+|   |   |   \---スイッチを中央寄せにする方法
+|   |   |           switch_width_0dp.png
+|   |   |           switch_width_wrap_content.png
+|   |   |           スイッチを中央寄せにする方法.md
+|   |   |           
+|   |   +---TextView_EditText
+|   |   |   |   inputTypeに指定できる属性値.pdf
+|   |   |   |   inputTypeに指定できる属性値.webloc
+|   |   |   |   文字単位でスタイルを適用する方法.md
+|   |   |   |   
+|   |   |   +---AutoCompleteTextView
+|   |   |   |       AutoCompleteTextView.md
+|   |   |   |       
+|   |   |   +---EditText
+|   |   |   |   |   EditText.md
+|   |   |   |   |   TextWatcherで入力の変更を処理する.md
+|   |   |   |   |   カーソルを合わせると個人情報が候補表示される.md
+|   |   |   |   |   
+|   |   |   |   \---トラブルシューティング
+|   |   |   \---TextView
+|   |   |           Android8.0 の TextView で改行位置が他と異なる場合.pdf
+|   |   |           TextView.md
+|   |   |           余白等まとめ.xlsx
+|   |   |           開閉するTextViewの作り方.md
+|   |   |           
+|   |   +---Widget一覧
+|   |   |   |   Widget一覧.md
+|   |   |   |   
+|   |   |   \---image
+|   |   |           Switch.PNG
+|   |   |           ToggleButton.PNG
+|   |   |           
+|   |   +---_CheckBox
+|   |   |       CheckBox.md
+|   |   |       checkbox_right_space.png
+|   |   |       DrawableへのInsetの指定方法.md
+|   |   |       よく使用するAPI.md
+|   |   |       クリックイベントをインターセプトして、チェック状態をプログラムで管理する方法.md
+|   |   |       右側にできる余計なスペースの削除方法.md
+|   |   |       図解でわかるパラメータ.xlsx
+|   |   |       
+|   |   +---_FAB
+|   |   |       FAB の基本.md
+|   |   |       FAB の応用.md
+|   |   |       FAQ.md
+|   |   |       Snackbar で隠れないようにする方法.md
+|   |   |       
+|   |   +---_RecyclerView
+|   |   |       onBindViewHolder内でポジションを取得する方法.md
+|   |   |       アイテムクリック時にリップルエフェクトを行う.md
+|   |   |       トラブルシューティング.md
+|   |   |       
+|   |   +---_SearchView
+|   |   |       SearchView.md
+|   |   |       
+|   |   \---_タイトルバー
+|   |       |   ActionBar.md
+|   |       |   ToolBar.md
+|   |       |   アプリバーの追加_Android_Developers.webloc
+|   |       |   システム UI の表示設定を制御する_Android_Developers.webloc
+|   |       |   
+|   |       \---画像
+|   |               画面の部品名称.png
+|   |               
+|   +---アニメーション
+|   |   |   AnimatedVectorDrawable.md
+|   |   |   Animator.md
+|   |   |   AnimatorSet.md
+|   |   |   Interpolator.md
+|   |   |   Interpolatorの種類.md
+|   |   |   LayoutTransition.md
+|   |   |   ObjectAnimator.md
+|   |   |   ShapeShifter.md
+|   |   |   Transition.md
+|   |   |   TransitionFramework.md
+|   |   |   TransitionManager.md
+|   |   |   TransitionSet.md
+|   |   |   TypeEvaluator.pdf
+|   |   |   TypeEvaluator.webloc
+|   |   |   ValueAnimator.md
+|   |   |   VectorDrawable.md
+|   |   |   ViewPropertyAnimator.md
+|   |   |   Viewの表示_非表示.md
+|   |   |   アニメーションが行われない場合.md
+|   |   |   アニメーションの種類.xlsx
+|   |   |   クラス継承一覧.xlsx
+|   |   |   ビューアニメーション.url
+|   |   |   プロパティアニメーション.md
+|   |   |   プロパティアニメーションとビューアニメーション.url
+|   |   |   描画可能リソース一覧.xlsx
+|   |   |   
+|   |   +---_ViewAnimationSystem
+|   |   |       fillAfter_fillBefore_fillEnabled.md
+|   |   |       繰り返し.md
+|   |   |       
+|   |   \---画像
+|   |           activity_transition_shared_element.gif
+|   |           
+|   +---アプリの基盤設定
+|   |       DEBUG ビルドかどうかを判定する if 文.md
+|   |       アプリケーションIDとパッケージ名.md
+|   |       
+|   +---アプリバー_ステータスバー
+|   |   |   ThemeOverlay.AppCompat.Dark.ActionBarのテーマ属性.md
+|   |   |   アプリバー_ステータスバーの高さの取得.md
+|   |   |   
+|   |   +---_アプリバー
+|   |   |       ActionBar と Toolbar の違い.md
+|   |   |       ActionProvider.md
+|   |   |       Toolbar.md
+|   |   |       
+|   |   \---画像
+|   |           status_opacity0_nav_opacity0.png
+|   |           status_opacity0_nav_opacity1.png
+|   |           status_opacity1_nav_opacity0.png
+|   |           status_opacity1_nav_opacity1.png
+|   |           
+|   +---アプリ情報
+|   |       アプリのバージョンを取得する.md
+|   |       
+|   +---アプリ起動
+|   |   |   アプリ起動.md
+|   |   |   様々なアプリの起動方法.md
+|   |   |   
+|   |   +---Androidアプリリンク
+|   |   |       アプリが起動しない場合.md
+|   |   |       アプリリンクの仕組み.md
+|   |   |       アプリリンクの作成手順.md
+|   |   |       
+|   |   \---カスタムURLスキーム
+|   |           カスタムURLスキーム実装方法の解説.url
+|   |           
+|   +---アーキテクチャ
+|   |   |   OSごとの実装差分まとめ.pdf
+|   |   |   アーキテクチャ.md
+|   |   |   データベースアクセス方法の選定.xlsx
+|   |   |   リポジトリ.md
+|   |   |   
+|   |   +---_MVC
+|   |   |       android_mvc_framework.pdf
+|   |   |       android_mvc_framework.webloc
+|   |   |       MVCモデルについて.md
+|   |   |       
+|   |   \---_MVVM
+|   |       |   .DS_Store
+|   |       |   DataBindingで実現するMVVM_Architecture.pdf
+|   |       |   LiveDataとObservableFieldの違い.md
+|   |       |   MVVM.md
+|   |       |   RadioButtonの設計.dio
+|   |       |   Viewで発生したタッチ等のイベントをViewModelに連携する方法.md
+|   |       |   トラブルシューティング.md
+|   |       |   各コンポーネント間の依存関係.xlsx
+|   |       |   
+|   |       +---DataBinding
+|   |       |   |   BindingAdapter.md
+|   |       |   |   BindingAdapter2.md
+|   |       |   |   Bindingクラス.md
+|   |       |   |   DataBinding.md
+|   |       |   |   DataBindingUtil.md
+|   |       |   |   DialogFragmentのDataBinding.md
+|   |       |   |   RecyclerViewのDataBinding.md
+|   |       |   |   setLifecycleOwner.md
+|   |       |   |   TwoWayDataBinding.md
+|   |       |   |   プレビュー用のデフォルト値.md
+|   |       |   |   ワーニング一覧.md
+|   |       |   |   定義済みBindingAdapter一覧.pdf
+|   |       |   |   
+|   |       |   +---InverseBindingAdapter
+|   |       |   |       InverseBindingAdapterサンプルプロジェクト.url
+|   |       |   |       
+|   |       |   \---_RadioButton
+|   |       |       |   .DS_Store
+|   |       |       |   
+|   |       |       \---こんなやり方もあるっている参考資料
+|   |       |               Android Data Binding Library Tutorial.pdf
+|   |       |               Android Data Binding Library Tutorial.webloc
+|   |       |               android How to bind method on RadioGroup on checkChanged event with data binding   Stack Overflow.pdf
+|   |       |               android How to bind method on RadioGroup on checkChanged event with data-binding - Stack Overflow.webloc
+|   |       |               Android UI 基本 ラジオボタン.pdf
+|   |       |               Android UI 基本 ラジオボタン.webloc
+|   |       |               
+|   |       +---LiveData
+|   |       |       AbsentLiveData.md
+|   |       |       LiveDataで一度だけの通知.md
+|   |       |       LiveDataコンポーネント.md
+|   |       |       LiveData取得時のパラメータが変わる度に監視し直す方法.md
+|   |       |       MediatorLiveData.md
+|   |       |       observe()メソッドの第二引数に渡すObserverのonChanged()が呼ばれるタイミング.md
+|   |       |       observeするタイミング.md
+|   |       |       observeメソッドの第一引数について.md
+|   |       |       Preferenceの変更を監視するLiveData.md
+|   |       |       Transformations.md
+|   |       |       【必須】値の更新時にNullPointerが発生しないようにする.md
+|   |       |       複数のViewModelで一つのLiveDataを共有する.md
+|   |       |       
+|   |       +---LiveDataDataBinding
+|   |       |   |   LiveDataとDataBindingで一度だけの通知.md
+|   |       |   |   LiveDataとDataBindingを使用したBindingAdapter.md
+|   |       |   |   LiveDataとDataBindingを使用したRecyclerView.md
+|   |       |   |   LiveDataとDataBindingを使用したRecyclerViewで一度だけの通知.md
+|   |       |   |   LiveDataとDatabindingを組み合わせる.md
+|   |       |   |   
+|   |       |   \---画像
+|   |       |           LiveDataとDataBindingを使用した各コンポーネントの通知方法.png
+|   |       |           LiveDataとDataBindingを使用した各コンポーネントの通知方法.xlsx
+|   |       |           
+|   |       +---SavedStateHandler
+|   |       |       SavedStateHandler.md
+|   |       |       SavedStateHandlerを使用してプロセス強制終了に対応する.pdf
+|   |       |       SavedStateHandlerを使用してプロセス強制終了に対応する.webloc
+|   |       |       
+|   |       +---ViewBinding
+|   |       |       includeしたレイアウトへのViewBinding.md
+|   |       |       onDestroyViewでバインディングクラスをクリーンアップする理由.md
+|   |       |       
+|   |       +---ViewModel
+|   |       |       SavedStateHandler.md
+|   |       |       ViewModelとSaveInstanceStateと永続ストレージの比較.md
+|   |       |       ViewModelのコンストラクタにパラメータを渡す.md
+|   |       |       ViewModelコンポーネント.md
+|   |       |       ViewModel生成ついて.md
+|   |       |       複数のFragmentでViewModelを共有する.md
+|   |       |       
+|   |       \---画像
+|   |               Android の MVVM の図.avif
+|   |               
+|   +---ウィンドウインセット
+|   |       001.XMLレイアウトでエッジtoエッジを回避する.md
+|   |       
+|   +---エミュレーター
+|   |       エラー一覧.xlsx
+|   |       
+|   +---ガベージコレクション
+|   |       Activity や Fragment への参照を保持するのはNG.md
+|   |       
+|   +---キーボード
+|   |       InputMethodManager.md
+|   |       キーボードのあれこれ.md
+|   |       キーボード入力の処理_Android_デベロッパー_Android_Developers.webloc
+|   |       キーボード表示時にViewが隠れないようにする.md
+|   |       背景タップでキーボードを隠す.md
+|   |       
+|   +---スリープ
+|   |       デバイススリープ対策.md
+|   |       
+|   +---セキュリティ
+|   |       AndroidのAPKを逆コンパイルする.pdf
+|   |       
+|   +---タッチイベント関連
+|   |   |   タッチイベントの透過と優先順位.md
+|   |   |   タッチイベントを独自領域で受け取る方法.md
+|   |   |   
+|   |   +---_タッチイベントの検出
+|   |   |   |   GestureDetecotr.md
+|   |   |   |   MotionEvent.md
+|   |   |   |   onTouch.md
+|   |   |   |   onTouchとonTouchEventの違い.md
+|   |   |   |   タッチイベントリスナー一覧.xlsx
+|   |   |   |   パンとは.md
+|   |   |   |   フリングとスクロール.md
+|   |   |   |   マルチタッチ.md
+|   |   |   |   
+|   |   |   \---ドラッグ＆ドロップ
+|   |   |           ドラッグAPIのEventフロー.xlsx
+|   |   |           ドロップした際にドラッグシャドウがドラッグ開始地点まで戻るアニメーションを抑制する方法.md
+|   |   |           
+|   |   \---画像
+|   |           タッチイベントの伝搬.PNG
+|   |           タッチイベントの伝搬_original.xlsx
+|   |           
+|   +---テストの自動化
+|   |   +---JUnit4 から JUnit5 への移行
+|   |   |       Android での JUnit 5 への対応状況.md
+|   |   |       【ブログ】JUnit 4からJUnit 5に移行する：重要な違いと利点.md
+|   |   |       
+|   |   \---本
+|   |       \---1.JUnit実践入門
+|   |           +---01.Part1 JUnit 入門
+|   |           |   |   テストクラスのインスタンス生成.md
+|   |           |   |   用語.md
+|   |           |   |   
+|   |           |   +---01.第一章 JUnit チュートリアル
+|   |           |   |       04.テストコードの記述.md
+|   |           |   |       
+|   |           |   +---02.第二章 ユニットテスト
+|   |           |   |       XUnit Test Patterns.url
+|   |           |   |       
+|   |           |   \---03.第三章 テスティングフレームワーク
+|   |           |           05.JUnit が提供するアノテーション.md
+|   |           |           06.JUnit のテストパターン.md
+|   |           |           
+|   |           +---02.Part2 JUnit の機能と拡張
+|   |           |   +---04.第四章 アサーション
+|   |           |   |       01.Assert による値の比較検証.md
+|   |           |   |       03.Matcher API の使用.md
+|   |           |   |       04.カスタム Matcher の作成.md
+|   |           |   |       HamcrestのMatchersに定義されているメソッドの使い方メモ.url
+|   |           |   |       
+|   |           |   +---05.第五章 テストランナー
+|   |           |   |       01.コマンドラインからの JUnit の実行.md
+|   |           |   |       02.テストランナーとは.md
+|   |           |   |       03.JUnit が提供するテストランナー.md
+|   |           |   |       
+|   |           |   +---06.第六章 テストのコンテキスト
+|   |           |   |       02.テストケースの整理.md
+|   |           |   |       04.テストクラスを横断する共通処理.md
+|   |           |   |       
+|   |           |   +---07.第七章 テストフィクスチャ
+|   |           |   |       01.テストフィクスチャとは.md
+|   |           |   |       02.フィクスチャのセットアップパターン.md
+|   |           |   |       
+|   |           |   +---08.第八章 パラメータ化テスト
+|   |           |   |       01.テストデータの選択.md
+|   |           |   |       02.入力値と期待値のパラメータ化.md
+|   |           |   |       03.組み合わせテスト.md
+|   |           |   |       04.パラメータ化テストの問題点.md
+|   |           |   |       
+|   |           |   \---09.第九章 ルール
+|   |           |           01.ルールとは.md
+|   |           |           04.RuleChain によるるーるの連鎖.md
+|   |           |           
+|   |           \---03.Part3 ユニットテストの活用と実践
+|   |               \---11.第11章 テストダブル
+|   |                       01.テスタビリティを高めるリファクタリング.md
+|   |                       
+|   +---テスト・デバッグ
+|   |   |   'this@ActivityName' is not captured error Android Kotlin.md
+|   |   |   BuildConfig.DEBUGが見つからない.md
+|   |   |   
+|   |   \---静的解析
+|   |       \---lint
+|   |               lintとは.md
+|   |               lintを自作する.md
+|   |               lintを自作する方法.url
+|   |               
+|   +---ナビゲーションバー
+|   |       .DS_Store
+|   |       ナビゲーションバー.md
+|   |       
+|   +---ハードウェアキー
+|   |   |   用語.md
+|   |   |   
+|   |   \---バックキー
+|   |           バックキーの制御.md
+|   |           
+|   +---バックアップと復元_機種変更
+|   |   |   デバイス間転送_D2D転送.md
+|   |   |   ログイン情報のバックアップと復元.md
+|   |   |   機密情報のバックアップ.md
+|   |   |   用語.md
+|   |   |   
+|   |   \---自動バックアップ
+|   |           GoogleOneバックアップ.md
+|   |           バックアップをテストする方法.md
+|   |           バックアップ対象のカスタマイズ.md
+|   |           
+|   +---バックグラウンド処理
+|   |   |   Doze.md
+|   |   |   KeyguardLock.md
+|   |   |   WakeLock.md
+|   |   |   アプリスタンバイ.md
+|   |   |   各 API の継続可能時間と繰り返し処理の実行可能間隔.md
+|   |   |   最適なAPIの選択.md
+|   |   |   最適なAPIの選択_詳細.pdf
+|   |   |   最適なAPIの選択_詳細.webloc
+|   |   |   最適なAPIの選択_詳細2.pdf
+|   |   |   最適なAPIの選択_詳細2.webloc
+|   |   |   
+|   |   +---AlarmManager
+|   |   |       adbコマンドでアラームが登録されているか確認する.md
+|   |   |       AlarmClockInfo.md
+|   |   |       AlarmManager.md
+|   |   |       登録上限数.md
+|   |   |       
+|   |   +---Kotlin Flow 公式ドキュメント
+|   |   |   |   1.概要(Android での Kotlin Flow).md
+|   |   |   |   3.StateFlow と SharedFlow.md
+|   |   |   |   Flow のコールドとホットの違い.md
+|   |   |   |   
+|   |   |   \---画像
+|   |   |           データストリームに含まれるエンティティ.png
+|   |   |           
+|   |   +---WorkManager
+|   |   |       combine.svg
+|   |   |       CoroutineWorker でのスレッド化.md
+|   |   |       flex_period_image.png
+|   |   |       ListenableWorker.md
+|   |   |       WorkInfo_State.md
+|   |   |       WorkManager実装編.md
+|   |   |       WorkManager理論編.md
+|   |   |       Workにインプットデータを渡す.md
+|   |   |       Workの予定や履歴を確認する.md
+|   |   |       Workの処理結果を受け取る.md
+|   |   |       Workの進捗状況管理.md
+|   |   |       アプリ終了やデバイス再起動.md
+|   |   |       カスタム WorkManager の構成.md
+|   |   |       処理チェーン.md
+|   |   |       処理チェーンのブロック状態.md
+|   |   |       複雑な処理チェーン.md
+|   |   |       
+|   |   +---_JobScheduler
+|   |   \---コルーチン
+|   |           Android のライフサイクルを意識したコルーチン.md
+|   |           
+|   +---パフォーマンス改善
+|   |   \---_画面描画系に問題がある場合
+|   |           GPUレンダリングの速度とオーバードローを検査する方法.url
+|   |           GPUレンダリングプロファイリングの結果の具体的な見方とよくある対処方法.url
+|   |           レンダリングステージ_コマンド発行_赤色_にて時間がかかっている場合.md
+|   |           遅いレンダリング.url
+|   |           
+|   +---ビルド
+|   |   |   assert 関数の有効化と無効化.md
+|   |   |   BuildGradleの具体的な使用方法.md
+|   |   |   BuildGradleの抽象的な概念.md
+|   |   |   Gradle のタスク定義のあれこれ.pdf
+|   |   |   Gradleビルド言語リファレンス.url
+|   |   |   Groovyを知らない人のためのbuild.gradle読み書き入門.pdf
+|   |   |   SDK_version.md
+|   |   |   ビルドについて.md
+|   |   |   ビルドタイプでできること.md
+|   |   |   ビルドバリアント_ビルドタイプ_プロダクトフレーバーについて.md
+|   |   |   プロダクトフレーバーでできること.md
+|   |   |   ライブラリの作成方法.md
+|   |   |   
+|   |   +---build.gradle
+|   |   |   |   buildscript_plugins_dependenciesの違い.md
+|   |   |   |   libs.version.toml の記述方法.md
+|   |   |   |   plugins の記述方法.md
+|   |   |   |   バージョンネームをxml内で取得可能にする.md
+|   |   |   |   
+|   |   |   \---文法
+|   |   |           namespace属性.md
+|   |   |           
+|   |   +---build_gradleの自動アップデートによって変更された内容を打ち消してしまった場合
+|   |   |       build_gradleの自動アップデートによって変更された内容を打ち消してしまった場合.md
+|   |   |       upgrade_assistant.png
+|   |   |       
+|   |   +---dexファイルとは
+|   |   |       dexファイルとは.pdf
+|   |   |       dexファイルとは.url
+|   |   |       
+|   |   \---ビルドエラー
+|   |           00000000_onCreate(SupportSQLiteDatabase)はDelegateのonCreate(SupportSQLiteDatabase)をオーバーライドできません.md
+|   |           20231007_A problem was found with the configuration of task 'appprocessDebugGoogleServices' (type 'GoogleServicesTask')..md
+|   |           20231007_Duplicate class kotlin.collections.jdk8.CollectionsJDK8Kt found in modules kotlin-stdlib-1.8.22.md
+|   |           20231008_Missing classes detected while running R8. Please add the missing classes or apply additional keep rules that are generated in.md
+|   |           トラブルシューティング.md
+|   |           ファイル名のルール.txt
+|   |           非推奨APIの使用エラー.md
+|   |           
+|   +---フォアグラウンドとバックグラウンド
+|   |       フォアグラウンドとバックグラウンド.md
+|   |       
+|   +---フォント
+|   |       ディセンダラインとは.url
+|   |       
+|   +---プログレッシブウェブアプリ
+|   |       プログレッシブウェブアプリ.md
+|   |       
+|   +---プロセス
+|   |       UIデータの保存方針決定プロセス.xlsx
+|   |       ViewModelとSaveInstanceStateと永続ストレージの比較.md
+|   |       デバイス再起動.md
+|   |       プロセスの優先度_Android_Developers.webloc
+|   |       
+|   +---ボイラープレートコード
+|   |       .DS_Store
+|   |       Sindiyクラス一覧.xlsx
+|   |       
+|   +---マテリアルデザイン
+|   |   |   Viewに影をつける.md
+|   |   |   カラーパレット.md
+|   |   |   基本.md
+|   |   |   
+|   |   +---アイコン
+|   |   |   |   Google Icons.url
+|   |   |   |   Material_Symbols.md
+|   |   |   |   
+|   |   |   \---画像
+|   |   |           MaterialDesignIconsがMaterialSymbolsに進化していた.png
+|   |   |           
+|   |   \---マテリアルデザイン 3
+|   |       +---1.Home
+|   |       +---2.Get started
+|   |       +---3.Develop
+|   |       +---4.Foundations
+|   |       |   \---5.Design tokens
+|   |       |       |   1.概要.md
+|   |       |       |   2.トークンの参照方法.md
+|   |       |       |   3.トークンの使用方法.md
+|   |       |       |   マテリアルトークン.md
+|   |       |       |   
+|   |       |       \---画像
+|   |       |               3種類のトークンの例.png
+|   |       |               design-token.png
+|   |       |               reference-token.png
+|   |       |               コンポーネントトークンとシステムトークンと参照トークン.png
+|   |       |               システムトークンでライトテーマとダークテーマを参照する.png
+|   |       |               システムトークンと参照トークン.png
+|   |       |               トークンによる変更の追跡.png
+|   |       |               トークンの割り当て例.png
+|   |       |               トークンは中央リポジトリとして機能する.png
+|   |       |               トークン名の読み方.png
+|   |       |               トークン表の例.png
+|   |       |               ボタンの色の図とトークン表.png
+|   |       |               参照トークン.png
+|   |       |               設計図とトークン表の組み合わせの例.png
+|   |       |               
+|   |       +---5.Styles
+|   |       |   +---2.Color
+|   |       |   |   |   1.Color system.md
+|   |       |   |   |   2.Color roles.md
+|   |       |   |   |   
+|   |       |   |   +---3.Color schemes
+|   |       |   |   |   |   1.Choosing a scheme.md
+|   |       |   |   |   |   
+|   |       |   |   |   +---2.Static
+|   |       |   |   |   |   |   1.ベースライン.md
+|   |       |   |   |   |   |   
+|   |       |   |   |   |   \---画像
+|   |       |   |   |   |           dark theme scheme.png
+|   |       |   |   |   |           light theme scheme.png
+|   |       |   |   |   |           music app.png
+|   |       |   |   |   |           news app.png
+|   |       |   |   |   |           
+|   |       |   |   |   \---画像
+|   |       |   |   |           baseline.png
+|   |       |   |   |           dynamic-color.gif
+|   |       |   |   |           
+|   |       |   |   \---画像
+|   |       |   |           chroma.png
+|   |       |   |           color-assignement.png
+|   |       |   |           color-roles-dark-theme.png
+|   |       |   |           color-roles-UI-elements.png
+|   |       |   |           color-roles.png
+|   |       |   |           content-vs-user-left-user.png
+|   |       |   |           content-vs-user-right-content.png
+|   |       |   |           content-vs-user-right-content2.png
+|   |       |   |           dark-theme-contrast.png
+|   |       |   |           dynamic-color-assigned2.png
+|   |       |   |           dynamic-color.png
+|   |       |   |           Errorロール.png
+|   |       |   |           FAB に Primary Container を使用.png
+|   |       |   |           FAB に Primary Fixed を使用.png
+|   |       |   |           Fixed と Fixed Dim の例.png
+|   |       |   |           Fixed と Fixed Dim.png
+|   |       |   |           Fixed はコントラスト要件を満たしていない.png
+|   |       |   |           from-source-color-to-key-colors.png
+|   |       |   |           hand-picked-color.png
+|   |       |   |           high-contrast.png
+|   |       |   |           hue.png
+|   |       |   |           in-app-content.png
+|   |       |   |           light-theme-contrast.png
+|   |       |   |           medium-contrast.png
+|   |       |   |           On Fixed と On Fixed Variant の例.png
+|   |       |   |           On Fixed と On Fixed Variant の例2.png
+|   |       |   |           Outline の使用例.png
+|   |       |   |           Outlined TextField のエラー.png
+|   |       |   |           Outlineロール.png
+|   |       |   |           paint-by-number-handpick.png
+|   |       |   |           paint-by-number.png
+|   |       |   |           pairing ng.png
+|   |       |   |           pairing ok.png
+|   |       |   |           primary container と on primary container.png
+|   |       |   |           primary と on primary.png
+|   |       |   |           primaryロール.png
+|   |       |   |           Scrim.png
+|   |       |   |           secondary container と on secondary container.png
+|   |       |   |           secondaryロール.png
+|   |       |   |           Shadow.png
+|   |       |   |           standard-contrast.png
+|   |       |   |           Surface Bright を使用したダークテーマ.png
+|   |       |   |           Surface Bright を使用したライトテーマ.png
+|   |       |   |           Surface Dim と Surface Bright の実際の使用例.png
+|   |       |   |           Surfaceロール.png
+|   |       |   |           tertiary の使用例.png
+|   |       |   |           tertiaryロール.png
+|   |       |   |           TextField のエラー.png
+|   |       |   |           tonal-palette.png
+|   |       |   |           tonal-palettes-color-roles.png
+|   |       |   |           tonal-palettes.png
+|   |       |   |           tone.png
+|   |       |   |           user-controlled-contrast_02.png
+|   |       |   |           user-controlled-contrast_03.png
+|   |       |   |           user-controlled-contrast_12.png
+|   |       |   |           user-controlled-contrast_13.png
+|   |       |   |           wallpaper-source-color.png
+|   |       |   |           アクセントカラーはコントラスト要件を満たす.png
+|   |       |   |           キーカラー.png
+|   |       |   |           スナックバーでのインバースの使用例.png
+|   |       |   |           ソースカラーがUIに反映される過程.png
+|   |       |   |           ダークテーマの Surface Dim と Bright.png
+|   |       |   |           ダークテーマの5種類のサーフェス.png
+|   |       |   |           ダークテーマのカラースキーム.png
+|   |       |   |           チップのアウトライン.png
+|   |       |   |           デフォルトのサーフェスコンテナロール.png
+|   |       |   |           トーンパレット.png
+|   |       |   |           モバイルとタブレットで同じロールを使用する.png
+|   |       |   |           ライトテーマの Surface Dim と Bright.png
+|   |       |   |           ライトテーマの5種類のサーフェス.png
+|   |       |   |           ライトテーマのインバース.png
+|   |       |   |           ライトテーマのカラースキーム.png
+|   |       |   |           区切り線に Outlin を使用した例.png
+|   |       |   |           画面サイズが大きくなるにつれ、別のレベルのSurface Containerが追加する例.mp4
+|   |       |   |           背景にサーフェス、ナビゲーションにサーフェスコンテナー.png
+|   |       |   |           視覚的な境界には Outline.png
+|   |       |   |           通常の Surface を使用したダークテーマ.png
+|   |       |   |           通常の Surface を使用したライトテーマ.png
+|   |       |   |           
+|   |       |   +---3.Elevation
+|   |       |   |   |   1.Overview.md
+|   |       |   |   |   2.Applying elevation.md
+|   |       |   |   |   3.Tokens.md
+|   |       |   |   |   Jetpack Compose で Elevation を設定する.md
+|   |       |   |   |   
+|   |       |   |   \---画像
+|   |       |   |           3 種類の高度の描画方法.png
+|   |       |   |           3 種類の高度の描画方法の具体例.png
+|   |       |   |           M2のエレベーション.png
+|   |       |   |           M3のエレベーション.png
+|   |       |   |           Surface の使用例.png
+|   |       |   |           エレベーションのレベルの定義.png
+|   |       |   |           コントラストが不明確なFAB.png
+|   |       |   |           コントラストが明確なFAB.png
+|   |       |   |           デフォルトの高度.png
+|   |       |   |           ナビゲーションドロワー.png
+|   |       |   |           大きい影.png
+|   |       |   |           小さい影.png
+|   |       |   |           影による要素の保護.png
+|   |       |   |           標高の異なる二つのサーフェス.png
+|   |       |   |           
+|   |       |   +---6.Shape
+|   |       |   |   |   1.Overview.md
+|   |       |   |   |   2.Shape scale と token.md
+|   |       |   |   |   
+|   |       |   |   \---画像
+|   |       |   |           2種類のシェイプファミリー.png
+|   |       |   |           7種類のシェイプスケール.png
+|   |       |   |           M2のスケール.png
+|   |       |   |           M3のスケール.png
+|   |       |   |           スケールの一例.png
+|   |       |   |           対称性.png
+|   |       |   |           
+|   |       |   \---7.Typography
+|   |       |       |   1.Overview.md
+|   |       |       |   2.Fonts.md
+|   |       |       |   3.Type scale と token.md
+|   |       |       |   4.Applying type.md
+|   |       |       |   
+|   |       |       \---画像
+|   |       |               4.5対1のコントラスト.png
+|   |       |               5つの書体スタイル.png
+|   |       |               7対1のコントラスト.png
+|   |       |               Body の使用例.png
+|   |       |               Bounding box.png
+|   |       |               Card で Display を使用した例.png
+|   |       |               Label の使用例.png
+|   |       |               Major Second スケール.png
+|   |       |               Noto Sans の例.png
+|   |       |               Roboto Flex と Roboto Serif の例.png
+|   |       |               Roboto Flex の例.png
+|   |       |               Roboto Flex の様々な太さ.png
+|   |       |               Roboto Serif の例.png
+|   |       |               Title スタイルの使用例.png
+|   |       |               カテゴリヘッダーに Title スタイルを適用する例.png
+|   |       |               グレードの変更はリフローが不要.png
+|   |       |               グレードを変更した例.png
+|   |       |               サイズを細かく変えるのではなく、コントラストを変える.png
+|   |       |               シンボルとテキストに同じサイズを指定する.png
+|   |       |               シンボルとテキストのサイズが異なる.png
+|   |       |               シンボルの使用例.png
+|   |       |               セットアップフローで Body スタイルを適用.png
+|   |       |               タイプスケールの例.png
+|   |       |               タイポグラフィートークンの例.png
+|   |       |               ダークテーマとライトテーマで太さが変わる.png
+|   |       |               デフォルトでは On Surface が使用される.png
+|   |       |               トップアプリバーに Title スタイルを適用.png
+|   |       |               トーンパレットとコントラスト.png
+|   |       |               ナビゲーションバーに Label を適用.png
+|   |       |               ハイパーリンクのスタイル.png
+|   |       |               バウンディングボックスと余白と全体の高さ.png
+|   |       |               パディングの場所.png
+|   |       |               パディングコンテナの測定値を使用.png
+|   |       |               フォントサイズを調整した例.png
+|   |       |               ヘッドラインのダイアログ.png
+|   |       |               ベースライン悪い例.png
+|   |       |               ベースライン良い例.png
+|   |       |               光学サイズ.png
+|   |       |               光学サイズの正しい使用方法.png
+|   |       |               光学サイズの誤った使用方法.png
+|   |       |               味のある Headline.png
+|   |       |               味のあるフォント.png
+|   |       |               太さ悪い例.png
+|   |       |               太さ良い例.png
+|   |       |               小さい文字の行の高さ.png
+|   |       |               小さい文字は太くしても読みづらい.png
+|   |       |               小さな画面で使用されるヘッドライン.png
+|   |       |               幅が狭い場合のメリット.png
+|   |       |               幅の変更例.png
+|   |       |               幅の広い場合の注意点.png
+|   |       |               必要なフォントのみを使用する.png
+|   |       |               時計は等幅.png
+|   |       |               書体のカスタマイズ.png
+|   |       |               等幅と比例幅.png
+|   |       |               細い文字は小さい文字には向いていない.png
+|   |       |               経過時間に Label を適用.png
+|   |       |               表現力の豊かな Display スタイル.png
+|   |       |               記事の本文に Body スタイルを適用.png
+|   |       |               読みやすい行の高さの例.png
+|   |       |               
+|   |       +---6.Components
+|   |       |   \---4.Buttons
+|   |       |       \---2.Common Buttons
+|   |       |           |   3.Guidelines.md
+|   |       |           |   
+|   |       |           \---画像
+|   |       |                   filled tonal buttons.png
+|   |       |                   アウトラインボタンの単独使用.png
+|   |       |                   カード内のテキストボタン.png
+|   |       |                   グラデーションの上にアウトラインボタン.png
+|   |       |                   スナックバー上のテキストボタン.png
+|   |       |                   ダイアログ内のテキストボタン.png
+|   |       |                   テキストボタン.png
+|   |       |                   写真の上にアウトラインボタン.png
+|   |       |                   塗りつぶしボタン.png
+|   |       |                   塗りつぶしボタンとアウトラインボタンの組み合わせ.png
+|   |       |                   画像の上のテキストボタン.png
+|   |       |                   
+|   |       \---7.Blog
+|   |           |   Introducing Material Theme Builder.md
+|   |           |   Introducing Tone-based Surfaces in Material 3.md
+|   |           |   
+|   |           \---画像
+|   |                   Build a custom theme.png
+|   |                   MDC-Android の場合のテーマファイルの保存先.png
+|   |                   selection colors.png
+|   |                   Visualize dynamic color.gif
+|   |                   エクスポートする.gif
+|   |                   サーフェスの新旧比較.png
+|   |                   ダークテーマとライトテーマの切り替え.gif
+|   |                   テーマファイルの保存先.png
+|   |                   デザイントークンを利用したテーマ.png
+|   |                   新しいサーフェスのライトテーマとダークテーマ.png
+|   |                   新しいサーフェスへの移行.png
+|   |                   
+|   +---マルチスレッド
+|   |   |   Androidのバックグラウンド処理について.md
+|   |   |   AsyncTask.md
+|   |   |   Executer.md
+|   |   |   スレッドの優先度の値の一覧.pdf
+|   |   |   スレッドの優先度の値の一覧.webloc
+|   |   |   メインスレッドかどうかを判定する if 文.md
+|   |   |   メソッドが実行されるべきスレッドを明示する.md
+|   |   |   
+|   |   \---Handler
+|   |           Handler.md
+|   |           HandlerThreadの使い方.pdf
+|   |           HandlerThreadの使い方.webloc
+|   |           HandlerThreadクラス.md
+|   |           Handler_Looper_イメージ図.png
+|   |           
+|   +---ライブラリ
+|   |   |   AndroidXへの移行.md
+|   |   |   ButterKnife.md
+|   |   |   jaredrummler_ColorPicker.md
+|   |   |   ライブラリまとめ.md
+|   |   |   
+|   |   +---_Graph
+|   |   |       MPAndroidChart.md
+|   |   |       
+|   |   +---_Log
+|   |   |       android_util_Log.md
+|   |   |       
+|   |   +---_位置情報
+|   |   |       API一覧.md
+|   |   |       FusedLocationProviderClient.md
+|   |   |       LocationManager.md
+|   |   |       
+|   |   \---_広告
+|   |           AdMob.md
+|   |           nend.md
+|   |           
+|   +---リソース
+|   |   |   Androidが最適なリソースを見つける仕組み.pu
+|   |   |   APILevel別リソース切り替え.md
+|   |   |   Int_String以外の配列リソース.md
+|   |   |   Rファイルについて.md
+|   |   |   リソースの切り替え.md
+|   |   |   
+|   |   +---valuesフォルダ内
+|   |   |   |   valuesフォルダ内で管理できるリソース.md
+|   |   |   |   
+|   |   |   \---strings.xml
+|   |   |           JavaのStringとResourceのstringの違い.md
+|   |   |           プレースフォルダー.md
+|   |   |           半角スペースを表示.pdf
+|   |   |           半角スペースを表示.webloc
+|   |   |           文字色の変更.md
+|   |   |           特殊文字.md
+|   |   |           
+|   |   +---_drawableフォルダ内
+|   |   |   |   .DS_Store
+|   |   |   |   BitmapとDrawableの違い.md
+|   |   |   |   Drawables概要.md
+|   |   |   |   
+|   |   |   +---_なぜJPEGよりPNGが良いのか
+|   |   |   |       PNGとJPEGの違い.pdf
+|   |   |   |       PNGとJPEGの違い.webloc
+|   |   |   |       
+|   |   |   +---_アイコン
+|   |   |   |       命名規則.md
+|   |   |   |       
+|   |   |   +---_様々なdrawableの使用方法
+|   |   |   |   |   .DS_Store
+|   |   |   |   |   9PatchDrawable.md
+|   |   |   |   |   CustomDrawable.md
+|   |   |   |   |   insetタグ.md
+|   |   |   |   |   トランジションドローワブル.md
+|   |   |   |   |   レイヤー_複数層リソース.md
+|   |   |   |   |   状態リスト.md
+|   |   |   |   |   
+|   |   |   |   +---_shape
+|   |   |   |   |       ring.md
+|   |   |   |   |       ring.xlsx
+|   |   |   |   |       shapeタグ.md
+|   |   |   |   |       shapeタグ_直線.md
+|   |   |   |   |       シェイプドローワブル.md
+|   |   |   |   |       
+|   |   |   |   \---画像
+|   |   |   |           inset.jpg
+|   |   |   |           layer_list.jpg
+|   |   |   |           TransitionDrawable.gif
+|   |   |   |           
+|   |   |   +---_画像
+|   |   |   |       画像.md
+|   |   |   |       
+|   |   |   \---ベクター画像
+|   |   |       |   vectorファイルをsvgファイルに変換する.md
+|   |   |       |   ベクター画像.md
+|   |   |       |   ベクター画像の取り込み手順.md
+|   |   |       |   
+|   |   |       \---画像
+|   |   |               asset_studio.png
+|   |   |               
+|   |   +---多言語対応
+|   |   |       トラブルシューティング.md
+|   |   |       
+|   |   \---色
+|   |           透明度の一覧.md
+|   |           
+|   +---リリース
+|   |   |   FAQ.md
+|   |   |   R8_圧縮_難読化_最適化.md
+|   |   |   アプリの署名.md
+|   |   |   アプリへの署名の仕組み.xlsx
+|   |   |   アプリダウンロード用URL.md
+|   |   |   アプリ名を変更する.md
+|   |   |   ソースコード難読化.md
+|   |   |   テスト版アプリの削除.md
+|   |   |   パッケージ名の変更.md
+|   |   |   フィンガープリントの確認方法.md
+|   |   |   リリース準備.md
+|   |   |   内部テスト.md
+|   |   |   各種アイコンの準備.md
+|   |   |   逆コンパイル.md
+|   |   |   
+|   |   +---GooglePlayにおけるアプリ公開のフィルタリング
+|   |   |       display_size.png
+|   |   |       GooglePlayにおけるアプリ公開のフィルタリング.md
+|   |   |       
+|   |   \---プライバシーポリシーとデータセーフティ
+|   |           関連用語.md
+|   |           
+|   +---レイアウト
+|   |   |   Compose レイアウト.md
+|   |   |   include_merge.md
+|   |   |   レイアウトの考慮事項.md
+|   |   |   様々な画面サイズに対応するベストプラクティス.md
+|   |   |   
+|   |   \---レスポンシブレイアウト
+|   |           AndroidでレスポンシブUIを実装する.md
+|   |           グリッドシステム.md
+|   |           グリッドシステム_最小列幅.xlsx
+|   |           コンテンツの伸縮.png
+|   |           スクロールしても表示し続ける背景.jpg
+|   |           フルスクリーン画像.jpg
+|   |           ブレークポイント_編集用.xlsx
+|   |           ヘッダーとフッターは例外.jpg
+|   |           レイアウトの切り替え.md
+|   |           最小幅ブレークポイント.png
+|   |           最小幅ブレークポイント_orig.png
+|   |           独自のグリッドシステム.jpg
+|   |           親フィールド要素をそろえる_カラム表示.jpg
+|   |           親フィールド要素をそろえる_カラム非表示.jpg
+|   |           
+|   +---ログ
+|   |       R8を使ってログをリリースビルドから削除する.md
+|   |       【参考】Log.isLoggableメソッド.md
+|   |       スタックトレースをログ出力する.md
+|   |       ログの基本.md
+|   |       ログレベルの使い分け方.md
+|   |       実装でログを削除する方法.md
+|   |       
+|   +---不揮発領域
+|   |   |   アクセス権限.xlsx
+|   |   |   
+|   |   +---DB
+|   |   |   |   DBFlow.md
+|   |   |   |   データベースアクセス方法の選定.xlsx - ショートカット.lnk
+|   |   |   |   
+|   |   |   +---SQL
+|   |   |   |       INSERTサンプル.md
+|   |   |   |       列の追加.md
+|   |   |   |       
+|   |   |   +---SQLite
+|   |   |   |       SQLiteで使用可能な型.md
+|   |   |   |       SQLiteを直接使用する.md
+|   |   |   |       UPDATE文.md
+|   |   |   |       公式ドキュメント.md
+|   |   |   |       
+|   |   |   \---_Room
+|   |   |           Android_Room_公式ドキュメント.webloc
+|   |   |           Delete.md
+|   |   |           Entity.md
+|   |   |           FAQ.md
+|   |   |           IDの自動採番機能.md
+|   |   |           Insert.md
+|   |   |           LiveData連携.md
+|   |   |           Query.md
+|   |   |           Room.md
+|   |   |           Room_LiveData_ViewModel_公式トレーニング.webloc
+|   |   |           Room_LiveData連携.xlsx
+|   |   |           Roomを使ったAndroidアプリをアンインストールしてもデータが残っている気がする.pdf
+|   |   |           Roomを使ったAndroidアプリをアンインストールしてもデータが残っている気がする.webloc
+|   |   |           Update.md
+|   |   |           コンバーター.md
+|   |   |           スキーマロケーションの指定.md
+|   |   |           テーブル作成後に初期レコードを挿入する.pdf
+|   |   |           トランザクション.md
+|   |   |           マイグレーション.md
+|   |   |           型.md
+|   |   |           新しいテーブルを作成する.md
+|   |   |           
+|   |   \---SharedPreference
+|   |           Map形式データをプリファレンスで扱う.md
+|   |           SharedPreference.md
+|   |           
+|   +---主要なアプリコンポーネント4つについて
+|   |       _主要なアプリコンポーネント4つについて.md
+|   |       
+|   +---外部API
+|   |   |   .DS_Store
+|   |   |   
+|   |   \---Google
+|   |           .DS_Store
+|   |           GoogleDrive.md
+|   |           
+|   +---性能
+|   |       ビジネスロジック改善.md
+|   |       ビュー改善.md
+|   |       
+|   +---画像
+|   |       DrawableとBitmapとBitmapDrawableの違い.md
+|   |       DrawableとBitmapとBitmapDrawableの関係.drawio.svg
+|   |       
+|   +---画面の解像度関連
+|   |       変換クラスサンプル.md
+|   |       解像度.md
+|   |       
+|   +---画面回転対応
+|   |       AsyncTask実行中の回転.md
+|   |       LiveDataとViewModelを使用して画面回転後にSnackBarを表示するサンプル.md
+|   |       画面回転対応.md
+|   |       
+|   +---画面設定
+|   |       画面方向固定.md
+|   |       
+|   +---省電力
+|   |   |   アプリスタンバイ.md
+|   |   |   アプリスタンバイバケット.md
+|   |   |   
+|   |   \---Doze
+|   |           Doze.md
+|   |           dozeのイメージ.png
+|   |           
+|   +---表示サイズ
+|   |       表示サイズ.md
+|   |       
+|   +---設計
+|   |       001.文字列をどこに定義するべきか.md
+|   |       
+|   +---認証
+|   |       用語.md
+|   |       
+|   +---通信
+|   |   |   今すぐ使える無料WebAPIまとめ.url
+|   |   |   
+|   |   \---Retrofit
+|   |           Retrofit 公式ドキュメント.md
+|   |           Retrofit.md
+|   |           よくあるエラーとその対処方法.md
+|   |           
+|   +---運用・管理
+|   |       アプリのフィンガープリントを取得する.md
+|   |       クラッシュ_ANRのレポート.md
+|   |       
+|   \---音楽と動画
+|           関連用語.md
+|           
++---API
+|   |   スロットル.md
+|   |   
+|   +---API Key
+|   |       API Key を安全にプロジェクトに追加する.md
+|   |       old_API Key Secretを安全に保管する.md
+|   |       
+|   +---Github API
+|   |   +---REST API
+|   |   |   |   curlコマンドの構築.md
+|   |   |   |   パラメータ.md
+|   |   |   |   
+|   |   |   \---認証
+|   |   |           personal access token.md
+|   |   |           
+|   |   +---サンプルバッチファイル
+|   |   |       github_api.bat
+|   |   |       Read me.md
+|   |   |       
+|   |   \---認証
+|   |           安全性について.md
+|   |           
+|   +---Google
+|   |   \---GoogleDrive
+|   |           GoogleWorkspaceAPIとDriveAPIの違い.md
+|   |           
+|   \---TwitterAPI
+|       |   API使用手順.md
+|       |   Twitter4J_便利なライブラリ.url
+|       |   TwitterAPI第三者解説サイト.url
+|       |   カスタムURLスキームをコールバックURLに設定する方法.url
+|       |   サインイン.md
+|       |   
+|       +---利用規約_制限事項_等
+|       |       standard_v1.1のRateLimit.md
+|       |       ツイート投稿API.md
+|       |       プライバシーポリシーの記載.md
+|       |       自動化のルール.md
+|       |       
+|       +---各APIの詳細
+|       |   |   パーセントエンコーディング.md
+|       |   |   
+|       |   +---アクセストークン_トークンシークレットの取得
+|       |   |       3LeggedOAuth.pu
+|       |   |       3LeggedOAuth.svg
+|       |   |       
+|       |   +---ツイートを投稿する
+|       |   |       post_2_tweets(API_v2).url
+|       |   |       statuses_update_json(API_v1.1).pu
+|       |   |       
+|       |   +---署名（oauth_signature）の作成
+|       |   |       create_OAuth_signature.pu
+|       |   |       create_OAuth_signature.svg
+|       |   |       署名の作成.url
+|       |   |       
+|       |   \---認証・認可情報（Authorizationヘッダ）の作成
+|       |           Authorizationヘッダの作成.md
+|       |           
+|       \---各種アイコン
+|           \---sing_in_with_twitter
+|                   sign_in_with_twitter_gray.png
+|                   sign_in_with_twitter_link.png
+|                   リソース提供元サイト.url
+|                   
++---ATOM
+|   |   AtomでPlantUMLを使ってクラス図を描いた時にプレビューウィンドウにリアルタイム反映されない時の対処.md
+|   |   Markdown書き方.md
+|   |   Markdown記載時の独自ルール.md
+|   |   おすすめのプラグイン.md
+|   |   シーケンス図のプレビュー表示.md
+|   |   
+|   \---画像
++---Firebase
+|   |   Firebase_Android_BoMとは.md
+|   |   Firebase_CLI.md
+|   |   Firebaseの機能一覧.md
+|   |   Realtime_Database.md
+|   |   REST形式APIを作成.md
+|   |   
+|   +---A B Testing
+|   |       01.A B Testing.md
+|   |       
+|   +---Analytics(Realtime Analytics)
+|   |       01.Analytics(Realtime Analytics).md
+|   |       02.Debug View.md
+|   |       
+|   +---Androidアプリリンク
+|   |       Androidアプリリンクの作成.md
+|   |       アプリリンクをテストする.md
+|   |       トラブルシューティング.md
+|   |       
+|   +---App Check
+|   |       01.App Check.md
+|   |       
+|   +---App Distribution
+|   |       01.App Distribution.md
+|   |       
+|   +---App Hosting
+|   |       01.App Hosting.md
+|   |       
+|   +---Authentication
+|   |   |   01.Authentication.md
+|   |   |   02.メール＆パスワード認証.md
+|   |   |   03.電話番号(SMS)認証.md
+|   |   |   04.ソーシャルログイン.md
+|   |   |   
+|   |   \---画像
+|   |           ユーザープロパティ.png
+|   |           
+|   +---Cloud Messaging
+|   |       01.Cloud Messaging.md
+|   |       CloudMessaging実装手順.md
+|   |       
+|   +---Crashlytics
+|   |   |   01.Crashlytics.md
+|   |   |   
+|   |   \---画像
+|   |           コンソール上でのカスタムキーの表示のされ方.png
+|   |           コンソール上でのログの表示のされ方.png
+|   |           
+|   +---Dynamic Links
+|   |       01.Dynamic Links.md
+|   |       
+|   +---Emulator Suite
+|   |       01.Emulator Suite.md
+|   |       
+|   +---Extensions(Firebase Extensions)
+|   |       01.Extensions(Firebase Extensions).md
+|   |       
+|   +---Firebaseプロジェクトの作成・初期設定関連
+|   |       トラブルシューティング.md
+|   |       
+|   +---Firestore
+|   |       01.Firestore.md
+|   |       02.Firestoreのサンプルコード集.md
+|   |       03.セキュリティルール.md
+|   |       
+|   +---Functions(Cloud Functions)
+|   |       01.Functions(Cloud Functions).md
+|   |       
+|   +---Genkit
+|   |       01.Genkit.md
+|   |       
+|   +---GoogleAnalyticsForFirebase
+|   |       GoogleAnalyticsForFirebase.md
+|   |       スクリーンビューを測定する.md
+|   |       
+|   +---Hosting(Firebase Hosting)
+|   |       01.Hosting(Firebase Hosting).md
+|   |       Firebase_Hosting.md
+|   |       
+|   +---In-App Messaging
+|   |       01.In-App Messaging.md
+|   |       
+|   +---Machine Learning
+|   |       01.Machine Learning.md
+|   |       
+|   +---Performance(Performance Monitoring)
+|   |       01.Performance(Performance Monitoring).md
+|   |       
+|   +---Realtime Database
+|   |       01.Realtime Database.md
+|   |       
+|   +---Release Monitoring
+|   |       01.Release Monitoring.md
+|   |       
+|   +---RemoteConfig
+|   |       RemoteConfig実装編.md
+|   |       RemoteConfig理論編.md
+|   |       アプリ内デフォルト値.md
+|   |       テンプレート.md
+|   |       フェッチ.md
+|   |       ルール一覧.xlsx
+|   |       優先順位.xlsx
+|   |       条件とルール.md
+|   |       
+|   +---Storage(Cloud Storage)
+|   |       01.Storage(Cloud Storage).md
+|   |       
+|   +---Test Lab
+|   |       01.Test Lab.md
+|   |       
+|   \---Vertex AI
+|           01.Vertex AI.md
+|           
++---Flutter&Dart
+|   \---Flutter&Dartを学習するべきか
+|           Flutter&Dartを学習するべきか.md
+|           アプリ開発市場の現状と今後の予想（2023?2026）   IT業界で気づいたことをこっそり書くブログ.pdf
+|           
++---Git
+|   |   FAQ.md
+|   |   Git.md
+|   |   gitignoreに記載したのに反映されない件.pdf
+|   |   gitignoreに記載したのに反映されない件.webloc
+|   |   gitignoreの仕様詳解.pdf
+|   |   gitignoreの仕様詳解.webloc
+|   |   gitignoreの書き方.pdf
+|   |   gitignoreの書き方.webloc
+|   |   Git管理をやめる方法.md
+|   |   masterブランチの変更手順.md
+|   |   コマンド早見表.md
+|   |   コミットの取り消し方法.md
+|   |   コミットメッセージの規約.md
+|   |   マージ時に必ず樹形図を分岐させる方法.md
+|   |   分流に本流の最新の状態を取り込む方法.md
+|   |   
+|   \---マージとリベースの違い
+|           マージ.png
+|           マージとリベースの違い.md
+|           リベース.png
+|           統合前.png
+|           
++---Github
+|       Pushしても反映されない場合.md
+|       ストレージ容量の上限.md
+|       
++---Googleサイト
+|       Googleサイト.md
+|       
++---Java
+|   |   Callback_Listener_Observer.md
+|   |   getter_setterが必要な理由.md
+|   |   Stack・Queue.md
+|   |   thisの使い方.md
+|   |   Treeの操作.md
+|   |   volatile修飾子.md
+|   |   WeakReference.md
+|   |   アクセス修飾子.md
+|   |   インターフェース.md
+|   |   オーバーロード.md
+|   |   コンストラクタ.md
+|   |   シングルトン.md
+|   |   ストリームとは.md
+|   |   データのソート.md
+|   |   メール送信.md
+|   |   ラムダ式.md
+|   |   三角関数.md
+|   |   乱数.md
+|   |   抽象クラス.md
+|   |   正規表現.md
+|   |   配列.md
+|   |   
+|   +---Enum
+|   |       AndroidEnum.md
+|   |       Enum.md
+|   |       
+|   +---ID管理
+|   |       Utility.md
+|   |       
+|   +---Javaの各バージョンについて
+|   |       Java17新機能まとめ.url
+|   |       Java7からJava16までの変遷.url
+|   |       Javaのバージョンの採番ルール変更.md
+|   |       
+|   +---JSON
+|   |       GSON.md
+|   |       JSONObject.md
+|   |       
+|   +---_Math
+|   +---_Object
+|   |       JavaにおけるequalsとhashCodeを理解する.pdf
+|   |       JavaにおけるequalsとhashCodeを理解する.webloc
+|   |       
+|   +---_ジェネリクス_リフレクション
+|   |   +---_ジェネリクス
+|   |   |       instanceofを使用したいとき.md
+|   |   |       super_extendsの使用可能箇所の早見表.md
+|   |   |       【参考】原型について.md
+|   |   |       ジェネリクス.md
+|   |   |       ジェネリクス型の隠蔽.md
+|   |   |       ワイルドカード型とObject型の違い.md
+|   |   |       仮型引数の上限の定義.md
+|   |   |       仮型引数の型へのキャストは実際にはキャストされていない.md
+|   |   |       内部クラスとジェネリクス.md
+|   |   |       再帰的ジェネリクス.pdf
+|   |   |       型安全な異種コンテナ.md
+|   |   |       境界ワイルドカード型.md
+|   |   |       変性(共変_反変_不変).md
+|   |   |       山カッコの3つの意味.md
+|   |   |       非境界ワイルドカード型.md
+|   |   |       
+|   |   \---_リフレクション
+|   |           Classクラス.md
+|   |           Raw_use_of_parameterized_classワーニング.md
+|   |           リフレクション.md
+|   |           
+|   +---_ネストされたクラス
+|   |       ネストされたクラス.xlsx
+|   |       内部クラス.md
+|   |       内部クラス2.md
+|   |       匿名内部クラス.md
+|   |       
+|   +---_メモリ管理
+|   |   +---_ヒープとスタック
+|   |   |       .DS_Store
+|   |   |       image_10.png
+|   |   |       image_12.png
+|   |   |       image_16.png
+|   |   |       image_18.png
+|   |   |       image_20.png
+|   |   |       image_24.png
+|   |   |       image_26.png
+|   |   |       image_28.png
+|   |   |       image_30.png
+|   |   |       image_4.png
+|   |   |       image_8.png
+|   |   |       スタックメモリとヒープメモリ_メモリ管理_スレッドセーフ.pdf
+|   |   |       メモリ管理とスレッドセーフ.md
+|   |   |       
+|   |   +---_プロセスとスレッド
+|   |   |       【図解】CPUのコアとスレッドとプロセスの違い・関係性、同時マルチスレッディング、コンテキストスイッチについて.pdf
+|   |   |       【図解】CPUのコアとスレッドとプロセスの違い・関係性、同時マルチスレッディング、コンテキストスイッチについて│SEの道標.webloc
+|   |   |       プロセスとスレッドの概要 Android デベロッパー Android Developers.webloc
+|   |   |       プロセスとスレッドの違い.pdf
+|   |   |       プロセスとスレッドの違い.webloc
+|   |   |       
+|   |   +---ガベージコレクション
+|   |   |       Androidのガベージコレクション.md
+|   |   |       ガベージコレクションの4つのアルゴリズム.pdf
+|   |   |       ガベージコレクションの方式.md
+|   |   |       
+|   |   \---メモリリーク
+|   |           onClickListenerはメモリリークするのか.md
+|   |           
+|   +---_可変長引数
+|   |       Java可変長引数メモ Hishidama s Java VarArgs Memo .pdf
+|   |       Java可変長引数メモ.webloc
+|   |       
+|   +---_関数型インターフェース
+|   |       関数型インターフェース.md
+|   |       関数型インターフェース.pdf
+|   |       
+|   +---アノテーション
+|   |       @SuppressWarnings.md
+|   |       Java で独自のアノテーションを定義する.md
+|   |       
+|   +---エンコード_デコード
+|   |   +---base64エンコーディング
+|   |   |       base64エンコーディング.md
+|   |   |       
+|   |   \---パーセントエンコーディング
+|   |           JavaでURLエンコード デコードする方法と注意点.pdf
+|   |           サンプルコード.md
+|   |           
+|   +---クラス
+|   |       recordクラス(Java16で導入).url
+|   |       recordクラス.md
+|   |       sealedクラス.md
+|   |       
+|   +---コードチェック_アサーション
+|   |       Nullチェック.md
+|   |       
+|   +---ファイル操作
+|   |       java_nio_file.pdf
+|   |       java_nio_file.webloc
+|   |       ストリームでの入出力処理の基本1.pdf
+|   |       ストリームでの入出力処理の基本2.pdf
+|   |       ストリームでの入出力処理の基本3.pdf
+|   |       ストリーム関連クラス.xlsx
+|   |       ファイル操作.md
+|   |       ファイル書き込み.md
+|   |       ファイル読み込み.md
+|   |       
+|   +---マルチスレッド
+|   |   |   AtomicInteger と volatile Integer の違い.md
+|   |   |   AtomicInteger とは.md
+|   |   |   Executor関連.md
+|   |   |   Threadクラス.md
+|   |   |   コレクションのスレッドセーフ.md
+|   |   |   スレッドの停止と再開.md
+|   |   |   スレッド生成開始APIの一覧.xlsx
+|   |   |   メモリ可視性の問題.md
+|   |   |   リトライ.md
+|   |   |   最大N個のスレッドの同時実行.md
+|   |   |   
+|   |   +---_デザインパターン
+|   |   |       SingleThreadedExecution.md
+|   |   |       
+|   |   \---画像
+|   |           Thread_sleepの再開方法.png
+|   |           Thread_waitの再開方法.png
+|   |           
+|   +---メソッド
+|   |   \---メソッド参照(コロン2つのやつ)
+|   |           メソッド参照(コロン2つのやつ).md
+|   |           メソッド参照.url
+|   |           
+|   +---例外
+|   |       try_with_resources.pdf
+|   |       try_with_resources.webloc
+|   |       よくある例外の対処法一覧.md
+|   |       よく使用する例外.md
+|   |       例外の概念.md
+|   |       例外発生時の挙動.md
+|   |       複数の例外を catch する.md
+|   |       
+|   +---修飾子
+|   |   \---static
+|   |           static import.md
+|   |           
+|   +---型、変数
+|   |   |   parseIntとvalueOfの違い.md
+|   |   |   型.md
+|   |   |   数値を数値型で扱うかString型で扱うか.md
+|   |   |   配列のボクシングとアンボクシング.md
+|   |   |   
+|   |   +---よくあるエラー
+|   |   |       Variable_X_might_not_have_been_initializedエラー.md
+|   |   |       
+|   |   +---コレクション
+|   |   |   |   コレクション.md
+|   |   |   |   コレクションのソートの基本.md
+|   |   |   |   コレクション間の変換.md
+|   |   |   |   
+|   |   |   +---List
+|   |   |   |       List.md
+|   |   |   |       ソート.md
+|   |   |   |       ソート_ワーニング.md
+|   |   |   |       ソート_要素が基本型の場合.pdf
+|   |   |   |       ソート_要素が基本型の場合.webloc
+|   |   |   |       ソートで使用するメソッド決定プロセス.xlsx
+|   |   |   |       指定した範囲の要素のみの並べ替え.md
+|   |   |   |       複数のソート方法を動的に入れ替える場合.md
+|   |   |   |       
+|   |   |   +---Map
+|   |   |   |       get時のNullワーニングの回避方法.md
+|   |   |   |       Map.md
+|   |   |   |       並べ替え.md
+|   |   |   |       
+|   |   |   \---Set
+|   |   |           Set.md
+|   |   |           
+|   |   +---ディープコピー
+|   |   |       cloneメソッドによるディープコピー.md
+|   |   |       第三者ライブラリによるディープコピー.md
+|   |   |       
+|   |   +---数値
+|   |   |       10の累乗形式で数値リテラルを記述する.md
+|   |   |       N進数.md
+|   |   |       区切り文字を使用してコードを見やすくする.md
+|   |   |       小数.md
+|   |   |       小数の演算.md
+|   |   |       演算と型.md
+|   |   |       
+|   |   \---文字・文字列
+|   |       |   charとString間の変換.md
+|   |       |   String.md
+|   |       |   StringBuilder.md
+|   |       |   String_format_サンプル.md
+|   |       |   String_format_サンプル_日付と時刻.md
+|   |       |   String_format_基礎理論.md
+|   |       |   ひらがなとカタカナの変換ユーティリティ.md
+|   |       |   文字列のテンプレート化.md
+|   |       |   文字列を置換する.pdf
+|   |       |   文字列を置換する.webloc
+|   |       |   
+|   |       \---char型
+|   |               char型.md
+|   |               
+|   +---日付と時刻
+|   |   |   Dateクラス.md
+|   |   |   単位変換.md
+|   |   |   現在のUnixエポック時刻を取得する.md
+|   |   |   
+|   |   \---Calendarクラス
+|   |           24時間表記と12時間表記.md
+|   |           参照系.md
+|   |           更新系.md
+|   |           生成系.md
+|   |           
+|   \---論理演算
+|           「縦棒=」と「&=」演算子.md
+|           ショートカットサーキット.md
+|           整数同士の論理演算.md
+|           
++---Kotlin
+|   |   KotlinからJavaへデコンパイルする.md
+|   |   let.md
+|   |   シングルトン.md
+|   |   レシーバ.md
+|   |   第一級オブジェクトとは.url
+|   |   
+|   +---DSL
+|   |       Kotlin DSL を理解してみる.pdf
+|   |       Kotlin DSL.md
+|   |       
+|   +---JavaとKotlinの違い
+|   |       Java_Kotlin_対応表.md
+|   |       Java_Kotlin_対応表.xlsx
+|   |       改行が意味を持つ.md
+|   |       無名クラスが直接複数のクラス_インターフェースを継承できる.md
+|   |       無名クラス内部からアウタークラスの変数にアクセスできる.md
+|   |       関数とメソッドは異なるものである.md
+|   |       
+|   +---アノテーション
+|   |       Kotlin で独自のアノテーションを定義する.md
+|   |       よく使用するアノテーション一覧.md
+|   |       
+|   +---クラスとオブジェクト
+|   |   |   companion object.md
+|   |   |   companion objectとクラス内objectの違い.md
+|   |   |   data object.md
+|   |   |   data_objectとdata_classの違い.md
+|   |   |   dataクラス.md
+|   |   |   Destructuring declarations(分解宣言).md
+|   |   |   Functional（SAM）インターフェース.md
+|   |   |   inline value クラス.md
+|   |   |   Kotlin 特有なクラスの一覧.md
+|   |   |   sealed クラス.md
+|   |   |   イコール記号.md
+|   |   |   インターフェース.md
+|   |   |   オブジェクト宣言(Object declarations).md
+|   |   |   オブジェクト式(Object expressions).md
+|   |   |   オブジェクト式とオブジェクト宣言の違い.md
+|   |   |   コンストラクタ.md
+|   |   |   コンストラクタ参照.md
+|   |   |   デリゲートクラス(クラスの委譲).md
+|   |   |   抽象クラスとインターフェースの使い分け.md
+|   |   |   関数型をクラスに直接実装する.md
+|   |   |   
+|   |   \---画像
+|   |           シールドクラスの例の階層図.svg
+|   |           デリゲートクラスの例.png
+|   |           
+|   +---コーディングの規則と慣例
+|   |       コーディングの規則と慣例.md
+|   |       
+|   +---ジェネリクス
+|   |       境界ワイルドカード型.md
+|   |       
+|   +---ネストされたクラス
+|   |       ネストされたクラスと内部クラス.md
+|   |       匿名内部クラス.md
+|   |       
+|   +---バリデーションチェック
+|   |       Preconditions.kt.md
+|   |       require check assert の違い.md
+|   |       
+|   +---リフレクション
+|   |       リフレクション.md
+|   |       
+|   +---例外
+|   |   |   例外(公式ドキュメント).md
+|   |   |   例外.md
+|   |   |   
+|   |   \---画像
+|   |           runtime-exception.svg
+|   |           throwable.svg
+|   |           
+|   +---修飾子
+|   |       final.md
+|   |       operator.md
+|   |       thisの意味.md
+|   |       typealias.md
+|   |       可視性修飾子.md
+|   |       
+|   +---入門
+|   |       Kotlin入門_Qiita.url
+|   |       
+|   +---制御の管理
+|   |       if と when の使い分け.md
+|   |       リターンとジャンプ.md
+|   |       条件とループ.md
+|   |       
+|   +---型_変数_値
+|   |   |   Any.md
+|   |   |   companion_object.md
+|   |   |   Kotlinの型を知る_前編_Qiita.pdf
+|   |   |   Nothing.md
+|   |   |   Unit.md
+|   |   |   use関数.md
+|   |   |   キャスト.md
+|   |   |   パスカル記法.md
+|   |   |   変数名の先頭のアンダースコアの意味.md
+|   |   |   
+|   |   +---enum
+|   |   |       enum.md
+|   |   |       
+|   |   +---nullの扱い
+|   |   |       オプショナル型.md
+|   |   |       
+|   |   +---String
+|   |   |       Characters.md
+|   |   |       String.md
+|   |   |       Stringの比較は「==」でOK.md
+|   |   |       文字列リテラルの中に式や変数を埋め込む.md
+|   |   |       
+|   |   +---Tuples
+|   |   |       Tuples(Pair_Triple).md
+|   |   |       
+|   |   +---コレクション
+|   |   |   |   ArrayDeque.md
+|   |   |   |   List.md
+|   |   |   |   Map.md
+|   |   |   |   Sequence.md
+|   |   |   |   Set.md
+|   |   |   |   イテレーター.md
+|   |   |   |   コレクションの共通事項.md
+|   |   |   |   コレクションの概要.md
+|   |   |   |   コレクション間の変換.md
+|   |   |   |   範囲と等差数列.md
+|   |   |   |   関数一覧.xlsx
+|   |   |   |   
+|   |   |   +---コレクションの操作
+|   |   |   |       forEach の continue と break.md
+|   |   |   |       List 専用の操作.md
+|   |   |   |       Map 専用の操作.md
+|   |   |   |       Set 専用の操作.md
+|   |   |   |       グループ化.md
+|   |   |   |       コレクション操作の概要.md
+|   |   |   |       フィルター.md
+|   |   |   |       プラスとマイナスの操作.md
+|   |   |   |       書き込み可能なコレクションへの操作.md
+|   |   |   |       構造の変更.md
+|   |   |   |       要素の並べ替え.md
+|   |   |   |       要素をまとめて取得する.md
+|   |   |   |       要素を一つだけ取得する.md
+|   |   |   |       関数一覧.xlsx
+|   |   |   |       集計と蓄積.md
+|   |   |   |       
+|   |   |   \---画像
+|   |   |           コレクション関連のクラス図.png
+|   |   |           
+|   |   +---プロパティ・定数
+|   |   |   |   JvmFieldアノテーション.md
+|   |   |   |   staticフィールド.md
+|   |   |   |   インラインプロパティ.md
+|   |   |   |   デリゲートプロパティ.md
+|   |   |   |   パッケージレベルプロパティ.md
+|   |   |   |   プロパティ.md
+|   |   |   |   プロパティ参照.md
+|   |   |   |   定数の定義.md
+|   |   |   |   拡張プロパティ.md
+|   |   |   |   遅延初期化.md
+|   |   |   |   関数型.md
+|   |   |   |   
+|   |   |   \---エラー対応
+|   |   |           Property delegate must have a 'getValue(XXXActivity, KProperty)' method. None of the following functions are suitable.md
+|   |   |           
+|   |   +---基本(プリミティブ)型
+|   |   |   \---数値
+|   |   |       |   Float.NaN.md
+|   |   |       |   
+|   |   |       +---型
+|   |   |       |       参照型とプリミティブ型.md
+|   |   |       |       型変換.md
+|   |   |       |       基本的な数値型.md
+|   |   |       |       正の数のみの数値型.md
+|   |   |       |       
+|   |   |       +---数値リテラル
+|   |   |       |       10のX乗.md
+|   |   |       |       Float と Double には接尾辞が必要.md
+|   |   |       |       N進数.md
+|   |   |       |       アンダースコア表記.md
+|   |   |       |       
+|   |   |       +---浮動小数点の仕組み
+|   |   |       |   |   浮動小数点の仕組み.md
+|   |   |       |   |   
+|   |   |       |   \---画像
+|   |   |       |           double内部表現.png
+|   |   |       |           float内部表現.png
+|   |   |       |           仮数と指数.png
+|   |   |       |           
+|   |   |       \---演算
+|   |   |               ビット単位の演算.md
+|   |   |               四則演算.md
+|   |   |               小数の演算にはBigDecimalを使用する.md
+|   |   |               
+|   |   +---時間
+|   |   |       時間の計測.md
+|   |   |       
+|   |   +---正規表現
+|   |   |   |   Greedy Qualifiers フローチャート.dio
+|   |   |   |   Greedy vs Reluctant vs Possessive Qualifiers.md
+|   |   |   |   MatchedResult クラス.md
+|   |   |   |   よく使う正規表現のサンプル集.md
+|   |   |   |   エスケープ処理.md
+|   |   |   |   正規表現が難しい理由.md
+|   |   |   |   正規表現の一覧.md
+|   |   |   |   正規表現の応用.md
+|   |   |   |   特殊文字か単なる文字かの見分け方.md
+|   |   |   |   
+|   |   |   \---画像
+|   |   |           単語境界.png
+|   |   |           非単語境界.png
+|   |   |           
+|   |   +---範囲
+|   |   |       範囲.md
+|   |   |       
+|   |   \---配列
+|   |           配列(Array).md
+|   |           配列で使用できる便利な関数.md
+|   |           
+|   +---関数
+|   |   |   Contract.md
+|   |   |   infix_中置記法.md
+|   |   |   infix_中置記法.pdf
+|   |   |   invoke関数.md
+|   |   |   staticな関数.md
+|   |   |   どの表現方法を使用するか.dio
+|   |   |   インライン関数.md
+|   |   |   カリー化・部分適用.md
+|   |   |   クロージャ.md
+|   |   |   コンストラクター関数.md
+|   |   |   パッケージレベル関数.md
+|   |   |   ラムダ式.md
+|   |   |   レシーバ付き関数リテラル.md
+|   |   |   ローカル関数.md
+|   |   |   可変長引数の関数.md
+|   |   |   型安全ビルダー.md
+|   |   |   抽象クラス.md
+|   |   |   拡張関数(レシーバー付き関数).md
+|   |   |   拡張関数のレシーバーの第一引数化.md
+|   |   |   末尾再帰関数.md
+|   |   |   無名関数.md
+|   |   |   省略表記.xlsx
+|   |   |   省略記法一覧.md
+|   |   |   関数.md
+|   |   |   関数とメソッドの違い.md
+|   |   |   関数参照.md
+|   |   |   関数型.md
+|   |   |   関連用語まとめ.md
+|   |   |   高階関数.md
+|   |   |   
+|   |   \---スコープ関数
+|   |           Kotlinスコープ関数の使い方とその用途.pdf
+|   |           スコープ関数.md
+|   |           
+|   \---非同期処理
+|       \---コルーチン
+|           |   1.コルーチンの基本.md
+|           |   10.表現の選択.md
+|           |   11.IntelliJ IDEA を使用してコルーチンをデバッグするチュートリアル.md
+|           |   12.IntelliJ IDEA を使用して Kotlin の Flow をデバッグするチュートリアル.md
+|           |   2.コルーチンとチャネルチュートリアル.md
+|           |   3.キャンセルとタイムアウト.md
+|           |   4.suspend関数の作成.md
+|           |   5.コルーチンコンテキストとディスパッチャー.md
+|           |   6.非同期のFlow.md
+|           |   7.チャネル.md
+|           |   8.コルーチンの例外の扱い方.md
+|           |   9.共有可変状態と同時実行.md
+|           |   CoroutineExceptionHandler.md
+|           |   coroutinScope ブロックと launch ブロックの違い.md
+|           |   Flow と Channel の違い.md
+|           |   Flow.single() 関数.md
+|           |   【ブログ】1.まずはじめに.md
+|           |   【ブログ】2.コルーチンのキャンセル.md
+|           |   【ブログ】3.コルーチンの例外.md
+|           |   【ブログ】4.キャンセルすべきではないワークのコルーチン実装パターン.md
+|           |   【ブログ】CoroutineContext と Scope.md
+|           |   【ブログ】スレッドのブロックとコルーチンの一時停止.md
+|           |   【ブログ】明示的な同時実行.md
+|           |   【ブログ】構造化された同時実行.md
+|           |   よく使用する関数一覧.xlsx
+|           |   コルーチンのポイントまとめ.md
+|           |   
+|           \---画像
+|                   emitが呼び出されるところにブレークポイント.png
+|                   IDEAでデバッグ.png
+|                   SupervisorJobは自分自身と子をキャンセルしない.webp
+|                   コルーチンの例外はコルーチンの階層を伝搬する.bin
+|                   コルーチンはタスクの階層で実行される.webp
+|                   コンテキストの結合順序.webp
+|                   ジョブのライフサイクル.webp
+|                   スコープ内の親と子のインスタンスの違い(正しい画像).png
+|                   スコープ内の親と子のインスタンスの違い.webp
+|                   タブの説明.png
+|                   チャネルのイメージ.png
+|                   テストで何をインジェクトするか.webp
+|                   デバッガーセッションの再開.png
+|                   デバッガーセッションの再開2.png
+|                   デバッガーセッションの再開3.png
+|                   デバッガーセッションの再開4.png
+|                   デバッガーセッションの再開5.png
+|                   デバッグツールウィンドウ.png
+|                   デバッグツールウィンドウ2.png
+|                   デバッグモードで実行.png
+|                   ブレークポイントを設置.png
+|                   ブロッキングのイメージ.webp
+|                   プロジェクトをビルドする.png
+|                   ロープ.webp
+|                   一時停止プロセス.gif
+|                   同時実行性.png
+|                   変数名の横に最適化された旨のメッセージ.png
+|                   統合されたコルーチンコンテキスト.webp
+|                   統合されたチャネル.gif
+|                   複数のコルーチンが一つのチャネルを使用.png
+|                   親がSupervisorJobではなくJobの場合.webp
+|                   進捗を表示する(平行処理の場合).png
+|                   進捗を表示する(連続処理の場合).png
+|                   
++---Mac
+|       MacOSでよく使うショートカットキー.md
+|       WindowsキーボードとマウスでMacを操作.md
+|       ターミナル.md
+|       開発元が未確認のMacアプリを開く.md
+|       
++---Markdown
+|       きれいに書くためのフォーマット.md
+|       トラブルシューティング.md
+|       動画ファイルの追加方法.md
+|       
++---Officeソフト
+|   \---Excel
+|       |   テーブルとして書式設定を解除する.md
+|       |   
+|       \---フィルタ後のデータを対象に数式を実行する
+|               フィルタ後のデータを対象に数式を実行する.md
+|               引数の一覧.png
+|               引数の一覧2.png
+|               
++---plantuml
+|       PlantUML公式サイト.url
+|       シーケンス図のテンプレート.pu
+|       記述ルール.md
+|       
++---shellスクリプト
+|       shellスクリプトをダブルクリックで実行できるようにする方法.md
+|       参考サイトまとめ.md
+|       
++---VisualStudioCode
+|   |   FAQ.md
+|   |   PlantUMLショートカットキー.md
+|   |   便利な初期設定.md
+|   |   
+|   \---マークダウン
+|           FAQ.md
+|           Markdown_Table.md
+|           よく使用するショートカットキー.md
+|           便利なプラグイン一覧.md
+|           
++---Windows
+|       ソフトのインストール場所の確認.md
+|       
++---アニメーション
+|       アニメーションの種類.md
+|       キーフレームアニメーション.md
+|       
++---エンコード_デコード
+|       base64_エンコーディングアルゴリズム.pdf
+|       エンコーディングの種類.md
+|       
++---コードレビュー
+|       コードレビュー.md
+|       
++---システム開発全般
+|   |   システム開発のフレームワーク.md
+|   |   要望と要求と要件の違い.md
+|   |   
+|   \---画像
+|           要望と要求と要件の関係.png
+|           
++---セキュリティ
+|   |   FIDO認証.md
+|   |   セキュリティの7要素.md
+|   |   セキュリティ関連用語_よく使用する基本用語.md
+|   |   セキュリティ関連用語_一般的な機能とその呼び方.md
+|   |   セキュリティ関連用語_具体的な技術.md
+|   |   セキュリティ関連用語とそれぞれの関係.xlsx
+|   |   パスキー.md
+|   |   パスワードを安全に保存するベストプラクティス.md
+|   |   
+|   +---サーバー通信セキュリティ
+|   |       1.サーバーと通信する際に気をつける点.md
+|   |       2-1.サーバー証明書による証明.md
+|   |       2.HTTPS（SSL／TLS）の使用.md
+|   |       3.証明書ピンニング.md
+|   |       4.認証と認可.md
+|   |       
+|   +---ハッシュ関数について
+|   |   |   ソルトとは.md
+|   |   |   ハッシュ関数に関する攻撃とその耐性について.md
+|   |   |   ハッシュ関数関連用語.md
+|   |   |   
+|   |   \---SHA-X
+|   |       |   SHAシリーズ一覧.xlsx
+|   |       |   
+|   |       \---SHA-256
+|   |               SHA-256.png
+|   |               SHA-256のアルゴリズム.md
+|   |               
+|   +---メッセージ認証_文書が改ざんされていないことの保障
+|   |       HMAC_definition.svg
+|   |       HMACとは.md
+|   |       MACとは.md
+|   |       MACとは.pdf
+|   |       メッセージ認証とは.md
+|   |       
+|   +---攻撃手法
+|   |       マルウェア.md
+|   |       攻撃手法一覧.xlsx
+|   |       
+|   +---暗号方式
+|   |   |   共通鍵暗号方式.md
+|   |   |   
+|   |   +---ハイブリッド暗号方式
+|   |   |       ハイブリッド暗号方式.md
+|   |   |       ハイブリッド暗号方式.png
+|   |   |       
+|   |   \---公開鍵暗号方式
+|   |           PKI図解.JPG
+|   |           公開鍵暗号方式.md
+|   |           
+|   +---暗号通信
+|   |       Nonceとは.md
+|   |       
+|   +---認証・認可
+|   |   |   Webページが正規のページかどうかの見分け方.url
+|   |   |   認証とは.md
+|   |   |   認証と認可の違い.md
+|   |   |   
+|   |   \---OAuth1.0a
+|   |           FAQ.md
+|   |           OAuth1.0a_仕様.md
+|   |           
+|   +---電子署名
+|   |       RSA暗号を使用した電子署名の全体像.PNG
+|   |       RSA暗号を用いた電子署名の作成.gif
+|   |       RSA暗号を用いた電子署名の検証.gif
+|   |       電子署名.md
+|   |       電子署名の参考資料.pdf
+|   |       
+|   \---電子証明書
+|           現実世界との対比.png
+|           電子証明書.md
+|           電子証明書とは「分かりそう」で「分からない」.pdf
+|           
++---テンプレート
+|       フローチャート_テンプレート.xlsx
+|       
++---デザイン
+|   +---デザインツール
+|   |   |   アイコン作成.md
+|   |   |   
+|   |   \---Figma
+|   |       |   Figmaの基本操作.md
+|   |       |   Figmaの概要.md
+|   |       |   Style.md
+|   |       |   wrap_content_match_parentの設定方法.md
+|   |       |   テキスト.md
+|   |       |   ブランドアイコンを取得する.md
+|   |       |   プロトタイプ.md
+|   |       |   初期設定.md
+|   |       |   
+|   |       +---オートレイアウト
+|   |       |   |   オートレイアウト.md
+|   |       |   |   
+|   |       |   \---画像
+|   |       |           orientation_horizontal.png
+|   |       |           orientation_vertical.png
+|   |       |           wrap_content_横.gif
+|   |       |           オートレイアウト_ボタンの使用例.PNG
+|   |       |           キャンバススタッキング.png
+|   |       |           コンテナに合わせて拡大.png
+|   |       |           ベースライン揃え.gif
+|   |       |           制約の設定方法.png
+|   |       |           親がFrameの場合.png
+|   |       |           親がGroupの場合.png
+|   |       |           親に合わせて子を拡縮.gif
+|   |       |           
+|   |       +---グループとフレーム
+|   |       |   |   GroupとFrameの違い.md
+|   |       |   |   
+|   |       |   \---画像
+|   |       |           Groupの拡縮に合わせて子Viewが常に拡縮する.PNG
+|   |       |           子Viewを拡縮させずにGroupの拡縮が可能.PNG
+|   |       |           
+|   |       +---コンポーネント
+|   |       |   |   コンポーネント.md
+|   |       |   |   コンポーネントプロパティ.md
+|   |       |   |   
+|   |       |   \---バリアント
+|   |       |       |   バリアント.md
+|   |       |       |   
+|   |       |       \---画像
+|   |       |               variantの追加.mp4
+|   |       |               複数のVariantの組み合わせ.PNG
+|   |       |               言葉の説明.png
+|   |       |               
+|   |       +---ショートカットキー
+|   |       |   |   ショートカットキー.md
+|   |       |   |   
+|   |       |   \---画像
+|   |       |           ショートカットキー一覧.png
+|   |       |           
+|   |       +---ブレンドモード
+|   |       |   |   ブレンドモード.md
+|   |       |   |   
+|   |       |   \---画像
+|   |       |           ブレンドモード一覧.jfif
+|   |       |           
+|   |       +---プラグイン
+|   |       |       Material Theme Builder.md
+|   |       |       
+|   |       +---マスク
+|   |       |   |   マスク.md
+|   |       |   |   
+|   |       |   \---画像
+|   |       |           masks-layer-panel.png
+|   |       |           ぼかし.PNG
+|   |       |           サンプル動画.gif
+|   |       |           
+|   |       \---レスポンシブデザイン
+|   |               レスポンシブデザイン.md
+|   |               
+|   \---デザインノウハウ
+|           デザイン基礎.xlsx
+|           
++---デザインパターン
+|   |   staticフィールドの使いどころ.md
+|   |   継承の使いどころ.md
+|   |   複数の処理の中から選択した処理を実装したい場合.md
+|   |   
+|   +---Gang of Four のデザインパターン
+|   |       00.デザインパターン一覧.md
+|   |       01.Adapter(Wrapper)パターン.md
+|   |       02.Templateパターン.md
+|   |       03.Singletonパターン.md
+|   |       04.Prototypeパターン.md
+|   |       05.Builderパターン.md
+|   |       06.AbstractFactoryパターン.md
+|   |       07.Bridgeパターン.md
+|   |       08.Strategyパターン.md
+|   |       09.Compositeパターン.md
+|   |       10.Decoratorパターン.md
+|   |       11.Visitorパターン.md
+|   |       12.Chain of Responsibilityパターン.md
+|   |       13.Facadeパターン.md
+|   |       14.Mediatorパターン.md
+|   |       15.Observerパターン.md
+|   |       16.Mementoパターン.md
+|   |       17.Stateパターン.md
+|   |       18.Flyweightパターン.md
+|   |       19.Proxyパターン.md
+|   |       20.Commandパターン.md
+|   |       21.Interpreterパターン.md
+|   |       22.PageObjectパターン.md
+|   |       23.Repositoryパターン.md
+|   |       24.Factory Methodパターン.md
+|   |       
+|   \---マルチスレッド編
+|           00.デザインパターン一覧.md
+|           01.Single Threaded Execution.md
+|           02.Immutable.md
+|           03.Guarded Suspension.md
+|           04.Balking.md
+|           05.Producer-Consumer.md
+|           06.Read-Write Lock.md
+|           07.Thread-Per-Message.md
+|           08.Worker Thread.md
+|           09.Future.md
+|           10.Two-Phase Termination.md
+|           11.Thread-Specific Storage.md
+|           12.Active Object.md
+|           Thread-Per-Message と Worker Thread の違い.md
+|           
++---データベース
+|   |   カーソルとは.md
+|   |   ビュー.md
+|   |   
+|   +---SQL
+|   |   |   BETWEEN仕様.md
+|   |   |   HAVING句が呼ばれるタイミング.png
+|   |   |   HAVING句の使い方.md
+|   |   |   テーブルコンペア用SQL作成ツール.xlsx
+|   |   |   相関副問い合わせ.md
+|   |   |   
+|   |   \---with_recursive
+|   |           with_recursive_sample.db
+|   |           with_recursive_sample.sqbpro
+|   |           with_recursive句_サンプル.xlsx
+|   |           
+|   \---SQLite
+|       |   Nullデータを格納する.md
+|       |   N進数データを格納する.md
+|       |   ROWIDの参照とINTEGER PRIMARY KEYとの関係 SQLite入門.pdf
+|       |   ROWIDの参照とINTEGER PRIMARY KEYとの関係 SQLite入門.webloc
+|       |   SQLiteのジャーナルモード.pdf
+|       |   SQLiteのジャーナルモード.webloc
+|       |   SQLiteのジャーナルモード_公式ドキュメント.webloc
+|       |   with_recursive句_サンプル.xlsx
+|       |   エスケープ文字.md
+|       |   文法.md
+|       |   
+|       +---型
+|       |       型についての基礎知識.md
+|       |       静的型定義.md
+|       |       
+|       \---日付と時刻
+|               日付と時刻のサンプル.md
+|               日付と時刻の関数.md
+|               
++---ネットワーク
+|   |   SSLとは、「分かりそう」で「分からない」.pdf
+|   |   
+|   +---GraphQL
+|   |   |   GraphQL.md
+|   |   |   
+|   |   +---Apollo GraphQL Kotlin Client
+|   |   |   \---チュートリアル
+|   |   |       |   1.プロジェクトを構成する.md
+|   |   |       |   2.スキーマを追加する.md
+|   |   |       |   3.クエリを記述する.md
+|   |   |       |   
+|   |   |       \---画像
+|   |   |               completed_id_query.png
+|   |   |               explorer_add_launches_query.png
+|   |   |               explorer_autocomplete.png
+|   |   |               explorer_check_cursor.png
+|   |   |               explorer_initial_added_query.png
+|   |   |               explorer_launches_drill_in.png
+|   |   |               explorer_launch_list_rename.png
+|   |   |               explorer_sandbox_open.png
+|   |   |               explorer_submit_operation.png
+|   |   |               launches_detail.png
+|   |   |               new_file.png
+|   |   |               open_in_explorer_launches.png
+|   |   |               
+|   |   \---画像
+|   |           グラフ理論.png
+|   |           ツリー.png
+|   |           
+|   \---HTTP
+|           AcceptとContent-Typeの違い.md
+|           Content-Type 一覧.md
+|           HTTP.md
+|           HTTPのフォーマット.jpg
+|           HTTPの仕組み_認証とは.url
+|           User-Agent とは.md
+|           ブラウザでURL欄に直接入力した場合はGETメソッドになる.md
+|           ヘッダーフィールドの一覧.url
+|           
++---ファイル
+|   +---JSON
+|   |   |   JSON Schema から Kotlin の data class を作成するツール.md
+|   |   |   JSON Schema.md
+|   |   |   JSONのフォーマット.md
+|   |   |   JSON公式ドキュメント？.url
+|   |   |   
+|   |   \---公式ドキュメント
+|   |       \---Docs
+|   |           \---2.Getting Started
+|   |               |   2.Creating your first schema.md
+|   |               |   
+|   |               \---画像
+|   |                       JSONデータを検証する.svg
+|   |                       
+|   \---XML
+|           XMLの基本.md
+|           
++---プライバシーポリシー
+|       プライバシーポリシー.md
+|       
++---プログラミング全般
+|   |   クラス名・変数名・メソッド名のネーミング.md
+|   |   クラス図.md
+|   |   リスナーの解除.md
+|   |   冪等性.md
+|   |   参照透過性.md
+|   |   参照透過性と冪等性の違い.md
+|   |   委譲と継承の違い.md
+|   |   専門用語.xlsx
+|   |   時刻の取り扱い.md
+|   |   継承.md
+|   |   良いコードの書き方.md
+|   |   良いコードの書き方.pdf
+|   |   良いコードの書き方.url
+|   |   
+|   +---アーキテクチャ
+|   |       ヘルパークラス.md
+|   |       
+|   +---プログラミングにおける重要な原則
+|   |       01.重要な原則の一覧.md
+|   |       
+|   \---品質管理
+|           不具合を出さない実装の進め方.md
+|           
++---プロトコル
+|       プロトコルまとめ.md
+|       
++---マーケティング
+|   \---001.専門用語
+|           専門用語.md
+|           
++---リファクタリング
+|       NGパターン.md
+|       コールバック地獄の回避方法.md
+|       リファクタリング.md
+|       リファクタリングのコアコンセプト.md
+|       継承は悪か？.url
+|       
++---勉強法
+|       ノートをとる意味.md
+|       プログラミングの勉強の効率化.md
+|       モチベーションと集中力.md
+|       不要な情報の判別.md
+|       効率的な進め方.md
+|       情報整理術.md
+|       理解力.md
+|       知識の種類.md
+|       記憶力.md
+|       
++---広告
+|   |   CPM.md
+|   |   SSP一覧.xlsx
+|   |   広告の種類.md
+|   |   広告企業(アドネットワーク)一覧.md
+|   |   広告用語(Qiitaからコピペしただけでわかりにくいので参考までに).md
+|   |   広告用語.md
+|   |   
+|   +---Amazon
+|   |       amazon publisher services.md
+|   |       Transparent Ad Marketplace.md
+|   |       
+|   +---DSPとSSP
+|   |   |   DSPとSSP.md
+|   |   |   
+|   |   \---画像
+|   |           DSPとSSP.png
+|   |           
+|   +---Meta Audience Network
+|   |       広告表示のプロセス.md
+|   |       
+|   +---nend
+|   |       apiKey_spotID.png
+|   |       apiKey_spotIDの確認.md
+|   |       FAQ.md
+|   |       Google_Advertising_IDを取得する.md
+|   |       広告枠の管理.png
+|   |       
+|   +---Prebid.org
+|   |       デメリット.md
+|   |       
+|   +---アドフリくん
+|   |   |   アドネットワーク運用マニュアル.pdf
+|   |   |   アドネットワーク運用マニュアル.url
+|   |   |   アドフリくんの使い方マニュアル・疑問点解消ページ.url
+|   |   |   
+|   |   +---adfurikunSDK_Android_moviereward_3.20.0
+|   |   |   |   README.txt
+|   |   |   |   
+|   |   |   +---libs
+|   |   |   |       adfurikunMovieRewardSDK-3.20.0.aar
+|   |   |   |       adfurikunsdk-adnw-maven.gradle
+|   |   |   |       adfurikunsdk-support-androidx.gradle
+|   |   |   |       
+|   |   |   +---SampleJava
+|   |   |   |   |   .gitignore
+|   |   |   |   |   .project
+|   |   |   |   |   build.gradle
+|   |   |   |   |   gradle.properties
+|   |   |   |   |   gradlew
+|   |   |   |   |   gradlew.bat
+|   |   |   |   |   settings.gradle
+|   |   |   |   |   
+|   |   |   |   +---app
+|   |   |   |   |   |   .gitignore
+|   |   |   |   |   |   build.gradle
+|   |   |   |   |   |   proguard-rules.pro
+|   |   |   |   |   |   
+|   |   |   |   |   +---libs
+|   |   |   |   |   |       adfurikunMovieRewardSDK-3.20.0.aar
+|   |   |   |   |   |       adfurikunsdk-adnw-maven.gradle
+|   |   |   |   |   |       adfurikunsdk-support-androidx.gradle
+|   |   |   |   |   |       
+|   |   |   |   |   \---src
+|   |   |   |   |       +---androidTest
+|   |   |   |   |       |   \---java
+|   |   |   |   |       |       \---sample
+|   |   |   |   |       |           \---adfurikunsdk
+|   |   |   |   |       |               \---jp
+|   |   |   |   |       |                   \---samplejava
+|   |   |   |   |       |                           ExampleInstrumentedTest.java
+|   |   |   |   |       |                           
+|   |   |   |   |       +---main
+|   |   |   |   |       |   |   AndroidManifest.xml
+|   |   |   |   |       |   |   
+|   |   |   |   |       |   +---java
+|   |   |   |   |       |   |   \---sample
+|   |   |   |   |       |   |       \---adfurikunsdk
+|   |   |   |   |       |   |           \---jp
+|   |   |   |   |       |   |               \---samplejava
+|   |   |   |   |       |   |                   |   AdfurikunConst.java
+|   |   |   |   |       |   |                   |   MainActivity.java
+|   |   |   |   |       |   |                   |   SampleApplication.java
+|   |   |   |   |       |   |                   |   SimpleAppOpenAd.java
+|   |   |   |   |       |   |                   |   SimpleBanner.java
+|   |   |   |   |       |   |                   |   SimpleBannerAutoRefresh.java
+|   |   |   |   |       |   |                   |   SimpleInterstitial.java
+|   |   |   |   |       |   |                   |   SimpleMovieReward.java
+|   |   |   |   |       |   |                   |   SimpleNativeAd.java
+|   |   |   |   |       |   |                   |   SimpleRectangle.java
+|   |   |   |   |       |   |                   |   Utils.java
+|   |   |   |   |       |   |                   |   
+|   |   |   |   |       |   |                   \---admob
+|   |   |   |   |       |   |                           SimpleAdMobBanner.java
+|   |   |   |   |       |   |                           SimpleAdMobInterstitial.java
+|   |   |   |   |       |   |                           SimpleAdMobNativeAd.java
+|   |   |   |   |       |   |                           SimpleAdMobRectangle.java
+|   |   |   |   |       |   |                           SimpleAdMobReward.java
+|   |   |   |   |       |   |                           
+|   |   |   |   |       |   \---res
+|   |   |   |   |       |       +---drawable-hdpi
+|   |   |   |   |       |       |       .gitkeep
+|   |   |   |   |       |       |       
+|   |   |   |   |       |       +---drawable-mdpi
+|   |   |   |   |       |       |       .gitkeep
+|   |   |   |   |       |       |       
+|   |   |   |   |       |       +---drawable-xhdpi
+|   |   |   |   |       |       |       .gitkeep
+|   |   |   |   |       |       |       
+|   |   |   |   |       |       +---drawable-xxhdpi
+|   |   |   |   |       |       |       .gitkeep
+|   |   |   |   |       |       |       
+|   |   |   |   |       |       +---drawable-xxxhdpi
+|   |   |   |   |       |       |       .gitkeep
+|   |   |   |   |       |       |       
+|   |   |   |   |       |       +---layout
+|   |   |   |   |       |       |       activity_admob_banner.xml
+|   |   |   |   |       |       |       activity_admob_interstitial.xml
+|   |   |   |   |       |       |       activity_admob_native_ad.xml
+|   |   |   |   |       |       |       activity_admob_rectangle.xml
+|   |   |   |   |       |       |       activity_admob_reward.xml
+|   |   |   |   |       |       |       activity_app_open_ad.xml
+|   |   |   |   |       |       |       activity_banner.xml
+|   |   |   |   |       |       |       activity_banner_auto_refresh.xml
+|   |   |   |   |       |       |       activity_native_ad.xml
+|   |   |   |   |       |       |       activity_rectangle.xml
+|   |   |   |   |       |       |       admob_custom_view.xml
+|   |   |   |   |       |       |       simple_interstitial.xml
+|   |   |   |   |       |       |       simple_movie_reward.xml
+|   |   |   |   |       |       |       
+|   |   |   |   |       |       +---menu
+|   |   |   |   |       |       |       main.xml
+|   |   |   |   |       |       |       
+|   |   |   |   |       |       +---mipmap-hdpi
+|   |   |   |   |       |       |       ic_launcher.png
+|   |   |   |   |       |       |       
+|   |   |   |   |       |       +---mipmap-mdpi
+|   |   |   |   |       |       |       ic_launcher.png
+|   |   |   |   |       |       |       
+|   |   |   |   |       |       +---mipmap-xhdpi
+|   |   |   |   |       |       |       ic_launcher.png
+|   |   |   |   |       |       |       
+|   |   |   |   |       |       +---mipmap-xxhdpi
+|   |   |   |   |       |       |       ic_launcher.png
+|   |   |   |   |       |       |       
+|   |   |   |   |       |       +---mipmap-xxxhdpi
+|   |   |   |   |       |       |       ic_launcher.png
+|   |   |   |   |       |       |       
+|   |   |   |   |       |       +---values
+|   |   |   |   |       |       |       colors.xml
+|   |   |   |   |       |       |       dimens.xml
+|   |   |   |   |       |       |       strings.xml
+|   |   |   |   |       |       |       styles.xml
+|   |   |   |   |       |       |       
+|   |   |   |   |       |       +---values-sw600dp
+|   |   |   |   |       |       |       dimens.xml
+|   |   |   |   |       |       |       
+|   |   |   |   |       |       +---values-sw720dp
+|   |   |   |   |       |       |       dimens.xml
+|   |   |   |   |       |       |       
+|   |   |   |   |       |       +---values-v11
+|   |   |   |   |       |       |       styles.xml
+|   |   |   |   |       |       |       
+|   |   |   |   |       |       +---values-v14
+|   |   |   |   |       |       |       styles.xml
+|   |   |   |   |       |       |       
+|   |   |   |   |       |       \---xml
+|   |   |   |   |       |               network_security_config.xml
+|   |   |   |   |       |               
+|   |   |   |   |       \---test
+|   |   |   |   |           \---java
+|   |   |   |   |               \---sample
+|   |   |   |   |                   \---adfurikunsdk
+|   |   |   |   |                       \---jp
+|   |   |   |   |                           \---samplejava
+|   |   |   |   |                                   ExampleUnitTest.java
+|   |   |   |   |                                   
+|   |   |   |   \---gradle
+|   |   |   |       \---wrapper
+|   |   |   |               gradle-wrapper.jar
+|   |   |   |               gradle-wrapper.properties
+|   |   |   |               
+|   |   |   \---SampleKotlin
+|   |   |       |   .gitignore
+|   |   |       |   build.gradle
+|   |   |       |   gradle.properties
+|   |   |       |   gradlew
+|   |   |       |   gradlew.bat
+|   |   |       |   settings.gradle
+|   |   |       |   
+|   |   |       +---app
+|   |   |       |   |   .gitignore
+|   |   |       |   |   build.gradle
+|   |   |       |   |   proguard-rules.pro
+|   |   |       |   |   
+|   |   |       |   +---libs
+|   |   |       |   |       adfurikunMovieRewardSDK-3.20.0.aar
+|   |   |       |   |       adfurikunsdk-adnw-maven.gradle
+|   |   |       |   |       adfurikunsdk-support-androidx.gradle
+|   |   |       |   |       
+|   |   |       |   \---src
+|   |   |       |       +---androidTest
+|   |   |       |       |   \---java
+|   |   |       |       |       \---jp
+|   |   |       |       |           \---glossom
+|   |   |       |       |               \---sample
+|   |   |       |       |                   \---samplekotlin
+|   |   |       |       |                           ExampleInstrumentedTest.kt
+|   |   |       |       |                           
+|   |   |       |       +---main
+|   |   |       |       |   |   AndroidManifest.xml
+|   |   |       |       |   |   
+|   |   |       |       |   +---java
+|   |   |       |       |   |   \---jp
+|   |   |       |       |   |       \---glossom
+|   |   |       |       |   |           \---sample
+|   |   |       |       |   |               \---samplekotlin
+|   |   |       |       |   |                   |   AdfurikunConst.kt
+|   |   |       |       |   |                   |   MainActivity.kt
+|   |   |       |       |   |                   |   NativeAdUtils.kt
+|   |   |       |       |   |                   |   SampleApplication.kt
+|   |   |       |       |   |                   |   SimpleAppOpenAd.kt
+|   |   |       |       |   |                   |   SimpleBanner.kt
+|   |   |       |       |   |                   |   SimpleBannerAutoRefresh.kt
+|   |   |       |       |   |                   |   SimpleInterstitial.kt
+|   |   |       |       |   |                   |   SimpleMovieReward.kt
+|   |   |       |       |   |                   |   SimpleNativeAd.kt
+|   |   |       |       |   |                   |   SimpleRectangle.kt
+|   |   |       |       |   |                   |   Utils.kt
+|   |   |       |       |   |                   |   
+|   |   |       |       |   |                   \---admob
+|   |   |       |       |   |                           SimpleAdMobBanner.kt
+|   |   |       |       |   |                           SimpleAdMobInterstitial.kt
+|   |   |       |       |   |                           SimpleAdMobNativeAd.kt
+|   |   |       |       |   |                           SimpleAdMobRectangle.kt
+|   |   |       |       |   |                           SimpleAdMobReward.kt
+|   |   |       |       |   |                           
+|   |   |       |       |   \---res
+|   |   |       |       |       +---drawable
+|   |   |       |       |       |       ic_launcher_background.xml
+|   |   |       |       |       |       
+|   |   |       |       |       +---drawable-v24
+|   |   |       |       |       |       ic_launcher_foreground.xml
+|   |   |       |       |       |       
+|   |   |       |       |       +---layout
+|   |   |       |       |       |       activity_admob_banner.xml
+|   |   |       |       |       |       activity_admob_interstitial.xml
+|   |   |       |       |       |       activity_admob_native_ad.xml
+|   |   |       |       |       |       activity_admob_rectangle.xml
+|   |   |       |       |       |       activity_admob_reward.xml
+|   |   |       |       |       |       activity_app_open_ad.xml
+|   |   |       |       |       |       activity_banner.xml
+|   |   |       |       |       |       activity_banner_auto_refresh.xml
+|   |   |       |       |       |       activity_native_ad.xml
+|   |   |       |       |       |       activity_rectangle.xml
+|   |   |       |       |       |       admob_custom_view.xml
+|   |   |       |       |       |       simple_interstitial.xml
+|   |   |       |       |       |       simple_movie_reward.xml
+|   |   |       |       |       |       
+|   |   |       |       |       +---mipmap-anydpi-v26
+|   |   |       |       |       |       ic_launcher.xml
+|   |   |       |       |       |       ic_launcher_round.xml
+|   |   |       |       |       |       
+|   |   |       |       |       +---mipmap-hdpi
+|   |   |       |       |       |       ic_launcher.png
+|   |   |       |       |       |       ic_launcher_round.png
+|   |   |       |       |       |       
+|   |   |       |       |       +---mipmap-mdpi
+|   |   |       |       |       |       ic_launcher.png
+|   |   |       |       |       |       ic_launcher_round.png
+|   |   |       |       |       |       
+|   |   |       |       |       +---mipmap-xhdpi
+|   |   |       |       |       |       ic_launcher.png
+|   |   |       |       |       |       ic_launcher_round.png
+|   |   |       |       |       |       
+|   |   |       |       |       +---mipmap-xxhdpi
+|   |   |       |       |       |       ic_launcher.png
+|   |   |       |       |       |       ic_launcher_round.png
+|   |   |       |       |       |       
+|   |   |       |       |       +---mipmap-xxxhdpi
+|   |   |       |       |       |       ic_launcher.png
+|   |   |       |       |       |       ic_launcher_round.png
+|   |   |       |       |       |       
+|   |   |       |       |       +---values
+|   |   |       |       |       |       colors.xml
+|   |   |       |       |       |       strings.xml
+|   |   |       |       |       |       styles.xml
+|   |   |       |       |       |       
+|   |   |       |       |       \---xml
+|   |   |       |       |               network_security_config.xml
+|   |   |       |       |               
+|   |   |       |       \---test
+|   |   |       |           \---java
+|   |   |       |               \---jp
+|   |   |       |                   \---glossom
+|   |   |       |                       \---sample
+|   |   |       |                           \---samplekotlin
+|   |   |       |                                   ExampleUnitTest.kt
+|   |   |       |                                   
+|   |   |       \---gradle
+|   |   |           \---wrapper
+|   |   |                   gradle-wrapper.jar
+|   |   |                   gradle-wrapper.properties
+|   |   |                   
+|   |   \---SDKの導入
+|   |           前回苦戦した部分.md
+|   |           
+|   \---メディエーション
+|           メディエーション.md
+|           
++---技術英語
+|       よく使われる英語.md
+|       接頭辞一覧.md
+|       
++---文字コード
+|   |   JIS_X_0208_あ.png
+|   |   文字コード概論.md
+|   |   
+|   \---UnicodeとUTF8
+|       |   Unicode(UTF8)の一覧.url
+|       |   UnicodeとUTF8のわかりやすい説明.pdf
+|       |   Unicodeについて.md
+|       |   UnicodeをUTF8やUTF16に変換する方法.pdf
+|       |   UTF8(Unicode)の一覧.url
+|       |   UTF8につてい.md
+|       |   
+|       \---Unicode文字符号化モデル
+|               Unicode文字符号化モデル.md
+|               UTF32の場合の例.png
+|               ビッグエンディアン.png
+|               ビッグエンディアン_リトルエンディアンの例.png
+|               リトルエンディアン.png
+|               
++---無料の便利なサービス
+|       無料の会員管理サービス_MiiT+_ミータス.url
+|       
++---画像
+|   \---SVG
+|           SVGの記述方法.pdf
+|           SVGの記述方法.webloc
+|           
++---線
+|       ベジェ曲線.md
+|       
++---色
+|   |   色.md
+|   |   透明度.md
+|   |   
+|   \---画像
+|           HSV_color_space.jpg
+|           meido_saido.png
+|           トーン.jpg
+|           彩度.png
+|           明度.png
+|           色の三属性.png
+|           色相.png
+|           
+\---設計
+    |   UML.pdf
+    |   データ構造の選定.md
+    |   ビジネスロジック.md
+    |   ファイルシステム.md
+    |   ファイル形式.md
+    |   プログラムを書く上で常に意識すべきこと.md
+    |   プログラム設計手順.md
+    |   仕様の定義漏れを防ぐ.md
+    |   設計のポイント.md
+    |   設計チェックリスト.md
+    |   
+    +---DB
+    |   |   やさしい図解で学ぶ　中間テーブル　多対多　概念編 - Qiita.webloc
+    |   |   やさしい図解で学ぶ　中間テーブル　多対多　概念編.pdf
+    |   |   中間テーブルについての補足.md
+    |   |   
+    |   \---ER図
+    |           やさしい図解で学ぶ　ER図　表記法一覧.pdf
+    |           やさしい図解で学ぶ　ER図　表記法一覧.webloc
+    |           
+    \---認証
+        \---生体認証
+                ONとOFFの切り替え時に生体認証が必要な理由.md
+                
