@@ -68,7 +68,7 @@ Android Developers の公式サイトの日本語訳は、機械的に翻訳さ�
 リポジトリ内検索をすることで、知りたい内容をピンポイントで知ることができます。
 
 
-## プロフィール
+## 各種リンク
 
 - ホームページ : [OKUDA Studio](https://sites.google.com/view/okuda0715biz/%E3%83%9B%E3%83%BC%E3%83%A0)
   - 職務経歴等がご覧いただけます。
