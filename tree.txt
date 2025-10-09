@@ -8,10 +8,7 @@ G:.
 |   README.md
 |   tree.txt
 |   
-+---.github
-|       FUNDING.yml
-|       
-+---Android
++---01.Android
 |   |   Androidの基礎.md
 |   |   LifecycleAwareComponents.md
 |   |   SupportLibraryについて.md
@@ -2790,227 +2787,7 @@ G:.
 |   \---音楽と動画
 |           関連用語.md
 |           
-+---API
-|   |   スロットル.md
-|   |   
-|   +---API Key
-|   |       API Key を安全にプロジェクトに追加する.md
-|   |       old_API Key Secretを安全に保管する.md
-|   |       
-|   +---Github API
-|   |   +---REST API
-|   |   |   |   curlコマンドの構築.md
-|   |   |   |   パラメータ.md
-|   |   |   |   
-|   |   |   \---認証
-|   |   |           personal access token.md
-|   |   |           
-|   |   +---サンプルバッチファイル
-|   |   |       github_api.bat
-|   |   |       Read me.md
-|   |   |       
-|   |   \---認証
-|   |           安全性について.md
-|   |           
-|   +---Google
-|   |   \---GoogleDrive
-|   |           GoogleWorkspaceAPIとDriveAPIの違い.md
-|   |           
-|   \---TwitterAPI
-|       |   API使用手順.md
-|       |   Twitter4J_便利なライブラリ.url
-|       |   TwitterAPI第三者解説サイト.url
-|       |   カスタムURLスキームをコールバックURLに設定する方法.url
-|       |   サインイン.md
-|       |   
-|       +---利用規約_制限事項_等
-|       |       standard_v1.1のRateLimit.md
-|       |       ツイート投稿API.md
-|       |       プライバシーポリシーの記載.md
-|       |       自動化のルール.md
-|       |       
-|       +---各APIの詳細
-|       |   |   パーセントエンコーディング.md
-|       |   |   
-|       |   +---アクセストークン_トークンシークレットの取得
-|       |   |       3LeggedOAuth.pu
-|       |   |       3LeggedOAuth.svg
-|       |   |       
-|       |   +---ツイートを投稿する
-|       |   |       post_2_tweets(API_v2).url
-|       |   |       statuses_update_json(API_v1.1).pu
-|       |   |       
-|       |   +---署名（oauth_signature）の作成
-|       |   |       create_OAuth_signature.pu
-|       |   |       create_OAuth_signature.svg
-|       |   |       署名の作成.url
-|       |   |       
-|       |   \---認証・認可情報（Authorizationヘッダ）の作成
-|       |           Authorizationヘッダの作成.md
-|       |           
-|       \---各種アイコン
-|           \---sing_in_with_twitter
-|                   sign_in_with_twitter_gray.png
-|                   sign_in_with_twitter_link.png
-|                   リソース提供元サイト.url
-|                   
-+---ATOM
-|   |   AtomでPlantUMLを使ってクラス図を描いた時にプレビューウィンドウにリアルタイム反映されない時の対処.md
-|   |   Markdown書き方.md
-|   |   Markdown記載時の独自ルール.md
-|   |   おすすめのプラグイン.md
-|   |   シーケンス図のプレビュー表示.md
-|   |   
-|   \---画像
-+---Firebase
-|   |   Firebase_Android_BoMとは.md
-|   |   Firebase_CLI.md
-|   |   Firebaseの機能一覧.md
-|   |   Realtime_Database.md
-|   |   REST形式APIを作成.md
-|   |   
-|   +---A B Testing
-|   |       01.A B Testing.md
-|   |       
-|   +---Analytics(Realtime Analytics)
-|   |       01.Analytics(Realtime Analytics).md
-|   |       02.Debug View.md
-|   |       
-|   +---Androidアプリリンク
-|   |       Androidアプリリンクの作成.md
-|   |       アプリリンクをテストする.md
-|   |       トラブルシューティング.md
-|   |       
-|   +---App Check
-|   |       01.App Check.md
-|   |       
-|   +---App Distribution
-|   |       01.App Distribution.md
-|   |       
-|   +---App Hosting
-|   |       01.App Hosting.md
-|   |       
-|   +---Authentication
-|   |   |   01.Authentication.md
-|   |   |   02.メール＆パスワード認証.md
-|   |   |   03.電話番号(SMS)認証.md
-|   |   |   04.ソーシャルログイン.md
-|   |   |   
-|   |   \---画像
-|   |           ユーザープロパティ.png
-|   |           
-|   +---Cloud Messaging
-|   |       01.Cloud Messaging.md
-|   |       CloudMessaging実装手順.md
-|   |       
-|   +---Crashlytics
-|   |   |   01.Crashlytics.md
-|   |   |   
-|   |   \---画像
-|   |           コンソール上でのカスタムキーの表示のされ方.png
-|   |           コンソール上でのログの表示のされ方.png
-|   |           
-|   +---Dynamic Links
-|   |       01.Dynamic Links.md
-|   |       
-|   +---Emulator Suite
-|   |       01.Emulator Suite.md
-|   |       
-|   +---Extensions(Firebase Extensions)
-|   |       01.Extensions(Firebase Extensions).md
-|   |       
-|   +---Firebaseプロジェクトの作成・初期設定関連
-|   |       トラブルシューティング.md
-|   |       
-|   +---Firestore
-|   |       01.Firestore.md
-|   |       02.Firestoreのサンプルコード集.md
-|   |       03.セキュリティルール.md
-|   |       
-|   +---Functions(Cloud Functions)
-|   |       01.Functions(Cloud Functions).md
-|   |       
-|   +---Genkit
-|   |       01.Genkit.md
-|   |       
-|   +---GoogleAnalyticsForFirebase
-|   |       GoogleAnalyticsForFirebase.md
-|   |       スクリーンビューを測定する.md
-|   |       
-|   +---Hosting(Firebase Hosting)
-|   |       01.Hosting(Firebase Hosting).md
-|   |       Firebase_Hosting.md
-|   |       
-|   +---In-App Messaging
-|   |       01.In-App Messaging.md
-|   |       
-|   +---Machine Learning
-|   |       01.Machine Learning.md
-|   |       
-|   +---Performance(Performance Monitoring)
-|   |       01.Performance(Performance Monitoring).md
-|   |       
-|   +---Realtime Database
-|   |       01.Realtime Database.md
-|   |       
-|   +---Release Monitoring
-|   |       01.Release Monitoring.md
-|   |       
-|   +---RemoteConfig
-|   |       RemoteConfig実装編.md
-|   |       RemoteConfig理論編.md
-|   |       アプリ内デフォルト値.md
-|   |       テンプレート.md
-|   |       フェッチ.md
-|   |       ルール一覧.xlsx
-|   |       優先順位.xlsx
-|   |       条件とルール.md
-|   |       
-|   +---Storage(Cloud Storage)
-|   |       01.Storage(Cloud Storage).md
-|   |       
-|   +---Test Lab
-|   |       01.Test Lab.md
-|   |       
-|   \---Vertex AI
-|           01.Vertex AI.md
-|           
-+---Flutter&Dart
-|   \---Flutter&Dartを学習するべきか
-|           Flutter&Dartを学習するべきか.md
-|           アプリ開発市場の現状と今後の予想（2023?2026）   IT業界で気づいたことをこっそり書くブログ.pdf
-|           
-+---Git
-|   |   FAQ.md
-|   |   Git.md
-|   |   gitignoreに記載したのに反映されない件.pdf
-|   |   gitignoreに記載したのに反映されない件.webloc
-|   |   gitignoreの仕様詳解.pdf
-|   |   gitignoreの仕様詳解.webloc
-|   |   gitignoreの書き方.pdf
-|   |   gitignoreの書き方.webloc
-|   |   Git管理をやめる方法.md
-|   |   masterブランチの変更手順.md
-|   |   コマンド早見表.md
-|   |   コミットの取り消し方法.md
-|   |   コミットメッセージの規約.md
-|   |   マージ時に必ず樹形図を分岐させる方法.md
-|   |   分流に本流の最新の状態を取り込む方法.md
-|   |   
-|   \---マージとリベースの違い
-|           マージ.png
-|           マージとリベースの違い.md
-|           リベース.png
-|           統合前.png
-|           
-+---Github
-|       Pushしても反映されない場合.md
-|       ストレージ容量の上限.md
-|       
-+---Googleサイト
-|       Googleサイト.md
-|       
-+---Java
++---02.Java
 |   |   Callback_Listener_Observer.md
 |   |   getter_setterが必要な理由.md
 |   |   Stack・Queue.md
@@ -3266,7 +3043,7 @@ G:.
 |           ショートカットサーキット.md
 |           整数同士の論理演算.md
 |           
-+---Kotlin
++---03.Kotlin
 |   |   KotlinからJavaへデコンパイルする.md
 |   |   let.md
 |   |   シングルトン.md
@@ -3521,18 +3298,18 @@ G:.
 |   |           
 |   \---非同期処理
 |       \---コルーチン
-|           |   1.コルーチンの基本.md
+|           |   01.コルーチンの基本.md
+|           |   02.コルーチンとチャネルチュートリアル.md
+|           |   03.キャンセルとタイムアウト.md
+|           |   04.suspend関数の作成.md
+|           |   05.コルーチンコンテキストとディスパッチャー.md
+|           |   06.非同期のFlow.md
+|           |   07.チャネル.md
+|           |   08.コルーチンの例外の扱い方.md
+|           |   09.共有可変状態と同時実行.md
 |           |   10.表現の選択.md
 |           |   11.IntelliJ IDEA を使用してコルーチンをデバッグするチュートリアル.md
 |           |   12.IntelliJ IDEA を使用して Kotlin の Flow をデバッグするチュートリアル.md
-|           |   2.コルーチンとチャネルチュートリアル.md
-|           |   3.キャンセルとタイムアウト.md
-|           |   4.suspend関数の作成.md
-|           |   5.コルーチンコンテキストとディスパッチャー.md
-|           |   6.非同期のFlow.md
-|           |   7.チャネル.md
-|           |   8.コルーチンの例外の扱い方.md
-|           |   9.共有可変状態と同時実行.md
 |           |   CoroutineExceptionHandler.md
 |           |   coroutinScope ブロックと launch ブロックの違い.md
 |           |   Flow と Channel の違い.md
@@ -3583,68 +3360,255 @@ G:.
 |                   進捗を表示する(平行処理の場合).png
 |                   進捗を表示する(連続処理の場合).png
 |                   
-+---Mac
-|       MacOSでよく使うショートカットキー.md
-|       WindowsキーボードとマウスでMacを操作.md
-|       ターミナル.md
-|       開発元が未確認のMacアプリを開く.md
-|       
-+---Markdown
-|       きれいに書くためのフォーマット.md
-|       トラブルシューティング.md
-|       動画ファイルの追加方法.md
-|       
-+---Officeソフト
-|   \---Excel
-|       |   テーブルとして書式設定を解除する.md
++---04.Firebase
+|   |   Firebase_Android_BoMとは.md
+|   |   Firebase_CLI.md
+|   |   Firebaseの機能一覧.md
+|   |   Realtime_Database.md
+|   |   REST形式APIを作成.md
+|   |   
+|   +---A B Testing
+|   |       01.A B Testing.md
+|   |       
+|   +---Analytics(Realtime Analytics)
+|   |       01.Analytics(Realtime Analytics).md
+|   |       02.Debug View.md
+|   |       
+|   +---Androidアプリリンク
+|   |       Androidアプリリンクの作成.md
+|   |       アプリリンクをテストする.md
+|   |       トラブルシューティング.md
+|   |       
+|   +---App Check
+|   |       01.App Check.md
+|   |       
+|   +---App Distribution
+|   |       01.App Distribution.md
+|   |       
+|   +---App Hosting
+|   |       01.App Hosting.md
+|   |       
+|   +---Authentication
+|   |   |   01.Authentication.md
+|   |   |   02.メール＆パスワード認証.md
+|   |   |   03.電話番号(SMS)認証.md
+|   |   |   04.ソーシャルログイン.md
+|   |   |   
+|   |   \---画像
+|   |           ユーザープロパティ.png
+|   |           
+|   +---Cloud Messaging
+|   |       01.Cloud Messaging.md
+|   |       CloudMessaging実装手順.md
+|   |       
+|   +---Crashlytics
+|   |   |   01.Crashlytics.md
+|   |   |   
+|   |   \---画像
+|   |           コンソール上でのカスタムキーの表示のされ方.png
+|   |           コンソール上でのログの表示のされ方.png
+|   |           
+|   +---Dynamic Links
+|   |       01.Dynamic Links.md
+|   |       
+|   +---Emulator Suite
+|   |       01.Emulator Suite.md
+|   |       
+|   +---Extensions(Firebase Extensions)
+|   |       01.Extensions(Firebase Extensions).md
+|   |       
+|   +---Firebaseプロジェクトの作成・初期設定関連
+|   |       トラブルシューティング.md
+|   |       
+|   +---Firestore
+|   |       01.Firestore.md
+|   |       02.Firestoreのサンプルコード集.md
+|   |       03.セキュリティルール.md
+|   |       
+|   +---Functions(Cloud Functions)
+|   |       01.Functions(Cloud Functions).md
+|   |       
+|   +---Genkit
+|   |       01.Genkit.md
+|   |       
+|   +---GoogleAnalyticsForFirebase
+|   |       GoogleAnalyticsForFirebase.md
+|   |       スクリーンビューを測定する.md
+|   |       
+|   +---Hosting(Firebase Hosting)
+|   |       01.Hosting(Firebase Hosting).md
+|   |       Firebase_Hosting.md
+|   |       
+|   +---In-App Messaging
+|   |       01.In-App Messaging.md
+|   |       
+|   +---Machine Learning
+|   |       01.Machine Learning.md
+|   |       
+|   +---Performance(Performance Monitoring)
+|   |       01.Performance(Performance Monitoring).md
+|   |       
+|   +---Realtime Database
+|   |       01.Realtime Database.md
+|   |       
+|   +---Release Monitoring
+|   |       01.Release Monitoring.md
+|   |       
+|   +---RemoteConfig
+|   |       RemoteConfig実装編.md
+|   |       RemoteConfig理論編.md
+|   |       アプリ内デフォルト値.md
+|   |       テンプレート.md
+|   |       フェッチ.md
+|   |       ルール一覧.xlsx
+|   |       優先順位.xlsx
+|   |       条件とルール.md
+|   |       
+|   +---Storage(Cloud Storage)
+|   |       01.Storage(Cloud Storage).md
+|   |       
+|   +---Test Lab
+|   |       01.Test Lab.md
+|   |       
+|   \---Vertex AI
+|           01.Vertex AI.md
+|           
++---05.API
+|   |   スロットル.md
+|   |   
+|   +---API Key
+|   |       API Key を安全にプロジェクトに追加する.md
+|   |       old_API Key Secretを安全に保管する.md
+|   |       
+|   +---Github API
+|   |   +---REST API
+|   |   |   |   curlコマンドの構築.md
+|   |   |   |   パラメータ.md
+|   |   |   |   
+|   |   |   \---認証
+|   |   |           personal access token.md
+|   |   |           
+|   |   +---サンプルバッチファイル
+|   |   |       github_api.bat
+|   |   |       Read me.md
+|   |   |       
+|   |   \---認証
+|   |           安全性について.md
+|   |           
+|   +---Google
+|   |   \---GoogleDrive
+|   |           GoogleWorkspaceAPIとDriveAPIの違い.md
+|   |           
+|   \---TwitterAPI
+|       |   API使用手順.md
+|       |   Twitter4J_便利なライブラリ.url
+|       |   TwitterAPI第三者解説サイト.url
+|       |   カスタムURLスキームをコールバックURLに設定する方法.url
+|       |   サインイン.md
 |       |   
-|       \---フィルタ後のデータを対象に数式を実行する
-|               フィルタ後のデータを対象に数式を実行する.md
-|               引数の一覧.png
-|               引数の一覧2.png
-|               
-+---plantuml
-|       PlantUML公式サイト.url
-|       シーケンス図のテンプレート.pu
-|       記述ルール.md
-|       
-+---shellスクリプト
-|       shellスクリプトをダブルクリックで実行できるようにする方法.md
-|       参考サイトまとめ.md
-|       
-+---VisualStudioCode
-|   |   FAQ.md
-|   |   PlantUMLショートカットキー.md
-|   |   便利な初期設定.md
+|       +---利用規約_制限事項_等
+|       |       standard_v1.1のRateLimit.md
+|       |       ツイート投稿API.md
+|       |       プライバシーポリシーの記載.md
+|       |       自動化のルール.md
+|       |       
+|       +---各APIの詳細
+|       |   |   パーセントエンコーディング.md
+|       |   |   
+|       |   +---アクセストークン_トークンシークレットの取得
+|       |   |       3LeggedOAuth.pu
+|       |   |       3LeggedOAuth.svg
+|       |   |       
+|       |   +---ツイートを投稿する
+|       |   |       post_2_tweets(API_v2).url
+|       |   |       statuses_update_json(API_v1.1).pu
+|       |   |       
+|       |   +---署名（oauth_signature）の作成
+|       |   |       create_OAuth_signature.pu
+|       |   |       create_OAuth_signature.svg
+|       |   |       署名の作成.url
+|       |   |       
+|       |   \---認証・認可情報（Authorizationヘッダ）の作成
+|       |           Authorizationヘッダの作成.md
+|       |           
+|       \---各種アイコン
+|           \---sing_in_with_twitter
+|                   sign_in_with_twitter_gray.png
+|                   sign_in_with_twitter_link.png
+|                   リソース提供元サイト.url
+|                   
++---06.Figma
+|   |   Figmaの基本操作.md
+|   |   Figmaの概要.md
+|   |   Style.md
+|   |   wrap_content_match_parentの設定方法.md
+|   |   テキスト.md
+|   |   ブランドアイコンを取得する.md
+|   |   プロトタイプ.md
+|   |   初期設定.md
 |   |   
-|   \---マークダウン
-|           FAQ.md
-|           Markdown_Table.md
-|           よく使用するショートカットキー.md
-|           便利なプラグイン一覧.md
+|   +---オートレイアウト
+|   |   |   オートレイアウト.md
+|   |   |   
+|   |   \---画像
+|   |           orientation_horizontal.png
+|   |           orientation_vertical.png
+|   |           wrap_content_横.gif
+|   |           オートレイアウト_ボタンの使用例.PNG
+|   |           キャンバススタッキング.png
+|   |           コンテナに合わせて拡大.png
+|   |           ベースライン揃え.gif
+|   |           制約の設定方法.png
+|   |           親がFrameの場合.png
+|   |           親がGroupの場合.png
+|   |           親に合わせて子を拡縮.gif
+|   |           
+|   +---グループとフレーム
+|   |   |   GroupとFrameの違い.md
+|   |   |   
+|   |   \---画像
+|   |           Groupの拡縮に合わせて子Viewが常に拡縮する.PNG
+|   |           子Viewを拡縮させずにGroupの拡縮が可能.PNG
+|   |           
+|   +---コンポーネント
+|   |   |   コンポーネント.md
+|   |   |   コンポーネントプロパティ.md
+|   |   |   
+|   |   \---バリアント
+|   |       |   バリアント.md
+|   |       |   
+|   |       \---画像
+|   |               variantの追加.mp4
+|   |               複数のVariantの組み合わせ.PNG
+|   |               言葉の説明.png
+|   |               
+|   +---ショートカットキー
+|   |   |   ショートカットキー.md
+|   |   |   
+|   |   \---画像
+|   |           ショートカットキー一覧.png
+|   |           
+|   +---ブレンドモード
+|   |   |   ブレンドモード.md
+|   |   |   
+|   |   \---画像
+|   |           ブレンドモード一覧.jfif
+|   |           
+|   +---プラグイン
+|   |       Material Theme Builder.md
+|   |       
+|   +---マスク
+|   |   |   マスク.md
+|   |   |   
+|   |   \---画像
+|   |           masks-layer-panel.png
+|   |           ぼかし.PNG
+|   |           サンプル動画.gif
+|   |           
+|   \---レスポンシブデザイン
+|           レスポンシブデザイン.md
 |           
-+---Windows
-|       ソフトのインストール場所の確認.md
-|       
-+---アニメーション
-|       アニメーションの種類.md
-|       キーフレームアニメーション.md
-|       
-+---エンコード_デコード
-|       base64_エンコーディングアルゴリズム.pdf
-|       エンコーディングの種類.md
-|       
-+---コードレビュー
-|       コードレビュー.md
-|       
-+---システム開発全般
-|   |   システム開発のフレームワーク.md
-|   |   要望と要求と要件の違い.md
-|   |   
-|   \---画像
-|           要望と要求と要件の関係.png
-|           
-+---セキュリティ
++---07.セキュリティ
 |   |   FIDO認証.md
 |   |   セキュリティの7要素.md
 |   |   セキュリティ関連用語_よく使用する基本用語.md
@@ -3719,88 +3683,7 @@ G:.
 |           電子証明書.md
 |           電子証明書とは「分かりそう」で「分からない」.pdf
 |           
-+---テンプレート
-|       フローチャート_テンプレート.xlsx
-|       
-+---デザイン
-|   +---デザインツール
-|   |   |   アイコン作成.md
-|   |   |   
-|   |   \---Figma
-|   |       |   Figmaの基本操作.md
-|   |       |   Figmaの概要.md
-|   |       |   Style.md
-|   |       |   wrap_content_match_parentの設定方法.md
-|   |       |   テキスト.md
-|   |       |   ブランドアイコンを取得する.md
-|   |       |   プロトタイプ.md
-|   |       |   初期設定.md
-|   |       |   
-|   |       +---オートレイアウト
-|   |       |   |   オートレイアウト.md
-|   |       |   |   
-|   |       |   \---画像
-|   |       |           orientation_horizontal.png
-|   |       |           orientation_vertical.png
-|   |       |           wrap_content_横.gif
-|   |       |           オートレイアウト_ボタンの使用例.PNG
-|   |       |           キャンバススタッキング.png
-|   |       |           コンテナに合わせて拡大.png
-|   |       |           ベースライン揃え.gif
-|   |       |           制約の設定方法.png
-|   |       |           親がFrameの場合.png
-|   |       |           親がGroupの場合.png
-|   |       |           親に合わせて子を拡縮.gif
-|   |       |           
-|   |       +---グループとフレーム
-|   |       |   |   GroupとFrameの違い.md
-|   |       |   |   
-|   |       |   \---画像
-|   |       |           Groupの拡縮に合わせて子Viewが常に拡縮する.PNG
-|   |       |           子Viewを拡縮させずにGroupの拡縮が可能.PNG
-|   |       |           
-|   |       +---コンポーネント
-|   |       |   |   コンポーネント.md
-|   |       |   |   コンポーネントプロパティ.md
-|   |       |   |   
-|   |       |   \---バリアント
-|   |       |       |   バリアント.md
-|   |       |       |   
-|   |       |       \---画像
-|   |       |               variantの追加.mp4
-|   |       |               複数のVariantの組み合わせ.PNG
-|   |       |               言葉の説明.png
-|   |       |               
-|   |       +---ショートカットキー
-|   |       |   |   ショートカットキー.md
-|   |       |   |   
-|   |       |   \---画像
-|   |       |           ショートカットキー一覧.png
-|   |       |           
-|   |       +---ブレンドモード
-|   |       |   |   ブレンドモード.md
-|   |       |   |   
-|   |       |   \---画像
-|   |       |           ブレンドモード一覧.jfif
-|   |       |           
-|   |       +---プラグイン
-|   |       |       Material Theme Builder.md
-|   |       |       
-|   |       +---マスク
-|   |       |   |   マスク.md
-|   |       |   |   
-|   |       |   \---画像
-|   |       |           masks-layer-panel.png
-|   |       |           ぼかし.PNG
-|   |       |           サンプル動画.gif
-|   |       |           
-|   |       \---レスポンシブデザイン
-|   |               レスポンシブデザイン.md
-|   |               
-|   \---デザインノウハウ
-|           デザイン基礎.xlsx
-|           
-+---デザインパターン
++---08.デザインパターン
 |   |   staticフィールドの使いどころ.md
 |   |   継承の使いどころ.md
 |   |   複数の処理の中から選択した処理を実装したい場合.md
@@ -3848,531 +3731,646 @@ G:.
 |           12.Active Object.md
 |           Thread-Per-Message と Worker Thread の違い.md
 |           
-+---データベース
-|   |   カーソルとは.md
-|   |   ビュー.md
-|   |   
-|   +---SQL
-|   |   |   BETWEEN仕様.md
-|   |   |   HAVING句が呼ばれるタイミング.png
-|   |   |   HAVING句の使い方.md
-|   |   |   テーブルコンペア用SQL作成ツール.xlsx
-|   |   |   相関副問い合わせ.md
-|   |   |   
-|   |   \---with_recursive
-|   |           with_recursive_sample.db
-|   |           with_recursive_sample.sqbpro
-|   |           with_recursive句_サンプル.xlsx
-|   |           
-|   \---SQLite
-|       |   Nullデータを格納する.md
-|       |   N進数データを格納する.md
-|       |   ROWIDの参照とINTEGER PRIMARY KEYとの関係 SQLite入門.pdf
-|       |   ROWIDの参照とINTEGER PRIMARY KEYとの関係 SQLite入門.webloc
-|       |   SQLiteのジャーナルモード.pdf
-|       |   SQLiteのジャーナルモード.webloc
-|       |   SQLiteのジャーナルモード_公式ドキュメント.webloc
-|       |   with_recursive句_サンプル.xlsx
-|       |   エスケープ文字.md
-|       |   文法.md
-|       |   
-|       +---型
-|       |       型についての基礎知識.md
-|       |       静的型定義.md
-|       |       
-|       \---日付と時刻
-|               日付と時刻のサンプル.md
-|               日付と時刻の関数.md
-|               
-+---ネットワーク
-|   |   SSLとは、「分かりそう」で「分からない」.pdf
-|   |   
-|   +---GraphQL
-|   |   |   GraphQL.md
-|   |   |   
-|   |   +---Apollo GraphQL Kotlin Client
-|   |   |   \---チュートリアル
-|   |   |       |   1.プロジェクトを構成する.md
-|   |   |       |   2.スキーマを追加する.md
-|   |   |       |   3.クエリを記述する.md
-|   |   |       |   
-|   |   |       \---画像
-|   |   |               completed_id_query.png
-|   |   |               explorer_add_launches_query.png
-|   |   |               explorer_autocomplete.png
-|   |   |               explorer_check_cursor.png
-|   |   |               explorer_initial_added_query.png
-|   |   |               explorer_launches_drill_in.png
-|   |   |               explorer_launch_list_rename.png
-|   |   |               explorer_sandbox_open.png
-|   |   |               explorer_submit_operation.png
-|   |   |               launches_detail.png
-|   |   |               new_file.png
-|   |   |               open_in_explorer_launches.png
-|   |   |               
-|   |   \---画像
-|   |           グラフ理論.png
-|   |           ツリー.png
-|   |           
-|   \---HTTP
-|           AcceptとContent-Typeの違い.md
-|           Content-Type 一覧.md
-|           HTTP.md
-|           HTTPのフォーマット.jpg
-|           HTTPの仕組み_認証とは.url
-|           User-Agent とは.md
-|           ブラウザでURL欄に直接入力した場合はGETメソッドになる.md
-|           ヘッダーフィールドの一覧.url
-|           
-+---ファイル
-|   +---JSON
-|   |   |   JSON Schema から Kotlin の data class を作成するツール.md
-|   |   |   JSON Schema.md
-|   |   |   JSONのフォーマット.md
-|   |   |   JSON公式ドキュメント？.url
-|   |   |   
-|   |   \---公式ドキュメント
-|   |       \---Docs
-|   |           \---2.Getting Started
-|   |               |   2.Creating your first schema.md
-|   |               |   
-|   |               \---画像
-|   |                       JSONデータを検証する.svg
-|   |                       
-|   \---XML
-|           XMLの基本.md
-|           
-+---プライバシーポリシー
-|       プライバシーポリシー.md
-|       
-+---プログラミング全般
-|   |   クラス名・変数名・メソッド名のネーミング.md
-|   |   クラス図.md
-|   |   リスナーの解除.md
-|   |   冪等性.md
-|   |   参照透過性.md
-|   |   参照透過性と冪等性の違い.md
-|   |   委譲と継承の違い.md
-|   |   専門用語.xlsx
-|   |   時刻の取り扱い.md
-|   |   継承.md
-|   |   良いコードの書き方.md
-|   |   良いコードの書き方.pdf
-|   |   良いコードの書き方.url
-|   |   
-|   +---アーキテクチャ
-|   |       ヘルパークラス.md
-|   |       
-|   +---プログラミングにおける重要な原則
-|   |       01.重要な原則の一覧.md
-|   |       
-|   \---品質管理
-|           不具合を出さない実装の進め方.md
-|           
-+---プロトコル
-|       プロトコルまとめ.md
-|       
-+---マーケティング
-|   \---001.専門用語
-|           専門用語.md
-|           
-+---リファクタリング
-|       NGパターン.md
-|       コールバック地獄の回避方法.md
-|       リファクタリング.md
-|       リファクタリングのコアコンセプト.md
-|       継承は悪か？.url
-|       
-+---勉強法
-|       ノートをとる意味.md
-|       プログラミングの勉強の効率化.md
-|       モチベーションと集中力.md
-|       不要な情報の判別.md
-|       効率的な進め方.md
-|       情報整理術.md
-|       理解力.md
-|       知識の種類.md
-|       記憶力.md
-|       
-+---広告
-|   |   CPM.md
-|   |   SSP一覧.xlsx
-|   |   広告の種類.md
-|   |   広告企業(アドネットワーク)一覧.md
-|   |   広告用語(Qiitaからコピペしただけでわかりにくいので参考までに).md
-|   |   広告用語.md
-|   |   
-|   +---Amazon
-|   |       amazon publisher services.md
-|   |       Transparent Ad Marketplace.md
-|   |       
-|   +---DSPとSSP
-|   |   |   DSPとSSP.md
-|   |   |   
-|   |   \---画像
-|   |           DSPとSSP.png
-|   |           
-|   +---Meta Audience Network
-|   |       広告表示のプロセス.md
-|   |       
-|   +---nend
-|   |       apiKey_spotID.png
-|   |       apiKey_spotIDの確認.md
-|   |       FAQ.md
-|   |       Google_Advertising_IDを取得する.md
-|   |       広告枠の管理.png
-|   |       
-|   +---Prebid.org
-|   |       デメリット.md
-|   |       
-|   +---アドフリくん
-|   |   |   アドネットワーク運用マニュアル.pdf
-|   |   |   アドネットワーク運用マニュアル.url
-|   |   |   アドフリくんの使い方マニュアル・疑問点解消ページ.url
-|   |   |   
-|   |   +---adfurikunSDK_Android_moviereward_3.20.0
-|   |   |   |   README.txt
-|   |   |   |   
-|   |   |   +---libs
-|   |   |   |       adfurikunMovieRewardSDK-3.20.0.aar
-|   |   |   |       adfurikunsdk-adnw-maven.gradle
-|   |   |   |       adfurikunsdk-support-androidx.gradle
-|   |   |   |       
-|   |   |   +---SampleJava
-|   |   |   |   |   .gitignore
-|   |   |   |   |   .project
-|   |   |   |   |   build.gradle
-|   |   |   |   |   gradle.properties
-|   |   |   |   |   gradlew
-|   |   |   |   |   gradlew.bat
-|   |   |   |   |   settings.gradle
-|   |   |   |   |   
-|   |   |   |   +---app
-|   |   |   |   |   |   .gitignore
-|   |   |   |   |   |   build.gradle
-|   |   |   |   |   |   proguard-rules.pro
-|   |   |   |   |   |   
-|   |   |   |   |   +---libs
-|   |   |   |   |   |       adfurikunMovieRewardSDK-3.20.0.aar
-|   |   |   |   |   |       adfurikunsdk-adnw-maven.gradle
-|   |   |   |   |   |       adfurikunsdk-support-androidx.gradle
-|   |   |   |   |   |       
-|   |   |   |   |   \---src
-|   |   |   |   |       +---androidTest
-|   |   |   |   |       |   \---java
-|   |   |   |   |       |       \---sample
-|   |   |   |   |       |           \---adfurikunsdk
-|   |   |   |   |       |               \---jp
-|   |   |   |   |       |                   \---samplejava
-|   |   |   |   |       |                           ExampleInstrumentedTest.java
-|   |   |   |   |       |                           
-|   |   |   |   |       +---main
-|   |   |   |   |       |   |   AndroidManifest.xml
-|   |   |   |   |       |   |   
-|   |   |   |   |       |   +---java
-|   |   |   |   |       |   |   \---sample
-|   |   |   |   |       |   |       \---adfurikunsdk
-|   |   |   |   |       |   |           \---jp
-|   |   |   |   |       |   |               \---samplejava
-|   |   |   |   |       |   |                   |   AdfurikunConst.java
-|   |   |   |   |       |   |                   |   MainActivity.java
-|   |   |   |   |       |   |                   |   SampleApplication.java
-|   |   |   |   |       |   |                   |   SimpleAppOpenAd.java
-|   |   |   |   |       |   |                   |   SimpleBanner.java
-|   |   |   |   |       |   |                   |   SimpleBannerAutoRefresh.java
-|   |   |   |   |       |   |                   |   SimpleInterstitial.java
-|   |   |   |   |       |   |                   |   SimpleMovieReward.java
-|   |   |   |   |       |   |                   |   SimpleNativeAd.java
-|   |   |   |   |       |   |                   |   SimpleRectangle.java
-|   |   |   |   |       |   |                   |   Utils.java
-|   |   |   |   |       |   |                   |   
-|   |   |   |   |       |   |                   \---admob
-|   |   |   |   |       |   |                           SimpleAdMobBanner.java
-|   |   |   |   |       |   |                           SimpleAdMobInterstitial.java
-|   |   |   |   |       |   |                           SimpleAdMobNativeAd.java
-|   |   |   |   |       |   |                           SimpleAdMobRectangle.java
-|   |   |   |   |       |   |                           SimpleAdMobReward.java
-|   |   |   |   |       |   |                           
-|   |   |   |   |       |   \---res
-|   |   |   |   |       |       +---drawable-hdpi
-|   |   |   |   |       |       |       .gitkeep
-|   |   |   |   |       |       |       
-|   |   |   |   |       |       +---drawable-mdpi
-|   |   |   |   |       |       |       .gitkeep
-|   |   |   |   |       |       |       
-|   |   |   |   |       |       +---drawable-xhdpi
-|   |   |   |   |       |       |       .gitkeep
-|   |   |   |   |       |       |       
-|   |   |   |   |       |       +---drawable-xxhdpi
-|   |   |   |   |       |       |       .gitkeep
-|   |   |   |   |       |       |       
-|   |   |   |   |       |       +---drawable-xxxhdpi
-|   |   |   |   |       |       |       .gitkeep
-|   |   |   |   |       |       |       
-|   |   |   |   |       |       +---layout
-|   |   |   |   |       |       |       activity_admob_banner.xml
-|   |   |   |   |       |       |       activity_admob_interstitial.xml
-|   |   |   |   |       |       |       activity_admob_native_ad.xml
-|   |   |   |   |       |       |       activity_admob_rectangle.xml
-|   |   |   |   |       |       |       activity_admob_reward.xml
-|   |   |   |   |       |       |       activity_app_open_ad.xml
-|   |   |   |   |       |       |       activity_banner.xml
-|   |   |   |   |       |       |       activity_banner_auto_refresh.xml
-|   |   |   |   |       |       |       activity_native_ad.xml
-|   |   |   |   |       |       |       activity_rectangle.xml
-|   |   |   |   |       |       |       admob_custom_view.xml
-|   |   |   |   |       |       |       simple_interstitial.xml
-|   |   |   |   |       |       |       simple_movie_reward.xml
-|   |   |   |   |       |       |       
-|   |   |   |   |       |       +---menu
-|   |   |   |   |       |       |       main.xml
-|   |   |   |   |       |       |       
-|   |   |   |   |       |       +---mipmap-hdpi
-|   |   |   |   |       |       |       ic_launcher.png
-|   |   |   |   |       |       |       
-|   |   |   |   |       |       +---mipmap-mdpi
-|   |   |   |   |       |       |       ic_launcher.png
-|   |   |   |   |       |       |       
-|   |   |   |   |       |       +---mipmap-xhdpi
-|   |   |   |   |       |       |       ic_launcher.png
-|   |   |   |   |       |       |       
-|   |   |   |   |       |       +---mipmap-xxhdpi
-|   |   |   |   |       |       |       ic_launcher.png
-|   |   |   |   |       |       |       
-|   |   |   |   |       |       +---mipmap-xxxhdpi
-|   |   |   |   |       |       |       ic_launcher.png
-|   |   |   |   |       |       |       
-|   |   |   |   |       |       +---values
-|   |   |   |   |       |       |       colors.xml
-|   |   |   |   |       |       |       dimens.xml
-|   |   |   |   |       |       |       strings.xml
-|   |   |   |   |       |       |       styles.xml
-|   |   |   |   |       |       |       
-|   |   |   |   |       |       +---values-sw600dp
-|   |   |   |   |       |       |       dimens.xml
-|   |   |   |   |       |       |       
-|   |   |   |   |       |       +---values-sw720dp
-|   |   |   |   |       |       |       dimens.xml
-|   |   |   |   |       |       |       
-|   |   |   |   |       |       +---values-v11
-|   |   |   |   |       |       |       styles.xml
-|   |   |   |   |       |       |       
-|   |   |   |   |       |       +---values-v14
-|   |   |   |   |       |       |       styles.xml
-|   |   |   |   |       |       |       
-|   |   |   |   |       |       \---xml
-|   |   |   |   |       |               network_security_config.xml
-|   |   |   |   |       |               
-|   |   |   |   |       \---test
-|   |   |   |   |           \---java
-|   |   |   |   |               \---sample
-|   |   |   |   |                   \---adfurikunsdk
-|   |   |   |   |                       \---jp
-|   |   |   |   |                           \---samplejava
-|   |   |   |   |                                   ExampleUnitTest.java
-|   |   |   |   |                                   
-|   |   |   |   \---gradle
-|   |   |   |       \---wrapper
-|   |   |   |               gradle-wrapper.jar
-|   |   |   |               gradle-wrapper.properties
-|   |   |   |               
-|   |   |   \---SampleKotlin
-|   |   |       |   .gitignore
-|   |   |       |   build.gradle
-|   |   |       |   gradle.properties
-|   |   |       |   gradlew
-|   |   |       |   gradlew.bat
-|   |   |       |   settings.gradle
-|   |   |       |   
-|   |   |       +---app
-|   |   |       |   |   .gitignore
-|   |   |       |   |   build.gradle
-|   |   |       |   |   proguard-rules.pro
-|   |   |       |   |   
-|   |   |       |   +---libs
-|   |   |       |   |       adfurikunMovieRewardSDK-3.20.0.aar
-|   |   |       |   |       adfurikunsdk-adnw-maven.gradle
-|   |   |       |   |       adfurikunsdk-support-androidx.gradle
-|   |   |       |   |       
-|   |   |       |   \---src
-|   |   |       |       +---androidTest
-|   |   |       |       |   \---java
-|   |   |       |       |       \---jp
-|   |   |       |       |           \---glossom
-|   |   |       |       |               \---sample
-|   |   |       |       |                   \---samplekotlin
-|   |   |       |       |                           ExampleInstrumentedTest.kt
-|   |   |       |       |                           
-|   |   |       |       +---main
-|   |   |       |       |   |   AndroidManifest.xml
-|   |   |       |       |   |   
-|   |   |       |       |   +---java
-|   |   |       |       |   |   \---jp
-|   |   |       |       |   |       \---glossom
-|   |   |       |       |   |           \---sample
-|   |   |       |       |   |               \---samplekotlin
-|   |   |       |       |   |                   |   AdfurikunConst.kt
-|   |   |       |       |   |                   |   MainActivity.kt
-|   |   |       |       |   |                   |   NativeAdUtils.kt
-|   |   |       |       |   |                   |   SampleApplication.kt
-|   |   |       |       |   |                   |   SimpleAppOpenAd.kt
-|   |   |       |       |   |                   |   SimpleBanner.kt
-|   |   |       |       |   |                   |   SimpleBannerAutoRefresh.kt
-|   |   |       |       |   |                   |   SimpleInterstitial.kt
-|   |   |       |       |   |                   |   SimpleMovieReward.kt
-|   |   |       |       |   |                   |   SimpleNativeAd.kt
-|   |   |       |       |   |                   |   SimpleRectangle.kt
-|   |   |       |       |   |                   |   Utils.kt
-|   |   |       |       |   |                   |   
-|   |   |       |       |   |                   \---admob
-|   |   |       |       |   |                           SimpleAdMobBanner.kt
-|   |   |       |       |   |                           SimpleAdMobInterstitial.kt
-|   |   |       |       |   |                           SimpleAdMobNativeAd.kt
-|   |   |       |       |   |                           SimpleAdMobRectangle.kt
-|   |   |       |       |   |                           SimpleAdMobReward.kt
-|   |   |       |       |   |                           
-|   |   |       |       |   \---res
-|   |   |       |       |       +---drawable
-|   |   |       |       |       |       ic_launcher_background.xml
-|   |   |       |       |       |       
-|   |   |       |       |       +---drawable-v24
-|   |   |       |       |       |       ic_launcher_foreground.xml
-|   |   |       |       |       |       
-|   |   |       |       |       +---layout
-|   |   |       |       |       |       activity_admob_banner.xml
-|   |   |       |       |       |       activity_admob_interstitial.xml
-|   |   |       |       |       |       activity_admob_native_ad.xml
-|   |   |       |       |       |       activity_admob_rectangle.xml
-|   |   |       |       |       |       activity_admob_reward.xml
-|   |   |       |       |       |       activity_app_open_ad.xml
-|   |   |       |       |       |       activity_banner.xml
-|   |   |       |       |       |       activity_banner_auto_refresh.xml
-|   |   |       |       |       |       activity_native_ad.xml
-|   |   |       |       |       |       activity_rectangle.xml
-|   |   |       |       |       |       admob_custom_view.xml
-|   |   |       |       |       |       simple_interstitial.xml
-|   |   |       |       |       |       simple_movie_reward.xml
-|   |   |       |       |       |       
-|   |   |       |       |       +---mipmap-anydpi-v26
-|   |   |       |       |       |       ic_launcher.xml
-|   |   |       |       |       |       ic_launcher_round.xml
-|   |   |       |       |       |       
-|   |   |       |       |       +---mipmap-hdpi
-|   |   |       |       |       |       ic_launcher.png
-|   |   |       |       |       |       ic_launcher_round.png
-|   |   |       |       |       |       
-|   |   |       |       |       +---mipmap-mdpi
-|   |   |       |       |       |       ic_launcher.png
-|   |   |       |       |       |       ic_launcher_round.png
-|   |   |       |       |       |       
-|   |   |       |       |       +---mipmap-xhdpi
-|   |   |       |       |       |       ic_launcher.png
-|   |   |       |       |       |       ic_launcher_round.png
-|   |   |       |       |       |       
-|   |   |       |       |       +---mipmap-xxhdpi
-|   |   |       |       |       |       ic_launcher.png
-|   |   |       |       |       |       ic_launcher_round.png
-|   |   |       |       |       |       
-|   |   |       |       |       +---mipmap-xxxhdpi
-|   |   |       |       |       |       ic_launcher.png
-|   |   |       |       |       |       ic_launcher_round.png
-|   |   |       |       |       |       
-|   |   |       |       |       +---values
-|   |   |       |       |       |       colors.xml
-|   |   |       |       |       |       strings.xml
-|   |   |       |       |       |       styles.xml
-|   |   |       |       |       |       
-|   |   |       |       |       \---xml
-|   |   |       |       |               network_security_config.xml
-|   |   |       |       |               
-|   |   |       |       \---test
-|   |   |       |           \---java
-|   |   |       |               \---jp
-|   |   |       |                   \---glossom
-|   |   |       |                       \---sample
-|   |   |       |                           \---samplekotlin
-|   |   |       |                                   ExampleUnitTest.kt
-|   |   |       |                                   
-|   |   |       \---gradle
-|   |   |           \---wrapper
-|   |   |                   gradle-wrapper.jar
-|   |   |                   gradle-wrapper.properties
-|   |   |                   
-|   |   \---SDKの導入
-|   |           前回苦戦した部分.md
-|   |           
-|   \---メディエーション
-|           メディエーション.md
-|           
-+---技術英語
-|       よく使われる英語.md
-|       接頭辞一覧.md
-|       
-+---文字コード
-|   |   JIS_X_0208_あ.png
-|   |   文字コード概論.md
-|   |   
-|   \---UnicodeとUTF8
-|       |   Unicode(UTF8)の一覧.url
-|       |   UnicodeとUTF8のわかりやすい説明.pdf
-|       |   Unicodeについて.md
-|       |   UnicodeをUTF8やUTF16に変換する方法.pdf
-|       |   UTF8(Unicode)の一覧.url
-|       |   UTF8につてい.md
-|       |   
-|       \---Unicode文字符号化モデル
-|               Unicode文字符号化モデル.md
-|               UTF32の場合の例.png
-|               ビッグエンディアン.png
-|               ビッグエンディアン_リトルエンディアンの例.png
-|               リトルエンディアン.png
-|               
-+---無料の便利なサービス
-|       無料の会員管理サービス_MiiT+_ミータス.url
-|       
-+---画像
-|   \---SVG
-|           SVGの記述方法.pdf
-|           SVGの記述方法.webloc
-|           
-+---線
-|       ベジェ曲線.md
-|       
-+---色
-|   |   色.md
-|   |   透明度.md
-|   |   
-|   \---画像
-|           HSV_color_space.jpg
-|           meido_saido.png
-|           トーン.jpg
-|           彩度.png
-|           明度.png
-|           色の三属性.png
-|           色相.png
-|           
-\---設計
-    |   UML.pdf
-    |   データ構造の選定.md
-    |   ビジネスロジック.md
-    |   ファイルシステム.md
-    |   ファイル形式.md
-    |   プログラムを書く上で常に意識すべきこと.md
-    |   プログラム設計手順.md
-    |   仕様の定義漏れを防ぐ.md
-    |   設計のポイント.md
-    |   設計チェックリスト.md
-    |   
-    +---DB
-    |   |   やさしい図解で学ぶ　中間テーブル　多対多　概念編 - Qiita.webloc
-    |   |   やさしい図解で学ぶ　中間テーブル　多対多　概念編.pdf
-    |   |   中間テーブルについての補足.md
+\---99.育成中コンテンツ
+    +---ATOM
+    |   |   AtomでPlantUMLを使ってクラス図を描いた時にプレビューウィンドウにリアルタイム反映されない時の対処.md
+    |   |   Markdown書き方.md
+    |   |   Markdown記載時の独自ルール.md
+    |   |   おすすめのプラグイン.md
+    |   |   シーケンス図のプレビュー表示.md
     |   |   
-    |   \---ER図
-    |           やさしい図解で学ぶ　ER図　表記法一覧.pdf
-    |           やさしい図解で学ぶ　ER図　表記法一覧.webloc
+    |   \---画像
+    +---Flutter&Dart
+    |   \---Flutter&Dartを学習するべきか
+    |           Flutter&Dartを学習するべきか.md
+    |           アプリ開発市場の現状と今後の予想（2023?2026）   IT業界で気づいたことをこっそり書くブログ.pdf
     |           
-    \---認証
-        \---生体認証
-                ONとOFFの切り替え時に生体認証が必要な理由.md
-                
+    +---Git
+    |   |   FAQ.md
+    |   |   Git.md
+    |   |   gitignoreに記載したのに反映されない件.pdf
+    |   |   gitignoreに記載したのに反映されない件.webloc
+    |   |   gitignoreの仕様詳解.pdf
+    |   |   gitignoreの仕様詳解.webloc
+    |   |   gitignoreの書き方.pdf
+    |   |   gitignoreの書き方.webloc
+    |   |   Git管理をやめる方法.md
+    |   |   masterブランチの変更手順.md
+    |   |   コマンド早見表.md
+    |   |   コミットの取り消し方法.md
+    |   |   コミットメッセージの規約.md
+    |   |   マージ時に必ず樹形図を分岐させる方法.md
+    |   |   分流に本流の最新の状態を取り込む方法.md
+    |   |   
+    |   \---マージとリベースの違い
+    |           マージ.png
+    |           マージとリベースの違い.md
+    |           リベース.png
+    |           統合前.png
+    |           
+    +---Github
+    |       Pushしても反映されない場合.md
+    |       ストレージ容量の上限.md
+    |       
+    +---Googleサイト
+    |       Googleサイト.md
+    |       
+    +---Mac
+    |       MacOSでよく使うショートカットキー.md
+    |       WindowsキーボードとマウスでMacを操作.md
+    |       ターミナル.md
+    |       開発元が未確認のMacアプリを開く.md
+    |       
+    +---Markdown
+    |       きれいに書くためのフォーマット.md
+    |       トラブルシューティング.md
+    |       動画ファイルの追加方法.md
+    |       
+    +---Officeソフト
+    |   \---Excel
+    |       |   テーブルとして書式設定を解除する.md
+    |       |   
+    |       \---フィルタ後のデータを対象に数式を実行する
+    |               フィルタ後のデータを対象に数式を実行する.md
+    |               引数の一覧.png
+    |               引数の一覧2.png
+    |               
+    +---plantuml
+    |       PlantUML公式サイト.url
+    |       シーケンス図のテンプレート.pu
+    |       記述ルール.md
+    |       
+    +---shellスクリプト
+    |       shellスクリプトをダブルクリックで実行できるようにする方法.md
+    |       参考サイトまとめ.md
+    |       
+    +---VisualStudioCode
+    |   |   FAQ.md
+    |   |   PlantUMLショートカットキー.md
+    |   |   便利な初期設定.md
+    |   |   
+    |   \---マークダウン
+    |           FAQ.md
+    |           Markdown_Table.md
+    |           よく使用するショートカットキー.md
+    |           便利なプラグイン一覧.md
+    |           
+    +---Windows
+    |       ソフトのインストール場所の確認.md
+    |       
+    +---アニメーション
+    |       アニメーションの種類.md
+    |       キーフレームアニメーション.md
+    |       
+    +---エンコード_デコード
+    |       base64_エンコーディングアルゴリズム.pdf
+    |       エンコーディングの種類.md
+    |       
+    +---コードレビュー
+    |       コードレビュー.md
+    |       
+    +---システム開発全般
+    |   |   システム開発のフレームワーク.md
+    |   |   要望と要求と要件の違い.md
+    |   |   
+    |   \---画像
+    |           要望と要求と要件の関係.png
+    |           
+    +---テンプレート
+    |       フローチャート_テンプレート.xlsx
+    |       
+    +---デザイン
+    |   +---デザインツール
+    |   |       アイコン作成.md
+    |   |       
+    |   \---デザインノウハウ
+    |           デザイン基礎.xlsx
+    |           
+    +---データベース
+    |   |   カーソルとは.md
+    |   |   ビュー.md
+    |   |   
+    |   +---SQL
+    |   |   |   BETWEEN仕様.md
+    |   |   |   HAVING句が呼ばれるタイミング.png
+    |   |   |   HAVING句の使い方.md
+    |   |   |   テーブルコンペア用SQL作成ツール.xlsx
+    |   |   |   相関副問い合わせ.md
+    |   |   |   
+    |   |   \---with_recursive
+    |   |           with_recursive_sample.db
+    |   |           with_recursive_sample.sqbpro
+    |   |           with_recursive句_サンプル.xlsx
+    |   |           
+    |   \---SQLite
+    |       |   Nullデータを格納する.md
+    |       |   N進数データを格納する.md
+    |       |   ROWIDの参照とINTEGER PRIMARY KEYとの関係 SQLite入門.pdf
+    |       |   ROWIDの参照とINTEGER PRIMARY KEYとの関係 SQLite入門.webloc
+    |       |   SQLiteのジャーナルモード.pdf
+    |       |   SQLiteのジャーナルモード.webloc
+    |       |   SQLiteのジャーナルモード_公式ドキュメント.webloc
+    |       |   with_recursive句_サンプル.xlsx
+    |       |   エスケープ文字.md
+    |       |   文法.md
+    |       |   
+    |       +---型
+    |       |       型についての基礎知識.md
+    |       |       静的型定義.md
+    |       |       
+    |       \---日付と時刻
+    |               日付と時刻のサンプル.md
+    |               日付と時刻の関数.md
+    |               
+    +---ネットワーク
+    |   |   SSLとは、「分かりそう」で「分からない」.pdf
+    |   |   
+    |   +---GraphQL
+    |   |   |   GraphQL.md
+    |   |   |   
+    |   |   +---Apollo GraphQL Kotlin Client
+    |   |   |   \---チュートリアル
+    |   |   |       |   1.プロジェクトを構成する.md
+    |   |   |       |   2.スキーマを追加する.md
+    |   |   |       |   3.クエリを記述する.md
+    |   |   |       |   
+    |   |   |       \---画像
+    |   |   |               completed_id_query.png
+    |   |   |               explorer_add_launches_query.png
+    |   |   |               explorer_autocomplete.png
+    |   |   |               explorer_check_cursor.png
+    |   |   |               explorer_initial_added_query.png
+    |   |   |               explorer_launches_drill_in.png
+    |   |   |               explorer_launch_list_rename.png
+    |   |   |               explorer_sandbox_open.png
+    |   |   |               explorer_submit_operation.png
+    |   |   |               launches_detail.png
+    |   |   |               new_file.png
+    |   |   |               open_in_explorer_launches.png
+    |   |   |               
+    |   |   \---画像
+    |   |           グラフ理論.png
+    |   |           ツリー.png
+    |   |           
+    |   \---HTTP
+    |           AcceptとContent-Typeの違い.md
+    |           Content-Type 一覧.md
+    |           HTTP.md
+    |           HTTPのフォーマット.jpg
+    |           HTTPの仕組み_認証とは.url
+    |           User-Agent とは.md
+    |           ブラウザでURL欄に直接入力した場合はGETメソッドになる.md
+    |           ヘッダーフィールドの一覧.url
+    |           
+    +---ファイル
+    |   +---JSON
+    |   |   |   JSON Schema から Kotlin の data class を作成するツール.md
+    |   |   |   JSON Schema.md
+    |   |   |   JSONのフォーマット.md
+    |   |   |   JSON公式ドキュメント？.url
+    |   |   |   
+    |   |   \---公式ドキュメント
+    |   |       \---Docs
+    |   |           \---2.Getting Started
+    |   |               |   2.Creating your first schema.md
+    |   |               |   
+    |   |               \---画像
+    |   |                       JSONデータを検証する.svg
+    |   |                       
+    |   \---XML
+    |           XMLの基本.md
+    |           
+    +---プライバシーポリシー
+    |       プライバシーポリシー.md
+    |       
+    +---プログラミング全般
+    |   |   クラス名・変数名・メソッド名のネーミング.md
+    |   |   クラス図.md
+    |   |   リスナーの解除.md
+    |   |   冪等性.md
+    |   |   参照透過性.md
+    |   |   参照透過性と冪等性の違い.md
+    |   |   委譲と継承の違い.md
+    |   |   専門用語.xlsx
+    |   |   時刻の取り扱い.md
+    |   |   継承.md
+    |   |   良いコードの書き方.md
+    |   |   良いコードの書き方.pdf
+    |   |   良いコードの書き方.url
+    |   |   
+    |   +---アーキテクチャ
+    |   |       ヘルパークラス.md
+    |   |       
+    |   +---プログラミングにおける重要な原則
+    |   |       01.重要な原則の一覧.md
+    |   |       
+    |   \---品質管理
+    |           不具合を出さない実装の進め方.md
+    |           
+    +---プロトコル
+    |       プロトコルまとめ.md
+    |       
+    +---マーケティング
+    |   \---001.専門用語
+    |           専門用語.md
+    |           
+    +---リファクタリング
+    |       NGパターン.md
+    |       コールバック地獄の回避方法.md
+    |       リファクタリング.md
+    |       リファクタリングのコアコンセプト.md
+    |       継承は悪か？.url
+    |       
+    +---勉強法
+    |       ノートをとる意味.md
+    |       プログラミングの勉強の効率化.md
+    |       モチベーションと集中力.md
+    |       不要な情報の判別.md
+    |       効率的な進め方.md
+    |       情報整理術.md
+    |       理解力.md
+    |       知識の種類.md
+    |       記憶力.md
+    |       
+    +---広告
+    |   |   CPM.md
+    |   |   SSP一覧.xlsx
+    |   |   広告の種類.md
+    |   |   広告企業(アドネットワーク)一覧.md
+    |   |   広告用語(Qiitaからコピペしただけでわかりにくいので参考までに).md
+    |   |   広告用語.md
+    |   |   
+    |   +---Amazon
+    |   |       amazon publisher services.md
+    |   |       Transparent Ad Marketplace.md
+    |   |       
+    |   +---DSPとSSP
+    |   |   |   DSPとSSP.md
+    |   |   |   
+    |   |   \---画像
+    |   |           DSPとSSP.png
+    |   |           
+    |   +---Meta Audience Network
+    |   |       広告表示のプロセス.md
+    |   |       
+    |   +---nend
+    |   |       apiKey_spotID.png
+    |   |       apiKey_spotIDの確認.md
+    |   |       FAQ.md
+    |   |       Google_Advertising_IDを取得する.md
+    |   |       広告枠の管理.png
+    |   |       
+    |   +---Prebid.org
+    |   |       デメリット.md
+    |   |       
+    |   +---アドフリくん
+    |   |   |   アドネットワーク運用マニュアル.pdf
+    |   |   |   アドネットワーク運用マニュアル.url
+    |   |   |   アドフリくんの使い方マニュアル・疑問点解消ページ.url
+    |   |   |   
+    |   |   +---adfurikunSDK_Android_moviereward_3.20.0
+    |   |   |   |   README.txt
+    |   |   |   |   
+    |   |   |   +---libs
+    |   |   |   |       adfurikunMovieRewardSDK-3.20.0.aar
+    |   |   |   |       adfurikunsdk-adnw-maven.gradle
+    |   |   |   |       adfurikunsdk-support-androidx.gradle
+    |   |   |   |       
+    |   |   |   +---SampleJava
+    |   |   |   |   |   .gitignore
+    |   |   |   |   |   .project
+    |   |   |   |   |   build.gradle
+    |   |   |   |   |   gradle.properties
+    |   |   |   |   |   gradlew
+    |   |   |   |   |   gradlew.bat
+    |   |   |   |   |   settings.gradle
+    |   |   |   |   |   
+    |   |   |   |   +---app
+    |   |   |   |   |   |   .gitignore
+    |   |   |   |   |   |   build.gradle
+    |   |   |   |   |   |   proguard-rules.pro
+    |   |   |   |   |   |   
+    |   |   |   |   |   +---libs
+    |   |   |   |   |   |       adfurikunMovieRewardSDK-3.20.0.aar
+    |   |   |   |   |   |       adfurikunsdk-adnw-maven.gradle
+    |   |   |   |   |   |       adfurikunsdk-support-androidx.gradle
+    |   |   |   |   |   |       
+    |   |   |   |   |   \---src
+    |   |   |   |   |       +---androidTest
+    |   |   |   |   |       |   \---java
+    |   |   |   |   |       |       \---sample
+    |   |   |   |   |       |           \---adfurikunsdk
+    |   |   |   |   |       |               \---jp
+    |   |   |   |   |       |                   \---samplejava
+    |   |   |   |   |       |                           ExampleInstrumentedTest.java
+    |   |   |   |   |       |                           
+    |   |   |   |   |       +---main
+    |   |   |   |   |       |   |   AndroidManifest.xml
+    |   |   |   |   |       |   |   
+    |   |   |   |   |       |   +---java
+    |   |   |   |   |       |   |   \---sample
+    |   |   |   |   |       |   |       \---adfurikunsdk
+    |   |   |   |   |       |   |           \---jp
+    |   |   |   |   |       |   |               \---samplejava
+    |   |   |   |   |       |   |                   |   AdfurikunConst.java
+    |   |   |   |   |       |   |                   |   MainActivity.java
+    |   |   |   |   |       |   |                   |   SampleApplication.java
+    |   |   |   |   |       |   |                   |   SimpleAppOpenAd.java
+    |   |   |   |   |       |   |                   |   SimpleBanner.java
+    |   |   |   |   |       |   |                   |   SimpleBannerAutoRefresh.java
+    |   |   |   |   |       |   |                   |   SimpleInterstitial.java
+    |   |   |   |   |       |   |                   |   SimpleMovieReward.java
+    |   |   |   |   |       |   |                   |   SimpleNativeAd.java
+    |   |   |   |   |       |   |                   |   SimpleRectangle.java
+    |   |   |   |   |       |   |                   |   Utils.java
+    |   |   |   |   |       |   |                   |   
+    |   |   |   |   |       |   |                   \---admob
+    |   |   |   |   |       |   |                           SimpleAdMobBanner.java
+    |   |   |   |   |       |   |                           SimpleAdMobInterstitial.java
+    |   |   |   |   |       |   |                           SimpleAdMobNativeAd.java
+    |   |   |   |   |       |   |                           SimpleAdMobRectangle.java
+    |   |   |   |   |       |   |                           SimpleAdMobReward.java
+    |   |   |   |   |       |   |                           
+    |   |   |   |   |       |   \---res
+    |   |   |   |   |       |       +---drawable-hdpi
+    |   |   |   |   |       |       |       .gitkeep
+    |   |   |   |   |       |       |       
+    |   |   |   |   |       |       +---drawable-mdpi
+    |   |   |   |   |       |       |       .gitkeep
+    |   |   |   |   |       |       |       
+    |   |   |   |   |       |       +---drawable-xhdpi
+    |   |   |   |   |       |       |       .gitkeep
+    |   |   |   |   |       |       |       
+    |   |   |   |   |       |       +---drawable-xxhdpi
+    |   |   |   |   |       |       |       .gitkeep
+    |   |   |   |   |       |       |       
+    |   |   |   |   |       |       +---drawable-xxxhdpi
+    |   |   |   |   |       |       |       .gitkeep
+    |   |   |   |   |       |       |       
+    |   |   |   |   |       |       +---layout
+    |   |   |   |   |       |       |       activity_admob_banner.xml
+    |   |   |   |   |       |       |       activity_admob_interstitial.xml
+    |   |   |   |   |       |       |       activity_admob_native_ad.xml
+    |   |   |   |   |       |       |       activity_admob_rectangle.xml
+    |   |   |   |   |       |       |       activity_admob_reward.xml
+    |   |   |   |   |       |       |       activity_app_open_ad.xml
+    |   |   |   |   |       |       |       activity_banner.xml
+    |   |   |   |   |       |       |       activity_banner_auto_refresh.xml
+    |   |   |   |   |       |       |       activity_native_ad.xml
+    |   |   |   |   |       |       |       activity_rectangle.xml
+    |   |   |   |   |       |       |       admob_custom_view.xml
+    |   |   |   |   |       |       |       simple_interstitial.xml
+    |   |   |   |   |       |       |       simple_movie_reward.xml
+    |   |   |   |   |       |       |       
+    |   |   |   |   |       |       +---menu
+    |   |   |   |   |       |       |       main.xml
+    |   |   |   |   |       |       |       
+    |   |   |   |   |       |       +---mipmap-hdpi
+    |   |   |   |   |       |       |       ic_launcher.png
+    |   |   |   |   |       |       |       
+    |   |   |   |   |       |       +---mipmap-mdpi
+    |   |   |   |   |       |       |       ic_launcher.png
+    |   |   |   |   |       |       |       
+    |   |   |   |   |       |       +---mipmap-xhdpi
+    |   |   |   |   |       |       |       ic_launcher.png
+    |   |   |   |   |       |       |       
+    |   |   |   |   |       |       +---mipmap-xxhdpi
+    |   |   |   |   |       |       |       ic_launcher.png
+    |   |   |   |   |       |       |       
+    |   |   |   |   |       |       +---mipmap-xxxhdpi
+    |   |   |   |   |       |       |       ic_launcher.png
+    |   |   |   |   |       |       |       
+    |   |   |   |   |       |       +---values
+    |   |   |   |   |       |       |       colors.xml
+    |   |   |   |   |       |       |       dimens.xml
+    |   |   |   |   |       |       |       strings.xml
+    |   |   |   |   |       |       |       styles.xml
+    |   |   |   |   |       |       |       
+    |   |   |   |   |       |       +---values-sw600dp
+    |   |   |   |   |       |       |       dimens.xml
+    |   |   |   |   |       |       |       
+    |   |   |   |   |       |       +---values-sw720dp
+    |   |   |   |   |       |       |       dimens.xml
+    |   |   |   |   |       |       |       
+    |   |   |   |   |       |       +---values-v11
+    |   |   |   |   |       |       |       styles.xml
+    |   |   |   |   |       |       |       
+    |   |   |   |   |       |       +---values-v14
+    |   |   |   |   |       |       |       styles.xml
+    |   |   |   |   |       |       |       
+    |   |   |   |   |       |       \---xml
+    |   |   |   |   |       |               network_security_config.xml
+    |   |   |   |   |       |               
+    |   |   |   |   |       \---test
+    |   |   |   |   |           \---java
+    |   |   |   |   |               \---sample
+    |   |   |   |   |                   \---adfurikunsdk
+    |   |   |   |   |                       \---jp
+    |   |   |   |   |                           \---samplejava
+    |   |   |   |   |                                   ExampleUnitTest.java
+    |   |   |   |   |                                   
+    |   |   |   |   \---gradle
+    |   |   |   |       \---wrapper
+    |   |   |   |               gradle-wrapper.jar
+    |   |   |   |               gradle-wrapper.properties
+    |   |   |   |               
+    |   |   |   \---SampleKotlin
+    |   |   |       |   .gitignore
+    |   |   |       |   build.gradle
+    |   |   |       |   gradle.properties
+    |   |   |       |   gradlew
+    |   |   |       |   gradlew.bat
+    |   |   |       |   settings.gradle
+    |   |   |       |   
+    |   |   |       +---app
+    |   |   |       |   |   .gitignore
+    |   |   |       |   |   build.gradle
+    |   |   |       |   |   proguard-rules.pro
+    |   |   |       |   |   
+    |   |   |       |   +---libs
+    |   |   |       |   |       adfurikunMovieRewardSDK-3.20.0.aar
+    |   |   |       |   |       adfurikunsdk-adnw-maven.gradle
+    |   |   |       |   |       adfurikunsdk-support-androidx.gradle
+    |   |   |       |   |       
+    |   |   |       |   \---src
+    |   |   |       |       +---androidTest
+    |   |   |       |       |   \---java
+    |   |   |       |       |       \---jp
+    |   |   |       |       |           \---glossom
+    |   |   |       |       |               \---sample
+    |   |   |       |       |                   \---samplekotlin
+    |   |   |       |       |                           ExampleInstrumentedTest.kt
+    |   |   |       |       |                           
+    |   |   |       |       +---main
+    |   |   |       |       |   |   AndroidManifest.xml
+    |   |   |       |       |   |   
+    |   |   |       |       |   +---java
+    |   |   |       |       |   |   \---jp
+    |   |   |       |       |   |       \---glossom
+    |   |   |       |       |   |           \---sample
+    |   |   |       |       |   |               \---samplekotlin
+    |   |   |       |       |   |                   |   AdfurikunConst.kt
+    |   |   |       |       |   |                   |   MainActivity.kt
+    |   |   |       |       |   |                   |   NativeAdUtils.kt
+    |   |   |       |       |   |                   |   SampleApplication.kt
+    |   |   |       |       |   |                   |   SimpleAppOpenAd.kt
+    |   |   |       |       |   |                   |   SimpleBanner.kt
+    |   |   |       |       |   |                   |   SimpleBannerAutoRefresh.kt
+    |   |   |       |       |   |                   |   SimpleInterstitial.kt
+    |   |   |       |       |   |                   |   SimpleMovieReward.kt
+    |   |   |       |       |   |                   |   SimpleNativeAd.kt
+    |   |   |       |       |   |                   |   SimpleRectangle.kt
+    |   |   |       |       |   |                   |   Utils.kt
+    |   |   |       |       |   |                   |   
+    |   |   |       |       |   |                   \---admob
+    |   |   |       |       |   |                           SimpleAdMobBanner.kt
+    |   |   |       |       |   |                           SimpleAdMobInterstitial.kt
+    |   |   |       |       |   |                           SimpleAdMobNativeAd.kt
+    |   |   |       |       |   |                           SimpleAdMobRectangle.kt
+    |   |   |       |       |   |                           SimpleAdMobReward.kt
+    |   |   |       |       |   |                           
+    |   |   |       |       |   \---res
+    |   |   |       |       |       +---drawable
+    |   |   |       |       |       |       ic_launcher_background.xml
+    |   |   |       |       |       |       
+    |   |   |       |       |       +---drawable-v24
+    |   |   |       |       |       |       ic_launcher_foreground.xml
+    |   |   |       |       |       |       
+    |   |   |       |       |       +---layout
+    |   |   |       |       |       |       activity_admob_banner.xml
+    |   |   |       |       |       |       activity_admob_interstitial.xml
+    |   |   |       |       |       |       activity_admob_native_ad.xml
+    |   |   |       |       |       |       activity_admob_rectangle.xml
+    |   |   |       |       |       |       activity_admob_reward.xml
+    |   |   |       |       |       |       activity_app_open_ad.xml
+    |   |   |       |       |       |       activity_banner.xml
+    |   |   |       |       |       |       activity_banner_auto_refresh.xml
+    |   |   |       |       |       |       activity_native_ad.xml
+    |   |   |       |       |       |       activity_rectangle.xml
+    |   |   |       |       |       |       admob_custom_view.xml
+    |   |   |       |       |       |       simple_interstitial.xml
+    |   |   |       |       |       |       simple_movie_reward.xml
+    |   |   |       |       |       |       
+    |   |   |       |       |       +---mipmap-anydpi-v26
+    |   |   |       |       |       |       ic_launcher.xml
+    |   |   |       |       |       |       ic_launcher_round.xml
+    |   |   |       |       |       |       
+    |   |   |       |       |       +---mipmap-hdpi
+    |   |   |       |       |       |       ic_launcher.png
+    |   |   |       |       |       |       ic_launcher_round.png
+    |   |   |       |       |       |       
+    |   |   |       |       |       +---mipmap-mdpi
+    |   |   |       |       |       |       ic_launcher.png
+    |   |   |       |       |       |       ic_launcher_round.png
+    |   |   |       |       |       |       
+    |   |   |       |       |       +---mipmap-xhdpi
+    |   |   |       |       |       |       ic_launcher.png
+    |   |   |       |       |       |       ic_launcher_round.png
+    |   |   |       |       |       |       
+    |   |   |       |       |       +---mipmap-xxhdpi
+    |   |   |       |       |       |       ic_launcher.png
+    |   |   |       |       |       |       ic_launcher_round.png
+    |   |   |       |       |       |       
+    |   |   |       |       |       +---mipmap-xxxhdpi
+    |   |   |       |       |       |       ic_launcher.png
+    |   |   |       |       |       |       ic_launcher_round.png
+    |   |   |       |       |       |       
+    |   |   |       |       |       +---values
+    |   |   |       |       |       |       colors.xml
+    |   |   |       |       |       |       strings.xml
+    |   |   |       |       |       |       styles.xml
+    |   |   |       |       |       |       
+    |   |   |       |       |       \---xml
+    |   |   |       |       |               network_security_config.xml
+    |   |   |       |       |               
+    |   |   |       |       \---test
+    |   |   |       |           \---java
+    |   |   |       |               \---jp
+    |   |   |       |                   \---glossom
+    |   |   |       |                       \---sample
+    |   |   |       |                           \---samplekotlin
+    |   |   |       |                                   ExampleUnitTest.kt
+    |   |   |       |                                   
+    |   |   |       \---gradle
+    |   |   |           \---wrapper
+    |   |   |                   gradle-wrapper.jar
+    |   |   |                   gradle-wrapper.properties
+    |   |   |                   
+    |   |   \---SDKの導入
+    |   |           前回苦戦した部分.md
+    |   |           
+    |   \---メディエーション
+    |           メディエーション.md
+    |           
+    +---技術英語
+    |       よく使われる英語.md
+    |       接頭辞一覧.md
+    |       
+    +---文字コード
+    |   |   JIS_X_0208_あ.png
+    |   |   文字コード概論.md
+    |   |   
+    |   \---UnicodeとUTF8
+    |       |   Unicode(UTF8)の一覧.url
+    |       |   UnicodeとUTF8のわかりやすい説明.pdf
+    |       |   Unicodeについて.md
+    |       |   UnicodeをUTF8やUTF16に変換する方法.pdf
+    |       |   UTF8(Unicode)の一覧.url
+    |       |   UTF8につてい.md
+    |       |   
+    |       \---Unicode文字符号化モデル
+    |               Unicode文字符号化モデル.md
+    |               UTF32の場合の例.png
+    |               ビッグエンディアン.png
+    |               ビッグエンディアン_リトルエンディアンの例.png
+    |               リトルエンディアン.png
+    |               
+    +---無料の便利なサービス
+    |       無料の会員管理サービス_MiiT+_ミータス.url
+    |       
+    +---画像
+    |   \---SVG
+    |           SVGの記述方法.pdf
+    |           SVGの記述方法.webloc
+    |           
+    +---線
+    |       ベジェ曲線.md
+    |       
+    +---色
+    |   |   色.md
+    |   |   透明度.md
+    |   |   
+    |   \---画像
+    |           HSV_color_space.jpg
+    |           meido_saido.png
+    |           トーン.jpg
+    |           彩度.png
+    |           明度.png
+    |           色の三属性.png
+    |           色相.png
+    |           
+    \---設計
+        |   UML.pdf
+        |   データ構造の選定.md
+        |   ビジネスロジック.md
+        |   ファイルシステム.md
+        |   ファイル形式.md
+        |   プログラムを書く上で常に意識すべきこと.md
+        |   プログラム設計手順.md
+        |   仕様の定義漏れを防ぐ.md
+        |   設計のポイント.md
+        |   設計チェックリスト.md
+        |   
+        +---DB
+        |   |   やさしい図解で学ぶ　中間テーブル　多対多　概念編 - Qiita.webloc
+        |   |   やさしい図解で学ぶ　中間テーブル　多対多　概念編.pdf
+        |   |   中間テーブルについての補足.md
+        |   |   
+        |   \---ER図
+        |           やさしい図解で学ぶ　ER図　表記法一覧.pdf
+        |           やさしい図解で学ぶ　ER図　表記法一覧.webloc
+        |           
+        \---認証
+            \---生体認証
+                    ONとOFFの切り替え時に生体認証が必要な理由.md
+                    

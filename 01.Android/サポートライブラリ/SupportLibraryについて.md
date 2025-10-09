@@ -1,6 +1,14 @@
-# SupportLibraryについて
+- [SupportLibrary について](#supportlibrary-について)
+  - [SupportLibrary の役目](#supportlibrary-の役目)
+  - [SupportLibrary の注意点](#supportlibrary-の注意点)
 
-## SupportLibraryの役目
+
+# SupportLibrary について
+
+SupportLibrary (android.support.* としてパッケージ化されたもの) は、現在非推奨となっています。代わりに AndroidX ライブラリを使用してください。
+
+
+## SupportLibrary の役目
 
 - 新しいフレームワークで追加された機能と同等の機能を古いフレームワーク上で実現する機能を持つ（場合によっては、古いフレームワーク上では何もしない）
   - 開発者はアプリが動作するAndroid OSのバージョンとそのバージョンのフレームワークがどの機能を提供しているかを気にする必要はない。代わりにSupportLibraryがそれをやってくれる。開発者がやるべきことは、SupportLibraryが提供されているクラスについては、そちらを利用するように実装をするだけである。一般的に、SupportLibraryのクラス名は「...Compat」となっている。
@@ -11,14 +19,7 @@
   - TVやウェアラブル端末用の機能
 
 
-## SupportLibraryの注意点
+## SupportLibrary の注意点
 
 - フレームワークは、SupportLibraryを使用している処理で、SupportLibraryの機能を利用せず、フレームワークの機能を利用することがある。
 
-## 関連用語
-
-言葉|意味
--|-
-フレームワーク  |  OSが提供する機能
-SupportLibrary  |  AndroidSDKに含まれるライブラリーの一つ
-...Compat  |  
