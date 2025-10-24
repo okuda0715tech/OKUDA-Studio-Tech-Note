@@ -1,0 +1,208 @@
+@startuml{create_OAuth_signature.png}
+'画像変換するときにここで指定したファイル名になる。
+
+skinparam maxMessageSize 70
+'テキストを指定した長さで折り返す
+
+title 署名の作成
+
+hide footbox
+'シーケンスの最下部のシーケンスボックスを非表示にする場合に記述する
+
+participant App as app
+
+participant TwitterServer as twiServer
+
+
+note right of app
+    この説明で使用するリクエストは、
+    https://api.twitter.com/1.1/statuses/update.json
+    への POST リクエストです。
+
+    詳細は以下の通りです。
+
+    【補足】
+    以下の例では、 POST メソッドを扱っており、通常、 POST メソッドの場合は、
+    URL の末尾にクエリストリングを付与しませんが、これはサンプルであり、
+    GET メソッドの場合の参考にもなるように URL の末尾に クエリストリングを
+    付与しています。
+end note
+
+note right of app
+    POST /1.1/statuses/update.json?include_entities=true HTTP/1.1
+    Accept: */*
+    Connection: close
+    User-Agent:OAuth gem v0.4.4
+    Content-Type: application/x-www-form-urlencoded
+    Content-Length:76
+    Host: api.twitter.com
+
+    status=Hello%20Ladies%20%2b%20Gentlemen%2c%20a%20signed%20OAuth%20request%21
+end note
+
+
+== リクエストの HTTP メソッドとベース URL を確認する ==
+
+app -> app : HTTPメソッド(GETやPOSTなど)を確認する
+
+app -> app : ベース URL を確認する
+
+
+== パラメータの収集 ==
+
+note right of app #fcba03
+    <b>【このステップの概要】</b>
+
+    「パラメータの収集」 ステップでは、以下の 2 種類のパラメータを収集します。
+
+    ■アプリのユースケースに関するパラメータ
+    ベース URL の後ろに付与されたパラメータとメッセージボディに格納された
+    パラメータを収集します。
+    たいていの場合、 GET メソッドなら URL の後ろから収集し、 POST メソッドなら
+    メッセージボディから収集することになります。
+
+    ■ OAuth 認証に必要なパラメータ
+    "oauth_" で始まる全てのパラメータを収集します。
+    リクエストトークンの取得フローでは、まだ "oauth_token" が取得できていないため、
+    それ以外の "oauth_" で始まる全てパラメータを収集します。
+
+    基本的には "oauth_" で始まる以下の 6 つのパラメータが必要です。
+    oauth_consumer_key
+    oauth_nonce
+    oauth_signature_method
+    oauth_timestamp
+    oauth_token
+    oauth_version
+    API エンドポイントによっては、 "oauth_callback" など他の
+    "oauth_" で始まるパラメータも存在します。
+    存在している場合は、それらも収集します。
+end note
+
+note right of app
+    この例で使用するリクエストから収集したパラメータは以下です。
+
+    status = Hello Ladies + Gentlemen, a signed OAuth request!
+    include_entities = true
+    oauth_consumer_key = xxxxxxxxxxxxxxxxxxxxxx
+    oauth_nonce = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+    oauth_signature_method = HMAC-SHA1
+    oauth_timestamp = 1318622958
+    oauth_token = 999999999-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+    oauth_version = 1.0
+
+    【注意】
+    この後、パラメータのキーとバリューをパーセントエンコーディングするため、
+    この時点では、パーセントエンコードされていない値を収集してください。
+end note
+
+group パラメータのパーセントエンコーディングと連結
+
+    app -> app : 収集した全てのキーとバリューをパーセントエンコーディングする
+
+    app -> app : パラメータのリストをパーセントエンコード後のキーのアルファベット順で並べ替える
+
+    app -> app : アンパサント文字を結合識別子として "key=value&...&key=value"の形式で文字列を連結する
+
+end
+
+note right of app
+    この例のリクエストから収集したパラメータを処理すると以下のようになります。
+    ただし、以下は見やすさのために折り返ししていますが、本来は一行で出力します。
+
+    include_entities=true&
+    oauth_consumer_key=xxxxxxxxxxxxxxxxxxxxxx&
+    oauth_nonce=xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx&
+    oauth_signature_method=HMAC-SHA1&
+    oauth_timestamp=1318622958&
+    oauth_token=999999999-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx&
+    oauth_version=1.0&
+    status=Hello%20Ladies%20%2B%20Gentlemen%2C%20a%20signed%20OAuth%20request%21
+end note
+
+
+== 署名ベース文字列の作成 ==
+
+note right of app #fcba03
+    <b>【このステップの概要】</b>
+
+    「署名ベース文字列の作成」 ステップでは、 HTTP メソッド、 ベース URL 、
+    収集したパラメータをパーセントエンコーディングして、連結します。
+end note
+
+app -> app : HTTPメソッドを大文字に変換します
+
+app -> app : ベースURLをパーセントエンコーディングします
+
+app -> app : 収集したパラメータをパーセントエンコーディングします
+
+note right of app
+    収集したパラメータは、キーとバリューについて、既にパーセントエンコーディング済みですが、
+    すべてのパラメータを連結した文字列に対してもう一度パーセントエンコーディングを行います。
+
+    これにより、例えば、"&"記号は"%26"に変換され、"%"記号は"%25"に変換されます。
+end note
+
+app -> app : アンパサント文字を結合識別子として "HTTPメソッド&ベースURL&パラメータ" の形式で文字列連結します
+
+note right of app
+    この例の署名ベース文字列は、以下のようになります。
+    ただし、以下は見やすさのために折り返ししていますが、本来は一行で出力します。
+
+    POST&
+    https%3A%2F%2Fapi.twitter.com%2F1.1%2Fstatuses%2Fupdate.json&
+    include_entities%3Dtrue%26
+    oauth_consumer_key%3Dxxxxxxxxxxxxxxxxxxxxxx%26
+    oauth_nonce%3Dxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx%26
+    oauth_signature_method%3DHMAC-SHA1%26
+    oauth_timestamp%3D1318622958%26
+    oauth_token%3D999999999-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx%26
+    oauth_version%3D1.0%26
+    status%3DHello%2520Ladies%2520%252B%2520Gentlemen%252C%2520a%2520signed%2520OAuth%2520request%2521
+end note
+
+== 署名キーの取得 ==
+
+note right of app #fcba03
+    <b>【このステップの概要】</b>
+
+    署名に使用するキーを生成します。
+
+    コンシューマーシークレットとトークンシークレットは最重要機密情報であるため、
+    注意して扱ってください。
+end note
+
+app -> app : コンシューマーシークレットをパーセントエンコーディングします
+
+app -> app : トークンシークレットをパーセントエンコーディングします
+
+app -> app : アンパサント文字を結合識別子として "コンシューマーシークレット&トークンシークレット" の形式で文字列連結します
+
+note right of app
+    リクエストトークンを取得する場合など、その時点では、まだトークンシークレットが
+    わからない場合は、トークンシークレットを省略し "コンシューマーシークレット&" を
+    キーとします。
+end note
+
+
+== 署名の実行 ==
+
+note right of app
+    Apache ライブラリの以下のメソッドで署名を行う。
+    署名ベース文字列をハッシュ化します。
+    そのハッシュ値が署名になります。
+
+    import org.apache.commons.codec.digest.HmacUtils
+
+    new HmacUtils(HmacAlgorithms.HMAC_SHA_1, key).hmacHex(String valueToDigest);
+
+    このメソッドは 16 進数のダイジェストを返します。
+end note
+
+app -> app : 上記で取得した16進数のダイジェストをbase64に変換します
+
+note right of app
+    base 64 に変換されたダイジェストが Twitter の oauth_signature になります。
+end note
+
+
+@enduml

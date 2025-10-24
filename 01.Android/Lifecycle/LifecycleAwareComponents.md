@@ -1,0 +1,7 @@
+# Lifecycle-Aware Components
+
+## Lifecycle-Aware Componentsとは
+
+普通のクラスをActivityやFragmentのようにライフサイクルを持ったクラスにするために使用するコンポーネント。
+普通のクラスにライフサイクルを持たせることで、ActivityやFragment側にそのクラスをコントロールするコードを書かなくて済むのがメリット。
+
