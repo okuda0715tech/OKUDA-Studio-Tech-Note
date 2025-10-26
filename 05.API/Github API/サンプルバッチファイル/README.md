@@ -1,7 +1,4 @@
-- [Read me](#read-me)
-
-
-# Read me
+# 概要
 
 このバッチファイル（github_api.bat）は、 curl コマンドで Github の API を実行します。
 
