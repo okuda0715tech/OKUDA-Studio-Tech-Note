@@ -1,7 +1,7 @@
-- [BuildGradleの具体的な使用方法](#buildgradleの具体的な使用方法)
+- [BuildGradle の具体的な使用方法](#buildgradle-の具体的な使用方法)
   - [リファレンス](#リファレンス)
-  - [settings.gradleについて](#settingsgradleについて)
-  - [トップレベルのbuild.gradle](#トップレベルのbuildgradle)
+  - [settings.gradle について](#settingsgradle-について)
+  - [トップレベルの build.gradle](#トップレベルの-buildgradle)
   - [モジュールレベルのbuild.gradle](#モジュールレベルのbuildgradle)
   - [プロダクトフレーバーごとに versionName を変える方法](#プロダクトフレーバーごとに-versionname-を変える方法)
   - [Javaからプロダクトフレーバーを参照する方法](#javaからプロダクトフレーバーを参照する方法)
@@ -17,28 +17,31 @@
     - [参考](#参考)
 
 
-# BuildGradleの具体的な使用方法
+# BuildGradle の具体的な使用方法
 
 ## リファレンス
 
-Android用公式リファレンス
-[Android Plugin DSL Reference](http://google.github.io/android-gradle-dsl/current/index.html)
+Android 用の公式リファレンスは以下にあります。その時点で最新のドキュメントを参照してください。
+
+[Android Plugin DSL Reference](https://developer.android.com/reference/tools/gradle-api)
 
 
-## settings.gradleについて
+## settings.gradle について
 
 シングルモジュールアプリ
-（通常はシングルモジュールとなるらしい）
 
-    include ':app'
+```
+include ':app'
+```
 
 マルチモジュールアプリ
-（おそらく以下のように記述すると思われる）
 
-    include ':app',':{別モジュール名}'
+```
+include ':app',':{別モジュール名}'
+```
 
 
-## トップレベルのbuild.gradle
+## トップレベルの build.gradle
 
 ルートプロジェクトディレクトリにあるトップレベルの build.gradle ファイルにより、  
 プロジェクトのすべてのモジュールに適用されるビルド設定が定義されます。
