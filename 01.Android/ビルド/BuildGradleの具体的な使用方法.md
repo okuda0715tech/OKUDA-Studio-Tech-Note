@@ -2,7 +2,7 @@
   - [リファレンス](#リファレンス)
   - [settings.gradle について](#settingsgradle-について)
   - [トップレベルの build.gradle](#トップレベルの-buildgradle)
-  - [モジュールレベルのbuild.gradle](#モジュールレベルのbuildgradle)
+  - [モジュールレベルの build.gradle](#モジュールレベルの-buildgradle)
   - [プロダクトフレーバーごとに versionName を変える方法](#プロダクトフレーバーごとに-versionname-を変える方法)
   - [Javaからプロダクトフレーバーを参照する方法](#javaからプロダクトフレーバーを参照する方法)
     - [dimension が一つだけの場合](#dimension-が一つだけの場合)
@@ -12,8 +12,8 @@
   - [ビルドタイプ、プロダクトフレーバーごとに applicationId を変更する方法](#ビルドタイププロダクトフレーバーごとに-applicationid-を変更する方法)
   - [dependencies ブロックのコンフィギュレーションの説明](#dependencies-ブロックのコンフィギュレーションの説明)
     - [implementation と api の違い](#implementation-と-api-の違い)
-      - [✅ implementation](#-implementation)
-      - [✅ api](#-api)
+      - [implementation](#implementation)
+      - [api](#api)
     - [参考](#参考)
 
 
@@ -90,7 +90,7 @@ dependencies {
 }
 ```
 
-## モジュールレベルのbuild.gradle
+## モジュールレベルの build.gradle
 
 各 project/module/ ディレクトリにあるモジュールレベルの build.gradle ファイルを使用すると、  
 そのファイルがある特定のモジュールのビルド設定を行うことができます。
@@ -442,9 +442,9 @@ android {
 
 ### implementation と api の違い
 
-#### ✅ implementation
+#### implementation
 
-- 使う場面：他のモジュールに依存ライブラリを隠したいとき（基本これを使う）
+- 使う場面：他のモジュールに依存ライブラリを隠したいとき（基本的にはこちらを使用する）
 - 特徴：
   - 自分のモジュール内では使える
   - 依存先モジュール（このモジュールを使う側）にはそのライブラリは見えない（再エクスポートされない）
@@ -455,7 +455,7 @@ implementation 'com.squareup.retrofit2:retrofit:2.9.0'
 ```
 
 
-#### ✅ api
+#### api
 
 - 使う場面
   - 自分のモジュールが公開ライブラリや SDK で、その依存も一緒に公開したいとき
