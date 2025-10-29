@@ -1,6 +1,5 @@
 - [settings.gradle](#settingsgradle)
-- [settings.gradle の役割](#settingsgradle-の役割)
-  - [settings.gradle はトップレベルにのみ存在する](#settingsgradle-はトップレベルにのみ存在する)
+  - [settings.gradle の概要](#settingsgradle-の概要)
   - [settings.gradle でよく使用する関数やプロパティ](#settingsgradle-でよく使用する関数やプロパティ)
     - [rootProject.name](#rootprojectname)
     - [include()](#include)
@@ -17,16 +16,15 @@
 
 # settings.gradle
 
-# settings.gradle の役割
+## settings.gradle の概要
+
+settings.gradle はトップレベルにのみ存在し、モジュールレベルには存在していません。つまり、プロジェクト内に一つだけ存在します。
+
+settings.gradle の主な役割は以下です。
 
 - MavenCentral など、依存関係を取得するためのリモートリポジトリを定義する。
   - 以前までは、 build.gradle に定義するのが主流でしたが、現在は settings.gradle に定義するのが主流です。
 - プロジェクトに含めるモジュールを定義する。
-
-
-## settings.gradle はトップレベルにのみ存在する
-
-settings.gradle はトップレベルにのみ存在し、モジュールレベルには存在していません。つまり、プロジェクト内に一つだけ存在します。
 
 
 ## settings.gradle でよく使用する関数やプロパティ
