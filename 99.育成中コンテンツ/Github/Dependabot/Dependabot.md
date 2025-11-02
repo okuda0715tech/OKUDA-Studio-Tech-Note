@@ -35,7 +35,7 @@ dependabot.yml の各項目の意味は以下の通りです。
 
 #### updates 内のハイフン
 
-Dependabot が自動チェックする対象（モジュールやエコシステム）の数だけ、 `updates` 内にハイフン ( `-` )  で項目を作成します。
+Dependabot が自動チェックする対象（モジュールやエコシステム）の数だけ、 `updates` 内にハイフン ( `-` )  で子要素を作成します。これは、 YAML の文法で、 `updates` がリストであることを意味ます。
 
 
 #### package-ecosystem

@@ -1,6 +1,5 @@
 - [BuildGradle の具体的な使用方法](#buildgradle-の具体的な使用方法)
   - [リファレンス](#リファレンス)
-  - [settings.gradle について](#settingsgradle-について)
   - [モジュールレベルの build.gradle の例](#モジュールレベルの-buildgradle-の例)
   - [プロダクトフレーバーごとに versionName を変える方法](#プロダクトフレーバーごとに-versionname-を変える方法)
   - [Javaからプロダクトフレーバーを参照する方法](#javaからプロダクトフレーバーを参照する方法)
@@ -23,21 +22,6 @@
 Android 用の公式リファレンスは以下にあります。その時点で最新のドキュメントを参照してください。
 
 [Android Plugin DSL Reference](https://developer.android.com/reference/tools/gradle-api)
-
-
-## settings.gradle について
-
-シングルモジュールアプリ
-
-```
-include ':app'
-```
-
-マルチモジュールアプリ
-
-```
-include ':app',':{別モジュール名}'
-```
 
 
 ## モジュールレベルの build.gradle の例
