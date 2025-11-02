@@ -70,7 +70,7 @@ kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
 
 こうすることによって、複数のモジュールで同じプラグインを使用する場合に、バージョンがバラバラになることを防ぐことができます。
 
-また、 Dependabot によって、依存関係の監視・更新を自動化することができます。
+また、 [Dependabot](../../10.Github/Dependabot/Dependabot.md) によって、依存関係の監視・更新を自動化することができます。
 
 
 
