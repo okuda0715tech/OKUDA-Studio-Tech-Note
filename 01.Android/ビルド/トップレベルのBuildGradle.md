@@ -1,13 +1,12 @@
 - [トップレベルの BuildGradle](#トップレベルの-buildgradle)
   - [トップレベルの build.gradle の役割](#トップレベルの-buildgradle-の役割)
-  - [トップレベルの build.gradle でよく使用される関数やプロパティ](#トップレベルの-buildgradle-でよく使用される関数やプロパティ)
-    - [plugins{}](#plugins)
-      - [概要](#概要)
-      - [よく使用するプラグイン](#よく使用するプラグイン)
-      - [具体例](#具体例)
-    - [extra 配列プロパティ](#extra-配列プロパティ)
-    - [subprojects {} 関数](#subprojects--関数)
-    - [allprojects {} 関数](#allprojects--関数)
+  - [plugins{}](#plugins)
+    - [概要](#概要)
+    - [よく使用するプラグイン](#よく使用するプラグイン)
+    - [具体例](#具体例)
+  - [extra 配列プロパティ](#extra-配列プロパティ)
+  - [subprojects {} 関数](#subprojects--関数)
+  - [allprojects {} 関数](#allprojects--関数)
   - [参考資料](#参考資料)
 
 
@@ -17,17 +16,16 @@
 
 プロジェクトのルートディレクトリにあるトップレベルの build.gradle により、プロジェクトのすべてのモジュールに適用されるビルド設定が定義されます。
 
+これからトップレベルの build.gradle でよく使用される関数やプロパティについて解説していきます。
 
-## トップレベルの build.gradle でよく使用される関数やプロパティ
+## plugins{}
 
-### plugins{}
-
-#### 概要
+### 概要
 
 plugins{} ブロックは、プロジェクトで使用する [Gradle プラグイン](./Gradleプラグインとは.md) を宣言するブロックです。
 
 
-#### よく使用するプラグイン
+### よく使用するプラグイン
 
 Android アプリ開発では、以下のプラグインをよく使用します。
 
@@ -36,7 +34,7 @@ Android アプリ開発では、以下のプラグインをよく使用します
 - `org.jetbrains.kotlin.android` （Kotlin + Android 用）
 
 
-#### 具体例
+### 具体例
 
 話を簡単にするために、まずは、古い記述方法を解説します。
 
@@ -80,7 +78,7 @@ kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
 
 
 
-### extra 配列プロパティ
+## extra 配列プロパティ
 
 extra 配列プロパティを使用すると、トップレベルの build.gradle で定義したプロパティをモジュールレベルの build.gradle から参照することができます。
 
@@ -116,11 +114,11 @@ ext {
 基本的には、 Kotlin DSL に移行しているのであれば、 extra 配列プロパティを使用するようにしましょう。
 
 
-### subprojects {} 関数
+## subprojects {} 関数
 
 
 
-### allprojects {} 関数
+## allprojects {} 関数
 
 
 
