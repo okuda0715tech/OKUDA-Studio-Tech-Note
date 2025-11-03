@@ -96,7 +96,7 @@ project(":payment").projectDir = file("modules/pay_module")
 
 ### pluginManagement{}
 
-`pluginManagement{}` ブロック内では、 Gradle プラグインを取得するリモートリポジトリを定義します。
+`pluginManagement{}` ブロック内では、 [Gradle プラグイン](./Gradleプラグインとは.md) を取得するリモートリポジトリを定義します。
 
 ```kotlin
 pluginManagement {
