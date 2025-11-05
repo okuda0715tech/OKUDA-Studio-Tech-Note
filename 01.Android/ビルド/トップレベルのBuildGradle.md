@@ -10,7 +10,15 @@
   - [subprojects {} 関数](#subprojects--関数)
   - [tasks{} 関数](#tasks-関数)
   - [extra 配列プロパティ](#extra-配列プロパティ)
-  - [参考資料](#参考資料)
+  - [dependencyResolutionManagement {} 関数](#dependencyresolutionmanagement--関数)
+  - [gradle プロパティ](#gradle-プロパティ)
+    - [taskGraph](#taskgraph)
+    - [startParameter](#startparameter)
+    - [](#)
+    - [](#-1)
+    - [](#-2)
+    - [](#-3)
+    - [](#-4)
 
 
 # トップレベルの BuildGradle
@@ -175,15 +183,7 @@ MyProject/
 
 ## tasks{} 関数
 
-
-
-
-
-
-
-
-
-
+Gradle のタスクを定義したり、変更したりできます。詳細は、 [タスク.md](./タスク.md) を参照してください。
 
 
 ## extra 配列プロパティ
@@ -208,7 +208,7 @@ android {
 }
 ```
 
-**注意** : Extra Properties は Any 型なので、使用時にキャストが必要です
+**注意** : `extra` 配列プロパティは `Any` 型であるため、使用時にキャストが必要です。
 
 Groovy の名残で `ext{}` ブロックが使用されることもあります。
 
@@ -222,8 +222,64 @@ ext {
 基本的には、 Kotlin DSL に移行しているのであれば、 extra 配列プロパティを使用するようにしましょう。
 
 
-## 参考資料
+## dependencyResolutionManagement {} 関数
 
-- ChatGPT
+**注意** : 最新の Gradle では、 build.gradle.kts ではなく、 settings.gradle.kts で dependencyResolutionManagement を定義することが推奨されます。
+
+dependencyResolutionManagement については、 [SettingsGradle.md](./SettingsGradle.md) を参照してください。
+
+
+## gradle プロパティ
+
+`gradle` は、現在のビルド全体を表す Gradle オブジェクト（Gradle インスタンス） への参照です。つまり、「この Gradle 実行プロセス全体で共通の設定」を行うときに使います。
+
+### taskGraph
+
+`gradle.taskGraph` は、タスクの依存関係グラフに関する情報を保持します。
+
+実行対象のタスクを確認したり、タスクの実行前後に処理を追加できます。
+
+```kotlin
+gradle.taskGraph.whenReady { graph ->
+    println("タスクグラフが構築されました。実行予定タスクは以下になります。")
+    graph.allTasks.forEach { task ->
+        println(" - ${task.path}")
+    }
+}
+
+gradle.taskGraph.beforeTask { task ->
+    println("タスクを開始: ${task.path}")
+}
+
+gradle.taskGraph.afterTask { task, state ->
+    if (state.failure != null) {
+        println("× タスク失敗: ${task.path}")
+    } else {
+        println("○ タスク成功: ${task.path}")
+    }
+}
+```
+
+タスクの流れや実行結果をデバッグしたいときなどに役立ちます。
+
+
+### startParameter
+
+
+
+
+
+
+
+
+### 
+### 
+### 
+### 
+### 
+
+
+
+
 
 
