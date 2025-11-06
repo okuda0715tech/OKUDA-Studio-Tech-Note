@@ -14,11 +14,11 @@
   - [gradle プロパティ](#gradle-プロパティ)
     - [taskGraph](#taskgraph)
     - [startParameter](#startparameter)
-    - [](#)
-    - [](#-1)
-    - [](#-2)
-    - [](#-3)
-    - [](#-4)
+    - [rootProject](#rootproject)
+    - [buildFinished {}](#buildfinished-)
+    - [beforeProject {}](#beforeproject-)
+    - [afterProject {}](#afterproject-)
+  - [rootProject プロパティ](#rootproject-プロパティ)
 
 
 # トップレベルの BuildGradle
@@ -233,6 +233,9 @@ dependencyResolutionManagement については、 [SettingsGradle.md](./Settings
 
 `gradle` は、現在のビルド全体を表す Gradle オブジェクト（Gradle インスタンス） への参照です。つまり、「この Gradle 実行プロセス全体で共通の設定」を行うときに使います。
 
+この章で説明する各コールバックの実行タイミングが、ビルド全体のどのフェーズに該当するのかについて、 [Gradleによるビルドの3フェーズ.md](./Gradleによるビルドの3フェーズ.md) で説明しているため、必要に応じてそちらも参照してください。
+
+
 ### taskGraph
 
 `gradle.taskGraph` は、タスクの依存関係グラフに関する情報を保持します。
@@ -265,18 +268,114 @@ gradle.taskGraph.afterTask { task, state ->
 
 ### startParameter
 
+Gradle を実行するときに指定されたコマンドライン引数やオプションが格納されています。（例 : `./gradlew build --offline --parallel` など）
+
+使用例を以下に示しますが、様々なプロパティが用意されているため、詳細は [startParameter.md](./gradleプロパティ/startParameter.md) を参照してください。
+
+```kotlin
+println("🚀 Gradle 実行パラメータ情報")
+println("タスク名: ${gradle.startParameter.taskNames}")
+println("オフラインモード: ${gradle.startParameter.isOffline}")
+println("並列実行: ${gradle.startParameter.isParallelProjectExecutionEnabled}")
+println("プロジェクトプロパティ: ${gradle.startParameter.projectProperties}")
+```
+
+CI / CD 環境で実行条件を判定したり、特定のオプション付きビルドだけ動作を変えるときに便利です。
+
+
+### rootProject
+
+ビルド全体のルートプロジェクトを参照します。どのサブプロジェクトからでも `gradle.rootProject` と記述することでアクセス可能です。
+
+使用例を以下に示します。
+
+```kotlin
+println("ルートプロジェクトの名前: ${gradle.rootProject.name}")
+println("ルートプロジェクトの場所: ${gradle.rootProject.projectDir}")
+
+tasks.register("copyToRoot") {
+    doLast {
+        val dest = file("${gradle.rootProject.projectDir}/collected_outputs")
+        dest.mkdirs()
+        println("コピー先: $dest")
+    }
+}
+```
+
+ルートに成果物やログをまとめたいときに使われます。
+
+
+### buildFinished {}
+
+ビルドが 完全に終了したタイミング（成功・失敗問わず） に呼び出されます。後処理やレポート出力などに最適です。
+
+使用例を以下に示します。
+
+```kotlin
+gradle.buildFinished { result ->
+    if (result.failure != null) {
+        println("ビルド失敗: ${result.failure?.message}")
+    } else {
+        println("ビルド成功！（所要時間: ${result.elapsedTime}）")
+    }
+}
+```
+
+Slack 通知やログ送信などを追加したい場合にも使えます。
+
+
+### beforeProject {}
+
+各プロジェクトの設定が開始される前に呼ばれます。ルートプロジェクトの `build.gradle.kts` に `beforeProject{}` を記述するだけで、サブプロジェクトを含むすべてのプロジェクトの設定の開始前にコールバックが呼ばれます。
+
+使用例を以下に示します。
+
+```kotlin
+// ルートプロジェクトの build.gradle.kts
+gradle.beforeProject { project ->
+    println("設定開始 >>> ${project.name}")
+}
+
+gradle.afterProject { project ->
+    println("設定完了 <<< ${project.name}")
+}
+```
+
+```
+設定開始 >>> MyApp
+設定完了 <<< MyApp
+設定開始 >>> app
+設定完了 <<< app
+設定開始 >>> library
+設定完了 <<< library
+```
+
+
+### afterProject {}
+
+各プロジェクトの設定が完了した後に呼ばれます。 `beforeProject {}` と同様に、ルートプロジェクトの `build.gradle.kts` に `beforeProject{}` を記述するだけで、サブプロジェクトを含むすべてのプロジェクトの設定の開始前にコールバックが呼ばれます。
+
+使用例を以下に示します。
+
+```kotlin
+gradle.afterProject { project, state ->
+    if (state.failure != null) {
+        println("${project.name} の設定中にエラーが発生: ${state.failure?.message}")
+    }
+}
+```
+
+以下の用途で使用されることが多いです。
+
+- 各モジュールの設定状況をログ出力する
+- 設定が終わった後に共通の設定を上書き／確認する
+- 設定エラーを一元管理する
+
+
+## rootProject プロパティ
 
 
 
-
-
-
-
-### 
-### 
-### 
-### 
-### 
 
 
 
