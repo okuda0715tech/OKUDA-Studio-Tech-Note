@@ -202,7 +202,7 @@ Gradle のタスクを定義したり、変更したりできます。詳細は�
 
 ## extra 配列プロパティ
 
-extra 配列プロパティを使用すると、トップレベルの build.gradle で定義したプロパティをモジュールレベルの build.gradle から参照することができます。
+extra 配列プロパティを使用すると、プロジェクト間でプロパティを共有することが可能です。つまり、 build.gradle.kts 内で設定した値が、別の build.gradle.kts 内から参照することができます。
 
 ```kotlin
 // トップレベル build.gradle.kts
@@ -223,6 +223,13 @@ android {
 ```
 
 **注意** : `extra` 配列プロパティは `Any` 型であるため、使用時にキャストが必要です。
+
+Kotlin のプロパティデリゲートを使用して、値を取得することも可能です。この場合は、プロパティ名 `val composeVersion` が `extra` 配列のキーとして使用されます。
+
+```kotlin
+val composeVersion: String by extra
+println(composeVersion) // "1.6.0"
+```
 
 Groovy の名残で `ext{}` ブロックが使用されることもあります。
 

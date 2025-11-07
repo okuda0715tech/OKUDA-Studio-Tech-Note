@@ -6,9 +6,7 @@
   - [android](#android)
   - [dependencies](#dependencies)
   - [repositories](#repositories)
-  - [](#)
-  - [](#-1)
-  - [](#-2)
+  - [configureEach](#configureeach)
   - [モジュールレベルよりもトップレベルの内容を優先したい場合](#モジュールレベルよりもトップレベルの内容を優先したい場合)
 
 
@@ -108,35 +106,26 @@ pluginManagement {
 ```
 
 
-## 
+## configureEach
 
+`configureEach{}` は、様々なレシーバーで定義されている関数ですが、その役割はほぼ同じです。コレクションの要素を、ループで一つ一つ取得しながら、それらに対して何らかの処理を行います。
 
-```kotlin
-```
+- `tasks.configureEach { ... }`
+  - レシーバーの型 : `TaskCollection<Task>`
+  - 要素の型 : タスク ( `Task` )
+- `extensions.configureEach { ... }`
+  - レシーバーの型 : `ExtensionContainer` 内の `NamedDomainObjectContainer`
+  - 要素の型 : 各拡張オブジェクト
+- `android.applicationVariants.configureEach { ... }`
+  - レシーバーの型 : `DomainObjectCollection<ApplicationVariant>`
+  - 要素の型 : 各ビルドバリアント
 
-
-## 
-
-
-```kotlin
-```
-
-
-## 
-
-
-
-```kotlin
-```
-
-
-
-
+同じような意味の関数に `all{}` 関数がありますが、こちらは、即時実行されます。一方で、 `configureEach{}` は、遅延実行されます。
 
 
 ## モジュールレベルよりもトップレベルの内容を優先したい場合
 
-
+ちょっとややこしいので、後で時間のあるときに調査する。
 
 
 
