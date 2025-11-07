@@ -6,8 +6,10 @@
     - [具体例](#具体例)
   - [buildscript {} 関数](#buildscript--関数)
   - [allprojects {} 関数](#allprojects--関数)
+    - [project プロパティ](#project-プロパティ)
   - [プロジェクトとは](#プロジェクトとは)
   - [subprojects {} 関数](#subprojects--関数)
+    - [project プロパティ](#project-プロパティ-1)
   - [tasks{} 関数](#tasks-関数)
   - [extra 配列プロパティ](#extra-配列プロパティ)
   - [dependencyResolutionManagement {} 関数](#dependencyresolutionmanagement--関数)
@@ -19,6 +21,8 @@
     - [beforeProject {}](#beforeproject-)
     - [afterProject {}](#afterproject-)
   - [rootProject プロパティ](#rootproject-プロパティ)
+    - [ルートプロジェクトのディレクトリを参照](#ルートプロジェクトのディレクトリを参照)
+    - [ルートプロジェクトの設定値を子プロジェクトで利用](#ルートプロジェクトの設定値を子プロジェクトで利用)
 
 
 # トップレベルの BuildGradle
@@ -133,6 +137,11 @@ allprojects {
 ```
 
 
+### project プロパティ
+
+`allprojects { ... }` ブロック内で `project` プロパティを参照すると、そのブロックが現在処理している各プロジェクトの `Project` インスタンスが取得されます。
+
+
 ## プロジェクトとは
 
 Gradle では、プロジェクトと呼ばれる単位で開発対象を扱います。
@@ -179,6 +188,11 @@ MyProject/
 前述の `allprojects{}` との違いは、ルートプロジェクトが含まれるかどうかです。
 
 使用例は、 [allprojects{} 関数](#allprojects--関数) の場合と同様のため、省略します。
+
+
+### project プロパティ
+
+`subprojects { ... }` ブロック内で `project` プロパティを参照すると、そのブロックが現在処理している各サブプロジェクトの `Project` インスタンスが取得されます。
 
 
 ## tasks{} 関数
@@ -374,7 +388,36 @@ gradle.afterProject { project, state ->
 
 ## rootProject プロパティ
 
+rootProject は、その名の通り ルートプロジェクト（最上位ディレクトリ） を表すプロパティです。マルチモジュール構成のときに「ルートプロジェクト」を参照する際に使用されます。
 
+以下に使用例を示します。
+
+
+### ルートプロジェクトのディレクトリを参照
+
+```kotlin
+tasks.register<Copy>("copyApkToRoot") {
+    from("$buildDir/outputs/apk/release")
+    into("${rootProject.projectDir}/releaseApks")
+}
+```
+
+app モジュールからルートディレクトリ配下に成果物をコピーしたい場合などに使います。
+
+
+### ルートプロジェクトの設定値を子プロジェクトで利用
+
+```kotlin
+// ルート build.gradle.kts
+extra["compileSdkVersion"] = 35
+
+// app/build.gradle.kts
+android {
+    compileSdk = rootProject.extra["compileSdkVersion"] as Int
+}
+```
+
+`rootProject.extra` に値を入れておくことで、全モジュールで共通設定を使えるようにします。
 
 
 
