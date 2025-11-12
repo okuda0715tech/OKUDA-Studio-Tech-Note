@@ -5,6 +5,7 @@
     - [project()](#project)
     - [file()](#file)
     - [fileTree()](#filetree)
+    - [apply()](#apply)
 
 
 # Project オブジェクト
@@ -136,5 +137,36 @@ Ant 形式の各記号の意味は以下の通りです。
 | `!`（Gradle拡張） | 除外                          | `!**/temp/**` → `temp` フォルダ以下を除外   |
 
 
+### apply()
 
+`apply()` 関数は、自分のプロジェクトの build.gradle.kts に、他の xxx.gradle.kts を合成するのに使用します。
 
+例えば、以下の記述があった場合、 app モジュールの build.gradle.kts に adfurikunsdk-adnw-maven.gradle.kts を合成します。合成するとは、別のファイルに切り出して定義されていたものを一つのファイルにまとめるということです。
+
+```kotlin
+// app/build.gradle.kts
+
+apply(from = "libs/adfurikunsdk-adnw-maven.gradle.kts")
+```
+
+このように、本来は一つの .gradle ファイルだったものを分割するのは、以下のケースが考えられます。
+
+- 共通設定の切り出し
+  - 複数のモジュールで同じ設定を使用する場合に、再利用性を高めます。
+- 外部ライブラリの導入
+  - ライブラリ用の設定を一つの .gradle ファイルにまとめます。
+
+上記の `adfurikunsdk-adnw-maven.gradle.kts` は、 .gradle.kts ファイルですが、これは、サブプロジェクトではありません。通常、 Gradle は、 .gradle.kts ファイルが存在する場合は、それを一つのプロジェクトであると見なします。しかし、今回の場合は、 apply 関数の引数として .gradle.kts ファイルが使用されているため、この .gradle.kts は、単に合成されるだけの gradle.kts だということがわかります。
+
+apply() 関数の引数で指定するファイルパスは、 rootDir を使用して、絶対パスで指定することを推奨します。
+
+```kotlin
+apply(from = "${rootDir}/libs/adfurikunsdk-adnw-maven.gradle")
+```
+
+絶対パスで指定することで、以下のメリットがあります。
+
+- 様々なモジュールから apply 関数を呼び出す場合でも、パスをいちいち変更する手間が減る。
+- パスの指定ミスによるビルドの失敗を軽減できる。
+
+**注意** : 昔は、 apply{} ブロックで Gralde プラグインを適用していましたが、最新の方法では、 plugins{} ブロックでプラグインを適用する方法が推奨されています。 apply{} ブロックは、実行時にプラグインを適用するため、 android{} ブロックなどが、実行時まで認識されません。そのため、実行前チェックなどが手薄になります。
