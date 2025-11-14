@@ -12,6 +12,12 @@
     - [implementation と api の違い](#implementation-と-api-の違い)
       - [implementation](#implementation)
       - [api](#api)
+    - [compileOnly](#compileonly)
+      - [使用例１：javax.annotation:javax.annotation-api](#使用例１javaxannotationjavaxannotation-api)
+      - [使用例２：androidx.annotation:annotation](#使用例２androidxannotationannotation)
+      - [使用例３：Android AAR ライブラリ作成時：依存をバンドルしたくない場合](#使用例３android-aar-ライブラリ作成時依存をバンドルしたくない場合)
+    - [runtimeOnly](#runtimeonly)
+      - [使用例：プラグイン方式のモジュール（実行時に動的ロード）](#使用例プラグイン方式のモジュール実行時に動的ロード)
     - [参考](#参考)
 
 
@@ -369,11 +375,20 @@ android {
 
 #### implementation
 
-- 使う場面：他のモジュールに依存ライブラリを隠したいとき（基本的にはこちらを使用する）
+以下のような app と libraryA と retrofit の依存関係の場合について考えます。
+
+```scss
+app ── depends ──> libraryA ── implementation ──> retrofit
+```
+
+- 使う場面：
+  - 他のモジュールに依存ライブラリを隠したいとき（基本的にはこちらを使用する）
 - 特徴：
   - 自分のモジュール内では使える
   - 依存先モジュール（このモジュールを使う側）にはそのライブラリは見えない（再エクスポートされない）
-- メリット：ビルドが速くなる（依存グラフが小さくなる）
+- メリット：
+  - ビルドが速くなる（依存グラフが小さくなる）
+    - retrofit のバージョンが変更された場合、 app からは retrofit が参照できないため app を再コンパイルする必要はなく、 libraryA のみを再コンパイルすれば良い。
 
 ```groovy
 implementation 'com.squareup.retrofit2:retrofit:2.9.0'
@@ -382,22 +397,119 @@ implementation 'com.squareup.retrofit2:retrofit:2.9.0'
 
 #### api
 
+以下のような app と libraryA と retrofit の依存関係の場合について考えます。
+
+```scss
+app ── depends ──> libraryA ── api ──> retrofit
+```
+
 - 使う場面
   - 自分のモジュールが公開ライブラリや SDK で、その依存も一緒に公開したいとき
   - 公開ライブラリや SDK を作っている場合でも、依存を公開する必要がない場合は、 implementation を使用した方が良いです。その方が、ライブラリのバージョン競合が発生するのを避けられるためです。
 - 特徴：
   - 自分のモジュールでも使える
   - 依存先モジュール（このモジュールを使う側）にも見える
-- 例：あなたのモジュールが ViewModel ライブラリで、外部にも LiveData を使わせたいとき
+- 例：
+  - ViewModel ライブラリを開発しており、外部にも LiveData を使わせたいとき
+- メリット：
+  - 依存関係の二重定義をなくせる
+    - app 側で改めて同じライブラリ (この場合は retrofit ) を定義しなくても良い。
 
 ```groovy
 api 'androidx.lifecycle:lifecycle-livedata-ktx:2.6.2'
 ```
 
 
+### compileOnly
+
+- 使う場面
+  - コンパイル時にしか必要ない依存関係を定義したい場合
+    - アノテーションを使用するための依存関係を定義したい場合
+  - コンパイル時と実行時の両方で必要だが、アプリによっては不要な依存関係となる場合
+    - implementation や api で定義されたライブラリの依存関係は、ライブラリの使用側に自動的に解決されます。
+    - つまり、ライブラリの該当の機能を使用していなかったとしても、アプリにバイトコードが含まれてしまいます。
+    - 該当の機能を使用していないなら、そのクラスへの依存も不要になるため、ビルドを通すためだけにコンパイル時だけ依存関係を構築すると、アプリサイズを小さくすることが可能です。
+    - 例えば、広告表示用ライブラリが複数の広告配信会社のライブラリに依存しており、そのうち、特定の配信会社のライブラリしか使用しない場合
+- 特徴
+  - 依存関係が .pom に含まれないため、 Gradle はライブラリの依存関係を自動的に解決できない。
+  - よって、ライブラリの利用側の build.gradle.kts で、ライブラリの依存関係を利用側の依存関係として定義する必要がある。
+  - または、 Service Loader や SPI を使用して、実行時に動的に依存関係をロードする必要がある。 
+
+#### 使用例１：javax.annotation:javax.annotation-api
+
+```kotlin
+dependencies {
+    compileOnly("javax.annotation:javax.annotation-api:1.3.2")
+}
+```
+
+- Java の @Nullable / @Nonnull などのアノテーション
+- 実行時には使われないので compileOnly が最適
+
+
+#### 使用例２：androidx.annotation:annotation
+
+```kotlin
+dependencies {
+    compileOnly("androidx.annotation:annotation:1.8.0")
+}
+```
+
+- @NonNull, @Keep, @RequiresApi など
+- 実行時には Android Framework 側の同等機能があるため runtime には不要
+
+
+#### 使用例３：Android AAR ライブラリ作成時：依存をバンドルしたくない場合
+
+ライブラリ作者が
+
+- 「他のプロジェクトが同じ依存を用意すべき」
+- 「自分の AAR に依存ライブラリを含めたくない」
+
+という場合は、その依存を compileOnly にして、 AAR に混入しないようにすることがあります。
+
+例えば、 Logging ライブラリが、 Timber を「存在すれば使う」場合は compileOnly を使います。
+
+```kotlin
+compileOnly("com.jakewharton.timber:timber:5.0.1")
+```
+
+
+### runtimeOnly
+
+- 使う場面
+  - 実行時にのみ参照する必要のあるクラスへの依存関係を定義する場合
+    - 使用するかどうか任意の機能に対して、依存関係の定義を必須にしない。
+    - アプリサイズが小さくなる。
+    - ビルド時間が短くなる。
+- 特徴
+  - .pom ファイルには (ランタイムスコープとして) 自動的に追加される。
+  - アプリユーザーが画面を指で操作している最中などに、トリガーが実行されるとクラスのロードが開始される。
+  - プログラム内で該当クラスが直接参照されない。
+  - リフレクション、プラグイン方式、実行時ロードなどの仕組みを使用して、実行時に初めて該当のクラスが参照される場合に使用できる。
+
+
+#### 使用例：プラグイン方式のモジュール（実行時に動的ロード）
+
+- 画像デコーダ
+- 圧縮/解凍ライブラリ
+
+など、アプリ起動後に ServiceLoader / SPI (Service Provider Interface) で読み込むもの
+
+```kotlin
+// 追加コーデックのみ runtimeOnly として登録
+runtimeOnly("com.github.bumptech.glide:gifdecoder:4.16.0")
+```
+
+SPI とは、 Java 標準のプラグイン機構で、「ある機能を実装したモジュールを後から差し替えられる仕組み」です。
+
+ServiceLoader は、SPI を使って「実装クラス」を実行時に探索するクラスです。
+
+
 ### 参考
 
 - implementation と api の違いにつてい解説しているドキュメント
   - [Speeding up your Android Gradle builds](https://speakerdeck.com/ctake0005/speeding-up-your-android-gradle-builds)
+- [ビルド依存関係を追加する - Android Developers](https://developer.android.com/build/dependencies?hl=ja)
 
 
