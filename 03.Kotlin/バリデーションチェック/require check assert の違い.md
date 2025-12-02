@@ -16,7 +16,11 @@ require 関数、 check 関数、 assert 関数は、どれも同じような役
 ```kotlin
 fun getIndices(count: Int): List<Int> {
     require(count >= 0) { "Count must be non-negative, was $count" }
+
     // ...
+
+    // count は生成するリストの要素の数
+    // ラムダ内は、要素のインデックスを it として、各要素に代入する値を計算
     return List(count) { it + 1 }
 }
 ```
@@ -39,7 +43,12 @@ fun getStateValue(): String {
 
 ## assert 関数
 
-[assert](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/assert.html) 関数は、表明が満たされない場合 AssertionError が発生します。また、 require や check とは異なり、デフォルトの設定で、 debug ビルドでは有効となり、 release ビルドでは無効となります。 ( require や check は、 release ビルドでも有効です。)
+[assert](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/assert.html) 関数は、表明が満たされない場合 AssertionError が発生します。
+
+また、 release ビルドでの挙動が異なります。
+
+- assert は、デフォルトの設定で debug ビルドでは有効となり、 release ビルドでは無効となります。
+- require や check は、 release ビルドでも有効です。
 
 このデフォルトの設定を活かすために、 assert は、デバッグやテストでの使用に向いています。
 
