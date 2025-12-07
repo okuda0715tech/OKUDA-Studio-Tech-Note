@@ -1,14 +1,16 @@
 <!-- TOC depthFrom:1 depthTo:6 withLinks:1 updateOnSave:1 orderedList:0 -->
 
 - [Query](#query)
-	- [基本形](#基本形)
-	- [パラメータを渡す](#パラメータを渡す)
-	- [複数のパラメータを渡す](#複数のパラメータを渡す)
-	- [一つのパラメータを複数回使用する](#一つのパラメータを複数回使用する)
-	- [テーブルの一部の列だけを格納するオブジェクトを作成する](#テーブルの一部の列だけを格納するオブジェクトを作成する)
-	- [実行時までパラメータの数がわからないSQL](#実行時までパラメータの数がわからないsql)
-	- [取得したデータをLiveData型の変数で受け取り、UI連携する](#取得したデータをlivedata型の変数で受け取りui連携する)
-	- [テーブルを結合したSQL](#テーブルを結合したsql)
+  - [基本形](#基本形)
+  - [パラメータを渡す](#パラメータを渡す)
+  - [複数のパラメータを渡す](#複数のパラメータを渡す)
+  - [一つのパラメータを複数回使用する](#一つのパラメータを複数回使用する)
+  - [テーブルの一部の列だけを格納するオブジェクトを作成する](#テーブルの一部の列だけを格納するオブジェクトを作成する)
+  - [実行時までパラメータの数がわからないSQL](#実行時までパラメータの数がわからないsql)
+  - [取得したデータをLiveData型の変数で受け取り、UI連携する](#取得したデータをlivedata型の変数で受け取りui連携する)
+  - [テーブルを結合したSQL](#テーブルを結合したsql)
+  - [Not sure how to convert a Cursor to this method's return type](#not-sure-how-to-convert-a-cursor-to-this-methods-return-type)
+  - [WHERE 句に Boolean 型の条件を指定する場合](#where-句に-boolean-型の条件を指定する場合)
 
 <!-- /TOC -->
 
@@ -98,12 +100,12 @@ public interface MyDao {
 
 ## テーブルの一部の列だけを格納するオブジェクトを作成する
 
-`@Entity`アノテーションでテーブルと同じ列を持つオブジェクトを作成することができますが、ある処理では、全ての列が必要ない場合があります。
+`@Entity` アノテーションでテーブルと同じ列を持つオブジェクトを作成することができますが、ある処理では、全ての列が必要ない場合があります。
 
 そんな時は、必要な列だけを格納するオブジェクトを使用して、リソースを節約することができます。
 
 ```Java
-// Tupleはレコードと同じ意味
+// Tuple は「複数のものをまとめた」という意味ですが、実務では汎用的すぎてあまり使えない命名規則です。
 // @Entityアノテーションは不要
 public class NameTuple {
     @ColumnInfo(name = "first_name")
@@ -173,17 +175,36 @@ public interface MyDao {
 ```Java
 @Dao
 public interface MyDao {
-   @Query("SELECT user.name AS userName, pet.name AS petName " +
-          "FROM user, pet " +
-          "WHERE user.id = pet.user_id")
-   public LiveData<List<UserPet>> loadUserAndPetNames();
+    @Query("SELECT user.name AS userName, pet.name AS petName " +
+            "FROM user, pet " +
+            "WHERE user.id = pet.user_id")
+    public LiveData<List<UserPet>> loadUserAndPetNames();
 
-   // Daoクラスの外部に個別のクラスとしてUserPetクラスを定義することもできます。
-   // その場合は、publicなクラスとしてください。
-   static class UserPet {
-       public String userName;
-       public String petName;
-   }
+    // Daoクラスの外部に個別のクラスとしてUserPetクラスを定義することもできます。
+    // その場合は、publicなクラスとしてください。
+    static class UserPet {
+        public String userName;
+        public String petName;
+    }
+}
+```
+
+JOIN で取得したデータは、その列名とモデルのプロパティ名でマッチングされます。つまり、同じ名前のプロパティに取得した項目が割り当てられます。必要ならば、以下のように、 POJO のプロパティに `@ColumnInfo(name = xxx)` を付与して、列名とプロパティをマッチさせてください。 @ColumnInfo アノテーションは、 @Entity が付与されたオブジェクトだけではなく、 POJO のプロパティにも付与できます。
+
+```java
+@Dao
+public interface MyDao {
+    @Query("SELECT user.name AS user_name, pet.name AS pet_name " +
+            "FROM user, pet " +
+            "WHERE user.id = pet.user_id")
+    public LiveData<List<UserPet>> loadUserAndPetNames();
+
+    static class UserPet {
+        @ColumnInfo(name = "user_name")
+        public String userName;
+        @ColumnInfo(name = "pet_name")
+        public String petName;
+    }
 }
 ```
 

@@ -361,13 +361,9 @@ public class User {
 }
 ```
 
-`User`オブジェクトを示すテーブルには、`id`、`firstName`、`street`、`state`、`city`、`post_code`という名前の列が格納されています。
+`User` オブジェクトを示すテーブルには、 `id` 、 `firstName` 、 `street` 、 `state` 、 `city` 、 `post_code` という名前の列が格納されています。
 
-`(prefix = "address_")`の指定は任意です。
-
-指定した場合には、列名が、`address_id`、`address_firstName`、・・・のように先頭にプレフィックスがつきます。
-
-共通の名前がある場合に区別するのに便利です。
+プレフィックス `(prefix = "address_")` の指定はオプションです。指定した場合には、列名に `address_street` 、 `address_state` 、 ... のように先頭にプレフィックスがつきます。共通の名前がある場合に区別するのに便利です。
 
 
 ## デフォルト値の指定
