@@ -35,10 +35,12 @@ public interface MyDao {
 }
 
 // UPDATE文
+// (関数の戻り値に Int 型を指定すると、更新した件数を返します。)
 @Query("UPDATE user SET name = :name WHERE id = :id")
 void update(String name, String id);
 
 // DELETE文
+// (関数の戻り値に Int 型を指定すると、削除した件数を返します。)
 @Query("DELETE FROM user WHERE id = :id")
 void delete(String id);
 
