@@ -75,7 +75,7 @@ println(person1 == person3) // false
 `N` には正の整数が入ります。  
 `componentN()` 関数は `N` 番目のプロパティを取得するゲッターの役割を果たします。
 
-`componentT()` 関数は、 Destructuring declarations を利用するために必要なメソッドになります。
+`componentN()` 関数は、 Destructuring declarations を利用するために必要なメソッドになります。
 
 
 ### copy() 関数
