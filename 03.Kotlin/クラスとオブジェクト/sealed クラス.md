@@ -8,6 +8,7 @@
     - [UI アプリケーションにおける状態管理](#ui-アプリケーションにおける状態管理)
     - [支払い方法の処理](#支払い方法の処理)
     - [API 要求応答処理](#api-要求応答処理)
+  - [sealed クラスと sealed インターフェースの違い](#sealed-クラスと-sealed-インターフェースの違い)
 
 
 # sealed クラスと sealed インターフェース
@@ -352,5 +353,39 @@ UserSuccess(userId=userId, name=John Doe, email=john@example.com)
 UserNotFound
 ```
 
+
+## sealed クラスと sealed インターフェースの違い
+
+- sealed クラス
+  - 状態（プロパティ）を持てる
+  - コンストラクタを持てる
+  - 共通の具象関数を持てる
+- sealed インターフェース
+  - 複数の sealed interface を同時に実装できる
+
+```kotlin
+sealed class UiState(
+    open val isLoading: Boolean // プロパティ・コンストラクタが持てる
+) {
+    data class Success(val data: List<Item>) : UiState(false)
+    data class Error(val message: String) : UiState(false)
+    object Loading : UiState(true)
+}
+```
+
+```kotlin
+sealed class UiState {
+
+    // 共通の具象関数が持てる
+    fun isTerminal(): Boolean =
+        this is Success || this is Error
+
+    data class Success(val data: List<Item>) : UiState()
+    data class Error(val message: String) : UiState()
+    object Loading : UiState()
+}
+```
+
+使い分けの判断基準は、「まず sealed interface、必要になったら sealed class」とするのが良いでしょう。
 
 
