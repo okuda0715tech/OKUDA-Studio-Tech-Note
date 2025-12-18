@@ -2,6 +2,8 @@
   - [require 関数](#require-関数)
   - [check 関数](#check-関数)
   - [assert 関数](#assert-関数)
+  - [!!](#)
+    - [checkNotNull と requireNotNull と !! の違い](#checknotnull-と-requirenotnull-と--の違い)
 
 
 # require check assert の違い
@@ -53,5 +55,28 @@ fun getStateValue(): String {
 このデフォルトの設定を活かすために、 assert は、デバッグやテストでの使用に向いています。
 
 release ビルドで作成されたアプリでも例外を認識し、例外処理を実行する必要がある場合は、 require や check を使用してください。
+
+
+## !!
+
+`check())` や `require()` には null 専用の `checkNotNull()` や `requireNotNull()` が用意されています。一方で、 `param!!` のように、変数名の後ろに `!!` をつけることで、 null でないことを宣言する方法もあります。
+
+`!!` の特徴は以下の通りです。
+
+- 変数が null だった場合には、 NullPointerException を発生させる。
+- 変数を使用する際に null でないことを宣言する。
+- スマートキャスト機能はない
+- null だった場合に表示するメッセージを自分で定義できない
+
+
+### checkNotNull と requireNotNull と !! の違い
+
+`!!` は、変数名の直後に付与することから、変数を使用する場面になって初めて null でないことを宣言します。
+
+一方で、 `checkNotNull` や `requireNotNull` は、 null ではないことを任意の場所で確認することが可能です。そのため、関数の先頭で宣言したり、変数に値を格納した直後に宣言して、事前に null ではないことを確認することが可能です。不具合を早い段階で発見することで、不具合の原因を特性しやすくなります。宣言と同時に適切なメッセージを設定することで、そのコードの読み手に意図を伝えることができます。
+
+上記の通り、 `!!` は場当たり的な宣言、 `check` や `require` は早めの宣言になるため、できる限り check や require を使用するようにしましょう。
+
+
 
 
