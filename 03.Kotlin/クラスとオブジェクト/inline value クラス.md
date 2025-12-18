@@ -60,8 +60,9 @@ val securePassword: String = Password("aaa")
 val securePassword: Password = Password("aaa")
 ```
 
+プロパティを参照する際には、 Password クラスが存在しているかのようにアクセスします。
+
 ```kotlin
-// 参照方法 (通常の Password クラスへのアクセスと同様)
 print(securePassword.stringPass) // aaa
 ```
 
