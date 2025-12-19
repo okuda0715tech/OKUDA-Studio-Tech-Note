@@ -358,10 +358,15 @@ UserNotFound
 
 - sealed クラス
   - 状態（プロパティ）を持てる
+    - フィールドとアクセサーの両方を持っているプロパティが持てる
   - コンストラクタを持てる
   - 共通の具象関数を持てる
 - sealed インターフェース
+  - プロパティっぽいものが持てる
+    - フィールドは持てないが、アクセッサーは持てる
   - 複数の sealed interface を同時に実装できる
+
+sealed クラスがプロパティ・コンストラクタを持つ例：
 
 ```kotlin
 sealed class UiState(
@@ -372,6 +377,8 @@ sealed class UiState(
     object Loading : UiState(true)
 }
 ```
+
+sealed クラスが具象関数を持つ例：
 
 ```kotlin
 sealed class UiState {
@@ -385,6 +392,35 @@ sealed class UiState {
     object Loading : UiState()
 }
 ```
+
+sealed クラスがプロパティっぽいものを持つ例：
+
+```kotlin
+sealed interface DestInput {
+    val destId: Int?
+    val name: String
+}
+```
+
+プロパティっぽいもの (フィールドは持てないが、アクセッサーは持てる) を持つとは、つまり、上記のコードが以下のコードと同じであることを意味します。
+
+```kotlin
+sealed interface DestInput {
+    fun getDestId(): Int?
+    fun getName(): String
+}
+```
+
+つまり、フィールド自体はサブクラスで持つ必要があります。
+
+```kotlin
+data class Keyboard(
+    override val destId: Int,
+    override val name: String
+) : DestInput
+```
+
+
 
 使い分けの判断基準は、「まず sealed interface、必要になったら sealed class」とするのが良いでしょう。
 
