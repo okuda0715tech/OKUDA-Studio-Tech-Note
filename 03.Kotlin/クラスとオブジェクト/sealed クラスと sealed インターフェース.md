@@ -393,7 +393,7 @@ sealed class UiState {
 }
 ```
 
-sealed クラスがプロパティっぽいものを持つ例：
+sealed インターフェースがプロパティっぽいものを持つ例：
 
 ```kotlin
 sealed interface DestInput {
