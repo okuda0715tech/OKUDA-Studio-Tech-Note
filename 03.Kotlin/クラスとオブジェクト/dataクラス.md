@@ -164,4 +164,41 @@ data class Person(val name: String) {
 `equals()` 関数以外にも、 `toString()` 、 `hashCode()` 、 `copy()` 関数も全て同じです。  
 これらの関数に、 `age` プロパティの情報は含まれません。
 
+これは、プライマリコンストラクタに定義されたプロパティから派生するプロパティを定義する場合に便利です。
+
+```kotlin
+data class EditUserUiState(
+    val name: NameInputState,
+) {
+    val canSave: Boolean
+        get() = name is NameInputState.Valid
+}
+```
+
+```kotlin
+sealed interface NameInputState {
+
+    data object Empty : NameInputState
+
+    data class Editing(
+        val raw: String
+    ) : NameInputState
+
+    data class Invalid(
+        val raw: String,
+        val reason: Reason
+    ) : NameInputState {
+        enum class Reason {
+            TOO_SHORT,
+            TOO_LONG,
+            INVALID_CHAR
+        }
+    }
+
+    data class Valid(
+        val value: UserName
+    ) : NameInputState
+}
+```
+
 
