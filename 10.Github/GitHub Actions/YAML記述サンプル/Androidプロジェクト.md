@@ -1,0 +1,49 @@
+- [Android プロジェクトで使用する](#android-プロジェクトで使用する)
+  - [使用例](#使用例)
+
+
+# Android プロジェクトで使用する
+
+## 使用例
+
+```yaml
+name: Android CI
+
+on:
+  pull_request:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up JDK
+        uses: actions/setup-java@v4
+        with:
+          distribution: 'temurin'
+          java-version: '17'
+
+      - name: Cache Gradle
+        uses: gradle/actions/setup-gradle@v3
+
+      - name: Run unit tests
+        run: ./gradlew test
+
+      - name: Run lint
+        run: ./gradlew lint
+
+      - name: Build Debug APK
+        run: ./gradlew assembleDebug
+
+      - name: Upload APK
+        uses: actions/upload-artifact@v4
+        with:
+          name: app-debug
+          path: app/build/outputs/apk/debug/*.apk
+```
