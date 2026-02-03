@@ -603,8 +603,8 @@ class LogsContentProvider: ContentProvider() {
     @InstallIn(ApplicationComponent::class)
     @EntryPoint
     interface LogsContentProviderEntryPoint {
-        // LogDao クラスは、どこかで、プライマリコンストラクターや
-        // Hilt モジュールで、インスタンスの生成方法が定義されている必要があります。
+        // LogDao クラスは、どこか (プライマリコンストラクターや Hilt モジュール) で、
+        // インスタンスの生成方法が定義されている必要があります。
         // エントリーポイントには、インスタンスの生成方法は定義する役割はありません。
         fun logDao(): LogDao
     }
