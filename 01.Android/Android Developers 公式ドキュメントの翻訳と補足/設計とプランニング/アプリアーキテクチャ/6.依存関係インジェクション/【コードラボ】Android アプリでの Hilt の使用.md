@@ -624,7 +624,7 @@ class LogsContentProvider: ContentProvider() {
 ```
 
 
-### 12. @Provides と @Binds と @EntryPoint の違い
+## 12. @Provides と @Binds と @EntryPoint の違い
 
 - @Provides
   - インスタンスの生成方法を定義します。
