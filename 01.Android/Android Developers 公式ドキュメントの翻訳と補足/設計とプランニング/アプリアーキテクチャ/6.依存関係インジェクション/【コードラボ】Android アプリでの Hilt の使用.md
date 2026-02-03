@@ -37,7 +37,7 @@
   - [11. @EntryPoint アノテーション](#11-entrypoint-アノテーション)
     - [11-1. @EntryPoint アノテーションとは](#11-1-entrypoint-アノテーションとは)
     - [11-2. @EntryPoint アノテーションの使用方法](#11-2-entrypoint-アノテーションの使用方法)
-    - [12. @Provides と @Binds と @EntryPoint の違い](#12-provides-と-binds-と-entrypoint-の違い)
+  - [12. @Provides と @Binds と @EntryPoint の違い](#12-provides-と-binds-と-entrypoint-の違い)
 
 
 # 【コードラボ】Android アプリでの Hilt の使用
