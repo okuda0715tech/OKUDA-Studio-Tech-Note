@@ -605,7 +605,7 @@ class LogsContentProvider: ContentProvider() {
     interface LogsContentProviderEntryPoint {
         // LogDao クラスは、どこか (プライマリコンストラクターや Hilt モジュール) で、
         // インスタンスの生成方法が定義されている必要があります。
-        // エントリーポイントには、インスタンスの生成方法は定義する役割はありません。
+        // エントリーポイントには、インスタンスの生成方法を定義する役割はありません。
         fun logDao(): LogDao
     }
 
