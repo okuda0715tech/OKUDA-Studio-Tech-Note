@@ -1,6 +1,6 @@
 - [data object](#data-object)
   - [概要](#概要)
-  - [使いどころ](#使いどころ)
+  - [使いどころ（object と data object の違い）](#使いどころobject-と-data-object-の違い)
   - [使用例](#使用例)
   - [toString() メソッドの自動実装](#tostring-メソッドの自動実装)
   - [equals() メソッドの自動実装](#equals-メソッドの自動実装)
